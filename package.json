@@ -1,7 +1,7 @@
 {
-  "name": "OpenShift-Sample-App",
+  "name": "lms",
   "version": "1.0.0",
-  "description": "OpenShift Sample Application",
+  "description": "leave management solution",
   "keywords": [
     "OpenShift",
     "Node.js",
@@ -9,27 +9,27 @@
     "openshift"
   ],
   "author": {
-    "name": "OpenShift",
-    "email": "ramr@example.org",
-    "url": "http://www.openshift.com/"
+    "name": "Rahul Roy",
+    "email": "rahulroy9202@gmail.com",
+    "url": "http://rahulroy9202.in/"
   },
-  "homepage": "http://www.openshift.com/",
+  "homepage": "http://lms.rahulroy9202.in/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/openshift/origin-server"
+    "url": "ssh://54dde6aee0b8cdb46300010f@lms-rahulroy9202.rhcloud.com/~/git/lms.git/"
   },
-
   "engines": {
     "node": ">= 0.6.0",
     "npm": ">= 1.0.0"
   },
-
   "dependencies": {
-    "express": "~3.4.4"
+    "body-parser": "^1.9.2",
+    "compression": "^1.1.2",
+    "express": "~4",
+    "mysql": "^2.5.4"
   },
   "devDependencies": {},
   "bundleDependencies": [],
-
   "private": true,
   "main": "server.js"
 }

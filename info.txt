@@ -1,0 +1,21 @@
+MySQL 5.5 database added.  Please make note of these credentials:
+
+       Root User: adminzGtnBz1
+   Root Password: HlX7-eKM4P7F
+   Database Name: lms
+
+Connection URL: mysql://$OPENSHIFT_MYSQL_DB_HOST:$OPENSHIFT_MYSQL_DB_PORT/
+
+You can manage your new MySQL database by also embedding phpmyadmin.
+The phpmyadmin username and password will be the same as the MySQL credentials above.
+
+
+
+ssh://54dde6aee0b8cdb46300010f@lms-rahulroy9202.rhcloud.com/~/git/lms.git/
+
+
+
+Please make note of these MySQL credentials again:
+  Root User: adminzGtnBz1
+  Root Password: HlX7-eKM4P7F
+URL: https://lms-rahulroy9202.rhcloud.com/phpmyadmin/
