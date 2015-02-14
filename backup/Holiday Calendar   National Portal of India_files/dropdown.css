@@ -1,0 +1,454 @@
+@charset "utf-8";
+/* CSS Document */
+#menuInner #nav,#menu #nav, #nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+#menuInner #nav,#menu #nav {
+	font-size: 0.8em;
+	font-weight: bold;
+	width: 980px;
+}
+#menu #nav li {
+	float: left;
+	margin: 0;
+	padding: 0 5px 0 0;
+	position: relative;
+	width: 158px;
+	height:80px;
+	*z-index:100;
+}
+#menuInner #nav li{
+	float: left;
+	margin: 0;
+	padding: 0 5px 0 0;
+	position: relative;
+	width: 158px;
+	height:80px;
+}
+#menuInner #nav li a,#menu #nav li a {
+	color:#000;
+	display: block;
+	text-decoration: none;
+	height:17px;
+	margin:0 0 0 0;
+	padding:2px 0 0 10px;
+	font-family:Tahoma, Geneva, sans-serif;
+	line-height:1.9em;
+}
+#menu #nav a:hover, #menu #nav a:focus ,#menu #nav li.hover a  {
+	color: #fff;
+}
+#menuInner #nav ul,#menu #nav ul {
+	background:#6b7689 url(../images/bg_sub_menu.gif) repeat-x 0 0;
+	/*width: 160px;*/
+	left: 0;
+	font-size: 0.857em;
+	line-height: 1.5em;
+	position: absolute;
+	top: 79px;
+	z-index:1000;	
+}
+#menuInner #nav ul{
+	top:20px!important;
+}
+#menuInner #nav li ul.single, #menu #nav li ul.single {
+	width: 158px;
+}
+#menuInner #nav ul li,#menu #nav ul li {
+	background:url(../images/bullet_white1.gif) no-repeat 4px 8px;
+	padding:0 0 0 10px;
+	float: left;
+	height: auto;
+	width: 180px;
+}
+#menuInner #nav ul li.topics {
+	width:220px!important;
+}
+#menuInner #nav ul a,#menu #nav ul a {
+	background: none;
+	padding:0px 0 2px 5px;
+	color:#fff;
+	margin:0;
+	height:20px;
+	font-size:96%;
+}
+#menuInner #nav ul a:hover, #menuInner #nav ul a:focus,#menu #nav ul a:hover, #menu #nav ul a:focus, #menuInner #nav li.hover ul li.hover a {
+	color:#50d5ff;
+}
+#menuInner #nav ul .hover>a, #menu #nav ul .hover>a {
+	color:#50d5ff;
+}
+#menuInner #nav ul,#menu #nav ul {
+	margin-left: -9999px;
+}
+#menuInner #nav li:hover>ul,#menuInner #nav li.hover>ul, #menuInner #nav a:focus+ul, #menuInner #nav .hover a:focus, #menu #nav li:hover>ul, #menu #nav li.hover>ul, #menu #nav a:focus+ul, #menu #nav .hover a:focus {
+	margin-left: 0;
+}
+#menuInner #nav ul a:focus, #menu #nav ul a:focus {
+	margin-left: 9999px;
+}
+#menu .topics {
+	background-image:url(../images/img1.gif);
+}
+#menu .how {
+	background-image:url(../images/img6.gif);
+}
+#menu .government {
+	background-image:url(../images/img2.gif);
+}
+#menu .people {
+	background-image:url(../images/img3.gif);
+}
+#menu .egov {
+	background-image:url(../images/img5.gif);
+}
+#menu .india {
+	background-image:url(../images/img4.gif);
+}
+
+/***Inner Page***/
+#menuInner
+{
+	clear:both;
+}
+#menuInner #nav li.topics a.topicsLink:focus,#menuInner #nav li.hover a.topicsLink {
+	background-image:url(../images/bg_menu_topics_mo.gif)!important;
+}
+#menuInner #nav li.how a.howDiID:focus,#menuInner #nav li.hover a.howDiID {
+	background-image:url(../images/bg_menu_hdid_mo.gif)!important;
+}
+#menuInner #nav li.government a.myGovt:focus,#menuInner #nav li.hover a.myGovt{
+	background-image:url(../images/bg_menu_myGovt_mo.gif)!important;
+}
+#menuInner #nav li.people a.peopleGroups:focus,#menuInner #nav li.hover a.peopleGroups {
+	background-image:url(../images/bg_menu_people_group_mo.gif)!important;
+}
+#menuInner #nav li.egov a.eGov:focus,#menuInner #nav li.hover a.eGov {
+	background-image:url(../images/bg_menu_sub_gov_mo.gif)!important;
+}
+#menuInner #nav li.india a.indGlance:focus,#menuInner #nav li.hover a.indGlance {
+	background-image:url(../images/bg_menu_india_glance_mo.gif)!important;
+}
+
+#menuInner  .topics,#menuInner  .how,#menuInner .government ,#menuInner .people ,#menuInner .egov ,#menuInner .india, #menu .topics, #menu .how, #menu .government, #menu .people, #menu .egov, #menu .india {
+	background-repeat:no-repeat;
+}
+#menuInner ul ul,#menu ul ul{padding-bottom:5px;}
+#menuInner .topics  ul,#menuInner .topicsHindi  ul,#menu .topics  ul, #menu .topicsHindi  ul 
+{width:800px;}
+#menuInner .how ul,#menuInner .howHindi ul,#menu .how ul, #menu .howHindi ul
+{width:380px;}
+#menuInner .government ul,#menuInner .governmentHindi ul,#menu .government ul, #menu .governmentHindi ul
+{width:380px;}
+#menuInner .india ul,#menuInner .indiaHindi ul, #menu .india ul, #menu .indiaHindi ul
+{width:165px ; }
+
+/*top level*/
+
+#menuInner #nav a:link,#menuInner #nav a:active,#menuInner #nav a:visited
+	{
+	display: block;
+	font-weight: bold;
+	padding: 2px 0px 0px 7px;
+	color: #171717;
+	text-decoration: none;
+	text-align: left;
+	float: left;
+	font-family: "Trebuchet MS", Verdana, Arial;
+	font-weight: bold;;
+	letter-spacing: .1px;
+	text-transform: uppercase;
+	line-height: 17px
+}
+
+
+/*second level*/
+
+
+
+
+#menuInner #nav li ul li a:link,#menuInner #nav li ul li a:active,#menuInner #nav li ul li a:visited
+	{
+	background: none;
+	width: 160px;
+	padding:1px 0 2px 5px;
+	float: left;
+	text-transform: none;
+	letter-spacing: normal;
+	font-weight: bold;
+	text-align: left;
+	color: #fff;
+	display: inline;
+}
+
+#menuInner #nav li ul li a:hover {
+	background: none;
+	color: #50d5ff;
+}
+
+/*Topics link*/
+#menuInner #nav .topics, #menuInner #nav .topicsHindi{
+	float: left;
+	height: 19px;
+	border: 1px solid #f2f3f2
+}
+
+#menuInner #nav li a.topicsLink:link,#menuInner #nav li a.topicsLink:active,#menuInner #nav li a.topicsLink:visited
+	{
+	display: block;
+	background: url(../images/bg_menu_topics.gif) no-repeat left top;
+	float: left;
+	width: 100%;
+}
+
+#menuInner #nav li a.topicsLink:hover,#menuInner #nav li:hover a.topicsLink
+	{
+	background: url(../images/bg_menu_topics_mo.gif) no-repeat left top;;
+	color: #ffffff
+}
+#menuInner #nav li a.topicsLinkActive:link,#menuInner #nav li a.topicsLinkActive:active,#menuInner #nav li a.topicsLinkActive:visited
+	{
+	display: block;
+	background: url(../images/bg_menu_topics_mo.gif) no-repeat left top;
+	float: left;
+	width: 100%;
+	color: #ffffff
+}
+
+#menuInner #nav li a.topicsLinkActive:hover,#menuInner #nav li:hover a.topicsLinkActive
+	{
+	background: url(../images/bg_menu_topics_mo.gif) no-repeat left top;;
+	color: #ffffff
+}
+
+/*How Do I Do*/
+#menuInner #nav .how ,#menuInner #nav .howHindi{
+	float: left;
+	height: 19px;
+	border: 1px solid #f2f3f2;
+	border-left: 0
+}
+
+#menuInner #nav li a.howDiID:link,#menuInner #nav li a.howDiID:active,#menuInner #nav li a.howDiID:visited
+	{
+	display: block;
+	background: url(../images/bg_menu_hdid.gif) no-repeat left top;
+	float: left;
+	width: 100%;
+}
+
+#menuInner #nav li a.howDiID:hover,#menuInner #nav li:hover a.howDiID {
+	background: url(../images/bg_menu_hdid_mo.gif) no-repeat left top;;
+	color: #fff
+}
+
+#menuInner #nav li a.howDiIDActive:link,#menuInner #nav li a.howDiIDActive:active,#menuInner #nav li a.howDiIDActive:visited
+	{
+	display: block;
+	background: url(../images/bg_menu_hdid_mo.gif) no-repeat left top;
+	float: left;
+	width: 100%;
+	color: #ffffff
+}
+
+#menuInner #nav li a.howDiIDActive:hover,#menuInner #nav li:hover a.howDiIDActive
+	{
+	background: url(../images/bg_menu_hdid_mo.gif) no-repeat left top;;
+	color: #ffffff
+}
+
+/*myGovt*/
+#menuInner #nav .government,#menuInner #nav .governmentHindi {
+	float: left;
+	height: 19px;
+	float: left;
+	border: 1px solid #f2f3f2;
+	border-left: 0
+}
+
+#menuInner #nav li a.myGovt:link,#menuInner #nav li a.myGovt:active,#menuInner #nav li a.myGovt:visited
+	{
+	display: block;
+	background: url(../images/bg_menu_myGovt.gif) no-repeat left top;
+	float: left;
+	width: 100%;
+}
+
+#menuInner #nav li a.myGovt:hover,#menuInner #nav li:hover a.myGovt {
+	background: url(../images/bg_menu_myGovt_mo.gif) no-repeat left top;;
+	color: #fff
+}
+
+
+#menuInner #nav li a.myGovtActive:link,#menuInner #nav li a.myGovtActive:active,#menuInner #nav li a.myGovtActive:visited
+	{
+	display: block;
+	background: url(../images/bg_menu_myGovt_mo.gif) no-repeat left top;
+	float: left;
+	width: 100%;
+	color: #ffffff
+}
+
+#menuInner #nav li a.myGovtActive:hover,#menuInner #nav li:hover a.myGovtActive
+	{
+	background: url(../images/bg_menu_myGovt_mo.gif) no-repeat left top;;
+	color: #ffffff
+}
+
+/*peopleGroups*/
+#menuInner #nav .people,#menuInner #nav .peopleHindi {
+	float: left;
+	height: 19px;
+	float: left;
+	border: 1px solid #f2f3f2;
+	border-left: 0
+}
+
+#menuInner #nav li a.peopleGroups:link,#menuInner #nav li a.peopleGroups:active,#menuInner #nav li a.peopleGroups:visited
+	{
+	display: block;
+	background: url(../images/bg_menu_people_group.gif) no-repeat left top;
+	float: left;
+	width: 100%;
+}
+
+#menuInner #nav li a.peopleGroups:hover,#menuInner #nav li:hover a.peopleGroups
+	{
+	background: url(../images/bg_menu_people_group_mo.gif) no-repeat left
+		top;;
+	color: #fff
+}
+
+#menuInner #nav li a.peopleGroupsActive:link,#menuInner #nav li a.peopleGroupsActive:active,#menuInner #nav li a.peopleGroupsActive:visited
+	{
+	display: block;
+	background: url(../images/bg_menu_people_group_mo.gif) no-repeat left
+		top;
+	float: left;
+	width: 100%;;
+	color: #ffffff
+}
+
+#menuInner #nav li a.peopleGroupsActive:hover,#menuInner #nav li:hover a.peopleGroupsActive
+	{
+	background: url(../images/bg_menu_people_group_mo.gif) no-repeat left
+		top;;
+	color: #fff
+}
+
+/*eGov*/
+#menuInner #nav .egov,#menuInner #nav .egovHindi {
+	float: left;
+	height: 19px;
+	float: left;
+	border: 1px solid #f2f3f2;
+	border-left: 0
+}
+
+#menuInner #nav li a.eGov:link,#menuInner #nav li a.eGov:active,#menuInner #nav li a.eGov:visited
+	{
+	display: block;
+	background: url(../images/bg_menu_sub_gov.gif) no-repeat left top;
+	float: left;
+	width: 100%;
+}
+
+#menuInner #nav li a.eGov:hover,#menuInner #nav li:hover a.eGov {
+	background: url(../images/bg_menu_sub_gov_mo.gif) no-repeat left top;;
+	color: #fff
+}
+
+#menuInner #nav li a.eGovActive:link,#menuInner #nav li a.eGovActive:active,#menuInner #nav li a.eGovActive:visited
+	{
+	display: block;
+	background: url(../images/bg_menu_sub_gov_mo.gif) no-repeat left top;
+	float: left;
+	width: 100%;
+	color: #ffffff
+}
+
+#menuInner #nav li a.eGovActive:hover,#menuInner #nav li:hover a.eGovActive
+	{
+	background: url(../images/bg_menu_sub_gov_mo.gif) no-repeat left top;;
+	color: #ffffff
+}
+
+/*indGlance*/
+#menuInner #nav .india,#menuInner #nav .indiaHindi {
+	float: left;
+	height: 19px;
+	float: left;
+	border: 1px solid #f2f3f2;
+	border-left: 0
+}
+
+#menuInner #nav li a.indGlance:link,#menuInner #nav li a.indGlance:active,#menuInner #nav li a.indGlance:visited
+	{
+	display: block;
+	background: url(../images/bg_menu_india_glance.gif) no-repeat left top;
+	float: left;
+	width: 100%;
+}
+
+#menuInner #nav li a.indGlance:hover,#menuInner #nav li:hover a.indGlance
+	{
+	background: url(../images/bg_menu_india_glance_mo.gif) no-repeat left top;
+	color: #fff;
+}
+
+#menuInner #nav li.india ul {
+	height:287px;
+	width:165px;
+}
+
+#menuInner #nav li a.indGlanceActive:link,#menuInner #nav li a.indGlanceActive:active,#menuInner #nav li a.indGlanceActive:visited
+	{
+	display: block;
+	background: url(../images/bg_menu_india_glance_mo.gif) no-repeat left
+		top;
+	float: left;
+	width: 100%;
+	color: #ffffff
+}
+
+#menuInner #nav li a.indGlanceActive:hover,#menuInner #nav li:hover a.indGlanceActive
+	{
+	background: url(../images/bg_menu_india_glance_mo.gif) no-repeat left
+		top;;
+	color: #ffffff
+}
+
+
+
+/*** For Hindi***/
+#menu .topicsHindi {
+	background-image:url(../images/img1_hindi.gif);
+}
+#menu .howHindi {
+	background-image:url(../images/img6_hindi.gif);
+}
+#menu .governmentHindi {
+	background-image:url(../images/img2_hindi.gif);
+}
+#menu .peopleHindi {
+	background-image:url(../images/img3_hindi.gif);
+}
+#menu .egovHindi{
+	background-image:url(../images/img5_hindi.gif);
+}
+#menu .indiaHindi {
+	background-image:url(../images/img4_hindi.gif);
+}
+#menuInner .topicsHindi,#menuInner .howHindi,#menuInner.governmentHindi,#menuInner .peopleHindi,#menuInner .egovHindi,#menuInner.indiaHindi, #menu .topicsHindi, #menu .howHindi, #menu .governmentHindi, #menu .peopleHindi, #menu .egovHindi, #menu .indiaHindi {
+	background-repeat:no-repeat;
+}
+#menu
+{
+	margin-left:3px;
+}
+#menuInner #nav li
+{
+	width:157px;
+}

@@ -1,0 +1,3068 @@
+/**
+ * @file
+ * Block Styling
+ */
+.block /* Block wrapper */ {
+	margin-bottom: 1em;
+}
+.block h2 {
+	border-bottom: 1px solid #EB6AC7;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 100%;
+	font-weight: bold;
+	margin-bottom: 7px;
+	padding-bottom: 7px;
+}
+#india-glance-slideshow a:active,#india-glance-slideshow a:focus {
+    outline: 0;
+    outline-style:none;
+    outline-width:0;
+}
+ul.quicktabs_tabs.quicktabs-style-basic {
+	border:none;
+	z-index:0;
+}
+ul.quicktabs_tabs.quicktabs-style-basic li,ul.quicktabs_tabs.quicktabs-style-basic li a{
+	z-index:0;
+}
+ul.quicktabs_tabs.quicktabs-style-basic li a:hover {
+	color:#FFFFFF;
+}
+.block.first /* The first block in the region */ {
+}
+.block.last /* The last block in the region */ {
+}
+.block.region-odd /* Zebra striping for each block in the region */ {
+}
+.block.region-even /* Zebra striping for each block in the region */ {
+}
+.block.odd /* Zebra striping independent of each region */ {
+}
+.block.even /* Zebra striping independent of each region */ {
+}
+.region-count-1 /* Incremental count for each block in the region */ {
+}
+.count-1 /* Incremental count independent of each region */ {
+}
+.block h2.title /* Block title */ {
+}
+.block .content /* Block's content wrapper */ {
+}
+#block-aggregator-category-1 /* Block for the latest news items in the first category */ {
+}
+#block-aggregator-feed-1 /* Block for the latest news items in the first feed */ {
+}
+#block-block-1 /* First administrator-defined block */ {
+}
+#block-blog-0 /* "Recent blog posts" block */ {
+}
+#block-book-0 /* "Book navigation" block for the current book's table of contents */ {
+}
+#block-comment-0 /* "Recent comments" block */ {
+}
+#block-forum-0 /* "Active forum topics" block */ {
+}
+#block-forum-1 /* "New forum topics" block */ {
+}
+#block-menu-primary-links /* "Primary links" block */ {
+}
+#block-menu-secondary-links /* "Secondary links" block */ {
+}
+#block-node-0 /* "Syndicate" block for primary RSS feed */ {
+}
+#block-poll-0 /* "Most recent poll" block */ {
+}
+#block-profile-0 /* "Author information" block for the profile of the page's author */ {
+}
+#block-search-0 /* "Search form" block */ {
+}
+#block-statistics-0 /* "Popular content" block */ {
+}
+#block-user-0 /* "User login form" block */ {
+}
+#block-user-1 /* "Navigation" block for Drupal navigation menu */ {
+	margin: 23px 0 0 0;
+}
+#block-user-1 ul li a {
+	color: #006699;
+	font-size: 80%;
+	text-decoration: none;
+}
+#block-user-2 /* "Who's new" block for a list of the newest users */ {
+}
+#block-user-3 /* "Who's online" block for a list of the online users */ {
+}
+
+/* ----------------------Whats New -----------*/
+#whats_new_home .view-content {
+	border: 7px solid #DFE5E6;
+	border-bottom: 0;
+	font-size: 70%;
+	padding: 10px;
+	border-radius:6px 6px 0 0 ;
+}
+#whats_new_home .view-content p {
+	padding: 5px 0;
+}
+#whats_new_home .view-content a {
+	color: #006699;
+	font-weight: bold;
+	text-decoration: none;
+}/*
+#whats_new_home .pane-content, #view-most-rated .pane-content {
+	border-top: solid 2px #dfe5e6;
+}*/
+#whats_new_home h2 {
+	background: url("../images/whatsnewhome_bg.jpg");
+	background-repeat:no-repeat;	
+	color: #000000;
+	font-size: 70%;
+	font-weight: bold;
+	padding: 6px 6px 0px 27px;
+	width: 115px;
+	margin: -5px 0 0 0;
+	height:21px;
+}
+#view-most-rated h2 {
+	background: url("../images/most_viewed.png");
+	background-repeat:no-repeat;	
+	color: #000000;
+	font-size: 70%;
+	font-weight: bold;
+	padding: 6px 6px 0px 27px;
+	width: 115px;
+	margin: -5px 0 0 0;
+	height:21px;
+}
+#whats_new_home .views-row, #view-most-rated .views-row {
+	border-bottom: dotted 1px;
+	padding: 5px 0;
+}
+.views-row {
+	padding: 2px 0;
+}
+#view-home-banner {
+	border: 7px solid #DFE5E6;
+	border-top: 0;
+	font-size: 70%;
+	padding: 10px;
+	text-align:center;
+	border-radius:0 0 6px 6px ;
+}
+#view-most-rated {
+	margin: 10px 0;
+}
+#view-most-rated .view-content a {
+	color: #006699;
+	text-decoration: none;
+	font-size: 70%;
+	padding:0 0 0 10px;
+}
+#view-most-rated .item-lists ul li {
+	background: url("../images/bullet_whats_new.gif") no-repeat scroll left 13px transparent;
+}
+/* --- search------- */
+#search-topics .pane-content {
+	width:517px;
+	padding:5px 10px 10px 10px;
+}
+.topics #search-topics .pane-content {
+	background:#ffe2ff;
+	border:solid 1px #fdcbef;
+	border-top:0;
+}
+.howDoIDo #search-topics .pane-content {
+	background:#fdeaaf;
+	border:solid 1px #ffe28b;
+	border-top:0;
+}
+.myGovt #search-topics .pane-content {
+	background:#def3ab;
+	border:solid 1px #bee26d;
+	border-top:0;
+}
+.people_groups #search-topics .pane-content {
+	background:#c8e6fb;
+	border:solid 1px #aeceee;
+	border-top:0;
+}
+.e-gov #search-topics .pane-content {
+	background:#F9EAFF;
+	border:solid 1px #EACDF7;
+	border-top:0;
+}
+#search-topics .pane-content form {
+	/*background:#FFFFFF;*/
+	
+	padding:10px;
+}
+.topics #search-topics .pane-content form {
+	border:solid 1px #fe98e2;
+	background: url("../images/search_topics_bg.jpg") repeat-x;
+}
+.howDoIDo #search-topics .pane-content form {
+	border:solid 1px #fdc100;
+	background: #fff url("../images/search_howdoi_bg.jpg") repeat-x;
+}
+.myGovt #search-topics .pane-content form {
+	border:solid 1px #9bcb37;
+	background: #FFFFFF url("../images/search_mygovernment_bg.jpg") repeat-x;
+}
+.people_groups #search-topics .pane-content form {
+	border:solid 1px #66a4dd;
+	background: url("../images/search_peoplegroups_bg.jpg") repeat-x;
+}
+.e-gov #search-topics .pane-content form {
+	border:solid 1px #cfa2e3;
+	background: url("../images/search_egoverance_bg.jpg") repeat-x;
+}
+#search-topics h2 {
+	border-bottom:none;
+	padding-left:41px;
+	font-weight:bold;
+	margin:30px 0 0 0;
+}
+.topics #search-topics h2 {
+	background: url("../images/bg_search_top_topics.gif") no-repeat scroll left top transparent;
+}
+.howDoIDo #search-topics h2 {
+	background: url("../images/bg_search_top_howDo.gif") no-repeat scroll left top transparent;
+}
+.myGovt #search-topics h2 {
+	background: url("../images/bg_search_top_myGov.gif") no-repeat scroll left top transparent;
+}
+.people_groups #search-topics h2 {
+	background: url("../images/bg_search_top_people.gif") no-repeat scroll left top transparent;
+}
+.e-gov #search-topics h2 {
+	background: url("../images/bg_search_top_eGov.gif") no-repeat scroll left top transparent;
+}
+#search-topics input.form-submit {
+	background:url(../images/btn_search.gif) no-repeat;
+	display:block;
+	float:left;
+	width:71px;
+	height:23px;
+	text-indent:-9999px;
+	overflow:hidden;
+	border:none;
+	font-size:0px;
+	line-height:0px;
+}
+.hi-content #search-topics input.form-submit {
+	background:url(../images/search_hindi.jpg) no-repeat;
+}
+#search-topics label {
+	float: left;
+	font-size: 0.688em;
+	overflow: hidden;
+	/*padding-top: 7px;*/
+	width: 120px;
+}
+.form-checkboxes, .form-radios {
+	margin:5px 0 0;
+}
+#search-topics .bef-select-as-checkboxes label, #search-topics .views-widget-filter-field_beneficiaries_value_many_to_one label, #search-topics .views-widget-filter-field_benefittype_value_many_to_one label {
+	float:none;
+}
+.bef-checkboxes .form-item {
+	float:left;
+	padding:0 12px;
+}
+/* --- news home---- */
+#news-home {
+	margin:-20px 5px 9px 5px;
+}
+.quicktabs_main.quicktabs-style-basic {
+	border:none;
+	margin-bottom:5px;
+}
+#news-home .quicktabs_main.quicktabs-style-basic {
+	border-top: 2px solid #c1d6fc;
+}
+ul.quicktabs_tabs.quicktabs-style-basic li {
+	/*border:none;*/
+	border:1px solid #CCC;
+	background:url(../images/search_tab_bg.jpg) repeat-x;
+}
+ul.quicktabs_tabs.quicktabs-style-basic li:hover {
+/*border:none;*/
+}
+ul.quicktabs_tabs.quicktabs-style-basic li a {
+	color:#000000;
+	padding:0 5px;
+}
+#news-home ul.quicktabs_tabs.quicktabs-style-basic li.active {
+	background: url(../images/home_tab_bg.jpg) repeat-x;
+	font-weight: bold;
+	/*margin: 0 0 0 5px;
+	padding: 2px 6px 4px;*/
+	padding:0;
+	width: 90px;
+	border:solid 1px #72a4ff;
+}
+ul.quicktabs_tabs.quicktabs-style-basic li.active a, ul.quicktabs_tabs.quicktabs-style-basic li a:hover, ul.quicktabs_tabs.quicktabs-style-basic li.active a:hover {
+	color: #FFFFFF;
+}
+.howDoIDo ul.quicktabs_tabs.quicktabs-style-basic li.active a, .howDoIDo ul.quicktabs_tabs.quicktabs-style-basic li a:hover, .howDoIDo ul.quicktabs_tabs.quicktabs-style-basic li.active a:hover {
+	color: #464646;
+}
+#news-home .field-content a {
+	background: url("../images/bg_bullet.gif") no-repeat scroll 1px 10px transparent;
+	color: #006699;
+	display: block;
+	line-height: normal;
+	padding: 4px 10px 4px 11px;
+	text-decoration: none;
+	float:left;
+	width:99%;
+}
+#news-home .views-row {
+	/*border-bottom: dotted 1px;
+	padding: 5px 0;*/
+	font-size:75%;
+}
+/* -most viewed right side bar -*/
+/*.topics .pane-quicktabs-quicktab-right-sidebar h2{
+	background:url(../images/whatsnew_topics_bg.jpg) no-repeat;
+	padding-left:34px;
+	background-position:0px 2px;
+	height:18px;
+	padding-top:5px;
+	}*/
+	 .pane-quicktabs-quicktab-right-sidebar h2, .pane-quicktabs-most-viewed-level1 h2,#most_viewed_online_service h2 {
+	background:url(../images/whatsnew_bg.jpg) no-repeat;
+	padding-left:34px;
+	background-position:0px 2px;
+	height:18px;
+	padding-top:5px;
+}
+/* -whats new right side bar -*/
+
+
+#whats_new_right_sidebar h2 {
+	/*background: none repeat scroll 0 0 #6B7689;
+	color: #FFFFFF;
+	width:85px;
+	font-size: 70%;
+	font-weight: bold;
+	padding: 2px 6px 4px;
+	border-bottom:none;
+	margin-bottom:0;*/
+	background:url(../images/whatsnew.jpg) no-repeat;
+	padding-left:34px;
+	background-position:0px 2px;
+	height:18px;
+	padding-top:5px;
+}
+#whats_new_right_sidebar h2.pane-title {
+	color: #000000;
+	font-weight: bold;
+	padding-bottom: 3px;
+	margin:-10px 0 0 0px;
+	font-size:70%;
+	border:none;
+}
+#whats_new_right_sidebar .pane-content {
+/*border-top: solid 2px #6B7689;*/
+}
+#whats_new_right_sidebar .views-row a {
+	color: #006699;
+	font-size: 70%;
+	text-decoration: none;
+}
+#whats_new_right_sidebar .views-row {
+	background: url("../images/bullet_whats_new.gif") no-repeat scroll left 10px transparent;
+	clear: both;
+	overflow: hidden;
+	padding-left: 8px;
+}
+.block ul {
+	margin:0px;
+	padding:0px;
+}
+#whats_new_right_sidebar ul.quicktabs_tabs.quicktabs-style-basic li.active {
+	font-weight: bold;
+	margin: 0 0 0 5px;
+	font-size:70%;
+	padding: 2px 6px 4px;
+	width: 90px;
+}
+.topics ul.quicktabs_tabs.quicktabs-style-basic li.active {
+	/*background: none repeat scroll 0 0 #EB6AC7;
+	border:solid 1px #EB6AC7;*/
+	background-image:url(../images/topics_most_bg.jpg);
+	border:medium none;
+}
+.topics .quicktabs_main.quicktabs-style-basic {
+	border: 1px solid #fed9f4;
+	border-top: 1px solid #EB6AC7;
+	background: url("../images/search_topics_bg.jpg") repeat-x;
+}
+#quicktabs_container_relevant_links .field-content a {
+	font-size:66%;
+	line-height:120%;
+}
+.howDoIDo ul.quicktabs_tabs.quicktabs-style-basic li.active {
+	/*background: none repeat scroll 0 0 #FFC82E;
+	border:solid 1px #FFC82E;*/
+	background-image:url(../images/howdo_most_bg.jpg);
+	border:medium none;
+}
+.howDoIDo .quicktabs_main.quicktabs-style-basic {
+	border: 1px solid #fde59a;
+	border-top: 1px solid #FFC82E;
+	background: url("../images/search_howdoi_bg.jpg") repeat-x;
+}
+.myGovt ul.quicktabs_tabs.quicktabs-style-basic li.active {
+	/*background: none repeat scroll 0 0 #77B800;
+	border:solid 1px #77B800;*/
+	background-image:url(../images/mygov_more_bg.jpg);
+	border:medium none;
+}
+.myGovt .quicktabs_main.quicktabs-style-basic {
+	border: 1px solid #c4dd8b;
+	border-top: 1px solid #77B800;
+	background: url("../images/search_mygovernment_bg.jpg") repeat-x;
+	margin-bottom:15px;
+}
+.people_groups ul.quicktabs_tabs.quicktabs-style-basic li.active {
+	/*background: none repeat scroll 0 0 #4891DC;
+	border:solid 1px #4891DC;*/
+	background-image:url(../images/people_more_bg.jpg);
+	border:medium none;
+}
+.people_groups .quicktabs_main.quicktabs-style-basic {
+	border: 1px solid #c0daf3;
+	border-top: 1px solid #4891DC;
+	background: url("../images/search_peoplegroups_bg.jpg") repeat-x;
+}
+.e-gov ul.quicktabs_tabs.quicktabs-style-basic li.active {
+	background: none repeat scroll 0 0 #9F60B5;
+	border:solid 1px #9F60B5;
+}
+.e-gov .quicktabs_main.quicktabs-style-basic {
+	border-top: 1px solid #9F60B5;
+}
+.IAAG ul.quicktabs_tabs.quicktabs-style-basic li.active {
+	background-image:url(../images/iaag_most_bg.jpg);
+	border:medium none;
+}
+.IAAG .quicktabs_main.quicktabs-style-basic {
+	border: 1px solid #C3F6F1;
+	border-top: 1px solid #1AB7A2;
+	background: url("../images/search_mygovernment_bg.jpg") repeat-x;
+}
+.block #mini-panel-minipanel_right_sidebar .pink h2.pane-title {
+	color: #000000;
+	font-weight: bold;
+	padding-bottom: 3px;
+	margin:10px 0 0 0px;
+	font-size:70%;
+	border:none;
+}
+/* --------leaf level pages--- */
+#metadata_landing_page h4 a,#content-inner .result-page h4 a,#content-inner .view-id-view_sponsor_metadata h4 a,#leaf-pages h4 a {
+	color: #006699;
+	font-weight: bold;
+	font-size:80%;
+	text-decoration: none;
+}
+.item-list ul li a {
+	color: #006699;
+	font-size: 85%;
+	text-decoration: none;
+}
+.item-list ul li {
+	list-type:none;
+	background: url("../images/bullet_whats_new.gif") no-repeat scroll left 10px transparent;
+	clear: both;
+	overflow: hidden;
+	padding-left: 8px;
+	list-style-type:none;
+}
+/*** CSS for publications ****/
+#publications h2 {
+	font-size:100%;
+	color:#009933;
+	font-weight:bold;
+	border-bottom:0px;
+}
+#publications .view-content img, #publications .view-content ul {
+	float:left;
+	color:#000;
+}
+#publications .view-content img {
+	color:#000;
+	padding:5px;
+	border:1px dotted #666;
+}
+#publications .view-content ul {
+	margin:0 0 20px 0;
+	list-style-type:none;
+	padding:0 10px 0 20px;
+	font-size:90%;
+	width:auto;
+}
+#publications .view-content ul li {
+	line-height:1.5em;
+}
+#publications div p {
+	padding:10px 10px 10px 20px;
+	margin:20px 0 0 0;
+	border:1px dotted #666;
+	background-color:#F2F2F2;
+	clear:both;
+	color:#000000;
+	font-size:80%;
+}
+#publications .view-content li span {
+	width:100px;
+	font-weight:bold;
+	display:block;
+	float:left;
+}
+#publications .views-exposed-form {
+	border-bottom:2px solid #009933;
+	padding:5px;
+}
+.views-exposed-form label {
+	font-weight: bold;
+	font-size:90%;
+	padding-bottom:5px;
+	display:block;
+}
+#edit-submit-views-publication-archive {
+	margin-top: 1.9em;
+	margin-left:-100px;
+}
+/* New class added for static page heading link*/
+.staticHeading {
+	border-bottom:1px dotted;
+	color:#99026F;
+}
+#static-content {
+	padding:25px 20px;
+	border-left:1px solid #fdcbef;
+	border-right:1px solid #fdcbef;
+	border-top:1px solid #e2e4e4;
+	position:relative;	
+	overflow:auto;
+}
+.InlineList li {
+	display:inline-block;
+	float: left;
+	margin-right: 10px;
+	width: 180px;
+}
+.InlineList li.icon {
+	width: 34px;
+}
+.InlineList {
+	margin-top:25px;
+}
+.hidethis {
+	height: 1px;
+	left: 0;
+	overflow: hidden;
+	position: absolute;
+	width: 1px;
+}
+#content-inner a {
+	font-size:100%
+}
+/* css for help file */
+.shadedText {
+	clear:both;
+	border:1px solid #FDB5DA;
+	margin-bottom:10px;
+	background-color:#FFF5FD;
+	padding:15px;
+}
+.shadedText1 {
+	border:1px solid #FDB5DA;
+	margin-bottom:10px;
+	padding:10px;
+	margin-left:130px;
+	background-color:#FFF5FD;
+}
+.leftDiv {
+	float:left;
+	width:50%;
+}
+dt {
+	/*border-left:1px dotted #000;*/
+	padding:5px 10px 5px 25px;
+	font-weight:bold;
+	background:url(../images/helpleaf.gif) no-repeat 6px 2px;
+}
+dt a {
+	font-weight:bold;
+	font-size:90%;
+	color:#99026F;
+}
+dd {
+	/*border-left:1px dotted #000;*/
+	padding:5px 10px 5px 25px;
+	margin:0 0 20px 0;
+	font-size:90%;
+	height:40px;
+}
+.shadedText ul {
+	padding:30px;
+}
+.listoffset {
+	padding-left:25px;
+	font-size:85%;
+	list-style:square;
+}
+.listoffset a {
+	font-size:100%;
+}
+.pane-content ul.listoffset, .pane-content ol.listoffset {
+	font-size:75%;
+}
+.linktous th {
+	background-color:#CCCCCC;
+	padding:10px;
+}
+.linktous td {
+	border-bottom:1px solid #CCCCCC;
+	padding:10px;
+}
+.linktous {
+	margin:20px;
+	font-size:80%;
+	width:95%;
+	border:1px solid #CCCCCC;
+	padding:10px;
+}
+.smallfont {
+	font-size:80%;
+}
+/**** CSS for generic tables used in the site *****/
+.generictable th {
+	padding:2px 0px 2px 5px;
+}
+.generictable td {
+	border-bottom:1px solid #CCCCCC;
+	padding:2px 0px 2px 5px;
+}
+.generictable {
+	margin:20px;
+	font-size:80%;
+	width:95%;
+	border:1px solid #CCCCCC;
+}
+.generictable a {
+	text-decoration:none;
+}
+.green {
+	background-color:#9ECA39;
+}
+/** Home page feed tab style **/
+.panels-flexible-region-inside-last {
+	padding-top:10px;
+}
+
+.panels-flexible-region-8-center {
+	width:59.5%;
+}
+.panels-flexible-region-8-home_middle_left {
+	width:39.5%;
+}
+#quicktabs_container_quicktab_home_howdo_i, #quicktabs_container_view_feeds_home, #quicktabs_container_news_feeds_hindi_home {
+	height:285px;
+	overflow:hidden;
+	border:1px dotted #c1d6fc;
+	background:url("../images/search_peoplegroups_bg.jpg") repeat-x scroll 0 0 transparent;
+}
+/** ends **/
+/*.pane-view-mp-search-loksabha .views-exposed-widgets{
+	float: left;
+    width: 243px;
+    border-right: dotted 1px #CCCCCC;
+
+}
+
+.pane-view-mp-search-loksabha .views-exposed-form label{
+	font-size:65%;
+	}
+.alphabet_listing{
+	float: right;
+    padding: 10px;
+    width: 268px;
+	}
+*/
+
+/****** CSS for news landing page ******/
+/*
+.mid_bgg_left ul {
+	margin: 0 0 0 12px;
+}
+.mid_bgg_middle ul {
+	margin: 0 0 0 12px;
+}
+.mid_bgg_right ul {
+	margin: 0 0 0 12px;
+}
+.mid_bgg_left ul li a {
+	font-weight:bold;
+}
+.mid_bgg_middle ul li a {
+	font-weight:bold;
+}
+.mid_bgg_right ul li a {
+	font-weight:bold;
+}
+.mid_bgg_left ul li {
+	list-style: disc outside url("../images/bull_green.gif");
+	padding-right: 15px;
+	padding-bottom:15px;
+}
+.mid_bgg_middle ul li {
+	list-style: disc outside url("../images/bull_purpel.gif");
+	padding-right: 15px;
+	padding-bottom:12px;
+}
+.mid_bgg_right ul li {
+	list-style: disc outside url("../images/bull_orange.gif");
+	padding-right: 15px;
+	padding-bottom:15px;
+}
+.mid_bgg_bot_left {
+	background:url("../images/ddnews_bottom.png") repeat-y scroll 0 0 transparent;
+	height: 39px;
+	width: 319px;
+}
+.mid_bgg_bot_middle {
+	background: url("../images/airnew_bottom.png") repeat-y scroll 0 0 transparent;
+	height: 39px;
+	text-align: center;
+	width: 319px;
+}
+.mid_bgg_bot_right {
+	background: url("../images/pibnew_bottom.png") repeat-y scroll 0 0 transparent;
+	height: 39px;
+	text-align: left;
+	width: 319px;
+}
+.view-id-view_news_list, .view-news-feeds-xml{
+	height:650px;
+	overflow:auto;
+	padding:10px;
+	margin: -6px 0 0 1px;
+}
+.panel-col-first .view-id-view_news_list, .panel-col-first .view-display-id-dd_news_details{
+	border-left:2px solid #9DEF50;
+	border-right:2px solid #9DEF50;
+	width: 293px;
+}
+.panel-col .view-id-view_news_list,.panel-col .view-news-feeds-xml {
+	border-left:2px solid #D66BD6;
+	border-right:2px solid #D66BD6;
+	width: 293px;
+}
+#quicktabs_container_view_feeds_home #mini-panel-pibnews .panel-col .view-news-feeds-xml{
+	width:96%;
+	border:none;
+	overflow:hidden;
+	height:auto;
+}
+.panel-col-last .view-id-view_news_list,.panel-col-last .view-news-feeds-xml {
+	border-left:2px solid #FCC742;
+	border-right:2px solid #FCC742;
+	width: 293px;
+}
+*/
+#template_three_column .inside {
+	margin:0.1em;
+}
+#template_three_column #news-list .inside {
+	margin:0 0 1em 0.5em;
+}
+#template_three_column .panel-panel {
+	margin:1px;
+}
+.myGovt #search-topics input[type='text'] {
+	width:450px;
+	background-color:#EEF8D7;
+}
+.topics #search-topics input[type='text'] {
+	width:450px;
+	background-color:#FFE2FF;
+}
+.howDoIDo #search-topics input[type='text'] {
+	width:450px;
+	background-color:#FFEFBF;
+}
+.people_groups #search-topics input[type='text'] {
+	width:450px;
+	background-color:#EAF4FE;
+}
+.e-gov #search-topics input[type='text'] {
+	width:450px;
+	background-color:#F9EAFF;
+}
+#news-list .field-content
+{
+	font-size:80%;
+}
+.mid_bgg_middle .feed-date
+{
+	/*display:none;*/
+}
+#news-list .feed-date, #news-list .feed-date .views-label-created
+{
+	color:#666666 !important;
+	font-size:85%;
+}
+/** For lok/Rajya sabha search member **/
+#searchmember {
+	border-top:2px solid #9ECA39;
+}
+#searchmember h2 {
+	font-size:100%;
+	font-weight:bold;
+	color:#13751B;
+}
+#searchalphabet h3, #searchstate h3 {
+	margin-left:15px;
+	font-size:90%;
+}
+#searchalphabet ul {
+	padding:2px 4px 0;
+	border:2px dotted #cccccc;
+	margin:0px 15px 20px 15px;
+	overflow:auto;
+	background:url(../images/search_mygovernment_bg.jpg) repeat-x;
+	background-position:0px -40px;
+}
+#searchalphabet ul li a {
+	text-decoration:none;
+	font-weight:bold;
+	color:#060;
+}
+#searchalphabet ul li a:active {
+	text-decoration:none;
+	font-weight:bold;
+	color:#000000;
+	border-right:1px solid #cccccc;
+	padding-right:4px;
+}
+#searchalphabet ul li {
+	float:left;
+	height:25px;
+	width:17px;
+	font-size:80%;
+	text-align:center;
+	color:#000;
+	border-right:1px solid #CCCCCC;
+	font-weight:bold;
+}
+#views-exposed-form-view-mp-search-rajyasabha-default {
+	border:2px dotted #cccccc;
+	margin:-15px 20px 10px 15px;
+	padding:0 10px;
+	font-size:85%;
+	background:url("../images/search_mygovernment_bg.jpg") repeat-x scroll 0 -40px transparent;
+}
+#views-exposed-form-view-mp-search-rajyasabha-default input[type="text"] {
+	width:180px;
+	background-color:#EEF8D7;
+	border:1px solid #9ECA39;
+}
+#views-exposed-form-view-mp-search-rajyasabha-default input[type="submit"] {
+	margin-top:12px;
+}
+#searchstate h3 {
+	margin-left:15px;
+	padding-bottom:0;
+	margin-bottom:0;
+}
+.view-view-mp-search-rajyasabha .item-list {
+	border-top:4px dotted #9ECA39;
+	padding-top:25px;
+}
+#searchtext {
+	position:relative;
+	top:95px;
+	*top:130px;
+	left:15px;
+	font-weight:bold;
+	font-size:100%;
+}
+#views-exposed-form-view-mp-search-loksabha-default {
+	border:2px dotted #cccccc;
+	margin:-15px 20px 10px 15px;
+	padding:0 10px;
+	font-size:85%;
+	background:url(../images/search_mygovernment_bg.jpg) repeat-x;
+	background-position:0px -40px;
+}
+#views-exposed-form-view-mp-search-loksabha-default input[type="text"] {
+	width:180px;
+	background-color:#EEF8D7;
+	border:1px solid #9ECA39;
+}
+#views-exposed-form-view-mp-search-loksabha-default input[type="submit"] {
+	margin-top:12px;
+}
+.view-view-mp-search-rajyasabha .item-list {
+	border-top:2px solid #9ECA39;
+	padding-top:25px;
+}
+.view-view-mp-search-loksabha .item-list {
+	border-top:4px dotted #9ECA39;
+	padding-top:25px;
+}
+/*** BG for local nav **/
+#content-inner {
+	padding:0px;
+	position:relative;
+}
+#template_three_column.topics {
+	background:url(../images/topicsnav_bg.gif) repeat-y;
+}
+#template_three_column.e-gov {
+	background:url(../images/egovnav_bg.gif) repeat-y;
+}
+#template_three_column.howDoIDo {
+	background:url(../images/howdoinav_bg.gif) repeat-y;
+}
+#template_three_column.myGovt {
+	background:url(../images/mygovnav_bg.gif) repeat-y;
+}
+#template_three_column.people_groups {
+	background:url(../images/peoplegroupnav_bg.gif) repeat-y;
+}
+#template_three_column.IAAG {
+	background:url(../images/iaagnav_bg.gif) repeat-y;
+}
+#template_three_column.IAAG_home {
+	background:url(../images/iaagnav_bg_home.gif) repeat-y;
+}
+.panels-flexible-region {
+	padding-bottom:2px;
+}
+#home .panels-flexible-region {
+	padding-bottom:5px;
+}
+/*** slideshow next and previous icon ***/
+.views_slideshow_previous {
+	margin: 3px 1px 0 -1px;
+}
+.views_slideshow_next {
+	margin: 3px 1px 0 -1px;
+}
+#views_slideshow_singleframe_controls_view_topics_slideshow-block_1 a {
+	padding: 0 2px 0 2px;
+}
+#views_slideshow_singleframe_main_view_topics_slideshow-block_1 {
+	border:1px solid #CCCCCC;
+	border-bottom:4px solid #b4b4b4;
+	border-right:1px solid #b4b4b4;
+	padding-left:2px;
+	padding-bottom:2px;
+	background-color:#ededed;
+	background-image:url(../images/slider_bg.jpg);
+	background-position:bottom;
+	background-repeat:repeat-x;
+}
+.view-view-topics-slideshow .views-slideshow-controls-bottom {
+	position: relative;
+	top: -24px;
+	width: 180px;
+	background-color: #ededed;
+	z-index: 0;
+	padding-left: 10px;
+	left:2px;
+	background-image:url(../images/slider_bg.jpg);
+	background-position:bottom;
+}
+/*** For home bottom **/
+#mini-panel-minipanel_home_bottom {
+	padding-bottom:5px;
+}
+.govtSearch {
+	background: url(../images/border_hr.gif) repeat-x left top;
+	padding-top: 15px;
+	clear: both;
+	overflow: hidden;
+	margin-top: -2px;
+	margin-left:5px;
+}
+/****** CSS for Spotlight ******/
+
+#spotlight {
+	padding-top:8px;
+	overflow:hidden;
+	margin-left:1px;
+}
+#spotlight .panels-flexible-region {
+	/*border-top:2px solid #6B7689;
+	border-top:2px dotted #c1d6fc;*/
+	margin-left:4px;
+}
+#spotlight h2.pane-title {
+	color: #fff;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-weight: bold;
+	font-size: 0.875em;
+	/*background: #6b7689;*/
+	padding: 2px 6px 0px 6px;
+	float: left;
+	margin-bottom:0px;
+	background:url("../images/home_tab_bg.jpg") repeat-x scroll 0 0 transparent;
+	border:1px solid #72A4FF;
+}
+/*** People Group static page ***/
+#peoplegroup-leaf-pages, #template_three_column.people_groups_leaf {
+	/*background:url(../images/peoplegroupstatic_bg.gif) repeat-y;*/
+}
+#menuInner .block-panels_mini {
+    margin-bottom: 0;
+}
+#mini-panel-mainmenu .panels-flexible-region-inside-last{
+	padding-top:0px;
+}
+#peoplegroup-leaf-pages h2.pane-title {
+	font-size:135%;
+	padding-left:338px;
+}
+#peoplegroup-leaf-pages .pane-content ul.listoffset, .pane-content ol.listoffset {
+	font-size:90%;
+}
+.ListWrapper {
+	background: #F3F8FC;
+	width: 100%;
+	overflow: hidden;
+	border:1px solid #4891DC;
+}
+#content-inner .ListWrapper a {
+	text-decoration:none;
+	color:#069;
+}
+.ListWrapperContainer {
+	padding: 10px 5px 5px 65px;
+}
+.TwoColumnList2 {
+	float: left;
+	width: 50%;
+	padding-bottom:15px;
+}
+.TwoColumnList2 ul li a,.TwoColumnList2 .listoffset  {
+	font-size:80%!important;
+}
+.TwoColumnList2 ul.listoffset li a {
+	font-size:100%!important;
+}
+
+
+.TwoColumnList2 ul {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+.TwoColumnList2 ul ul {
+	padding: 0;
+	margin-left: 14px;
+	margin-top: 5px;
+}
+.TwoColumnList2 ul ul li {
+	list-style: url('../images/arrow-black.gif');
+}
+.TwoColumnList2 ul ul li a {
+	color: #005200;
+}
+#peoplegroup-leaf-pages .view-content img.imagefield {
+	float:left;
+	padding:0px 20px 20px 0px;
+	margin-top:-30px;
+}
+#peoplegroup-leaf-pages .view-content {
+	padding:0px 20px 20px 20px;
+}
+#peoplegroup-leaf-pages p {
+	font-size:85%;
+	font-weight:normal;
+}
+.topics #level2-pages .pane-view-level2-description h2, .myGovt #level2-pages .pane-view-level2-description h2, .people_groups #level2-pages .pane-view-level2-description h2, .e-gov #level2-pages .pane-view-level2-description h2, .howDoIDo #level2-pages .pane-view-level2-description h2 {
+	position:relative;
+	top:125px;
+	left:41px;
+	color:#FFFFFF;
+	font-weight:bold;
+	font-size:120%;
+}
+/** leaf pages CSS **/
+.panels-flexible-region-5-center {
+	width:70%;
+	padding-left:15px;
+}
+.panels-flexible-region-4-center .views-field-field-image-fid {
+	padding-left:15px;
+}
+.panels-flexible-region-4-center img {
+	border:1px solid #CCCCCC;
+	padding:1px;
+	margin-bottom:5px;
+}
+.panels-flexible-region-4-center .views-field-body {
+	padding-left:15px;
+	padding-right:20px;
+	clear:both;
+}
+.pane-view-level2-description {
+	margin-top:-15px;
+}
+.pane-quicktabs-relevant-links {
+	width: 93%;
+	padding-left: 18px;
+	margin-top: 25px;
+	margin-bottom:12px;
+}
+#sidebar-right .view-view-whats-new {
+	padding:10px;
+}
+#sidebar-right ul.quicktabs_tabs.quicktabs-style-basic a {
+	font-size:98% !important;
+}
+/*** CSS for level 1 page content ***/
+.panels-flexible-region-2-panel_content-inside {
+	padding-right:18px;
+	padding-left:12px;
+}
+/*** CSS for static forms error error message ***/
+#static-content .messages {
+	margin:25px 120px;
+}
+/*** CSS for level 3 pages ***/
+.pane-view-meta-leaf .field-content p {
+	padding-left:10px;
+	/*border-bottom:1px dotted #999;*/
+}
+.view-id-view_sponsor_metadata {
+	/*background-color: #F2F2F2;
+	border: 1px dotted #999999;
+	overflow: auto;
+	padding: 7px;*/
+	margin-top:-5px;
+	margin-bottom:10px;
+}
+/*#content-inner .result-page h4 a,#content-inner .view-id-view_sponsor_metadata h4 a,#leaf-pages h4 a {
+	color: #006699;
+	font-weight: bold;
+	text-decoration: none;
+	font-size:80%;
+}*/
+#leaf-pages .field-content a {
+	text-decoration:none;
+	color:#006699;
+}
+#leaf-pages .field-content a:hover{
+	text-decoration:underline;
+}
+#leaf-pages .hide-body .pane-content{
+	display:none;
+}
+/*-----------------search block for MyGovt (Docs/Forms/Schemes/Acts)/How Do I(Post/Seek) ----------*/
+
+.myGovt #content-inner .search-header {
+	background-color:#E9F8C6;
+	margin:20px 20px 10px 0;
+	padding:2px 0 0 10px;
+	border-bottom:1px solid #cad1b7;
+	border-right:1px solid #cad1b7;
+	border-top:1px solid #e5edd2;
+	border-left:1px solid #e5edd2;
+}
+.howDoIDo #content-inner .search-header {
+	background-color:#FDF0C8;
+	margin:20px 20px 10px 0;
+	padding:2px 0 0 10px;
+	border-bottom:1px solid #cad1b7;
+	border-right:1px solid #cad1b7;
+	border-top:1px solid #e5edd2;
+	border-left:1px solid #e5edd2;
+}
+.views-widget-filter-field_coverage_jurisdiction_value {
+}
+.views-widget-filter-field_coverage_jurisdiction_value .form-item, .views-widget-filter-field_coverage_jurisdiction_value .form-checkboxes, .views-widget-filter-field_coverage_jurisdiction_value .form-radios {
+	float:left;
+	margin:0px;
+}
+#edit-term-node-tid-depth-hierarchical-select-selects-0 {
+}
+#edit-term-node-tid-depth-hierarchical-select-selects-1 {
+}
+#edit-term-node-tid-depth-hierarchical-select-selects-2 {
+	width:490px;
+}
+#edit-term-node-tid-depth-hierarchical-select-selects-3 {
+	width:490px;
+}
+#level2-pages .views-exposed-form, #level2-pages .views-exposed-widget {
+	clear:both;
+}
+#level2-pages .views-exposed-widget {
+	/*padding:10px 0;*/
+	width:490px;
+	/*border-bottom: 1px dotted #999999;*/
+}
+.hierarchical-select-wrapper .nojs .help-text {
+	height: 2em;
+	width: auto;
+}
+/* ----------  India Glance --------*/
+#template_three_column .panels-flexible-25 .panels-flexible-region-last .inside {
+	margin:0 0 0 20px;
+}
+#content-inner .india-glance {
+	font-size:75%;
+	margin:10px 0px 0px 12px;
+}
+ul.about-india {
+	padding:0 0 0 30px;
+	width:320px;
+	overflow:auto;
+}
+ul.about-india li {
+	padding:0 7px;
+	float:left;
+	width:125px;
+	background:url(../images/iag_bullet.gif) no-repeat;
+	background-position:0px 5px;
+}
+.india-glance .views-field-title {
+	/*color:#cb135b;
+	font-size:200%;
+	font-weight:bold;*/
+}
+#content-inner .india-glance a {
+	text-decoration:none;
+	font-weight:bold;
+	color:#1AB7A2;
+}
+#india-glance-tab #quicktabs_container_quicktab_india_glance {
+	border:solid 1px #6de7d8;
+	padding:8px;
+	margin: 3px 0 0 1px;
+	background:url(../images/search_india_bg.jpg) left top repeat-x;
+	border-bottom:0px;
+	font-size:110%;
+}
+#india-glance-tab #quicktabs-quicktab_india_glance ul.quicktabs_tabs li {
+	background:#f5eab2;
+	border:solid 1px #FFF;
+	border-top:0px;
+}
+#india-glance-tab #quicktabs-quicktab_india_glance ul.quicktabs_tabs li.active {
+	background:url("../images/bg_iiag_tab_active.png") repeat-x scroll left bottom transparent;
+	border-bottom: 0 none;
+	padding: 0 0 11px;
+}
+#india-glance-tab #quicktabs-quicktab_india_glance ul.quicktabs_tabs li a {
+	text-decoration:none;
+	color:#1ab7a2;
+	padding: 2px 10px;
+	font-weight:bold;
+}
+#india-glance-tab #quicktabs-quicktab_india_glance ul.quicktabs_tabs li.active a {
+	color:#f1ecb4;
+	background: #1ab7a2;
+}
+.IAAG .panels-flexible-region {
+	padding:0px;
+}
+#india-glance-slideshow .views-field-field-image-fid {
+	background:url("../images/bg_IIAG_cat.gif") no-repeat scroll right top transparent;
+	padding: 15px 11px;
+}
+#india-glance-slideshow .views-field-field-image-fid img {
+}
+#india-glance-slideshow .views-field-field-image-data {
+	font-weight:bold;
+	color:#cb135b;
+	font-size:80%;
+	/*text-transform:capitalize;*/
+	border-bottom: 1px dotted #c6c6c6;
+	padding:2px 0 0 10px;
+	background:url(../images/caption_bg.jpg) top left repeat-x;
+}
+.iag_banner {
+	margin:10px 0;
+}
+#views_slideshow_singleframe_controls_view_slideshow-block_1 {
+	margin: -150px 0 0 52px;
+	position: absolute;
+}
+#india-glance-slideshow:hover #views_slideshow_singleframe_controls_view_slideshow-block_1 {
+	z-index: 111;
+}
+#views_slideshow_singleframe_controls_view_slideshow-block_1 a {
+	float:left;
+	padding:0 2px;
+}
+#india-glance-slideshow #views_slideshow_singleframe_prev_view_slideshow-block_1 {
+	margin: 0 0 0 0px;
+	background:url(../images/slideshow_prev.png) no-repeat left;
+	display:block;
+	width:23px;
+	height:46px;
+	float:left;
+	text-indent:-9999px;
+	margin: 0 0 0 11px;
+}
+#india-glance-slideshow .views_slideshow_singleframe_play {
+	background:url(../images/slideshow_play.png) no-repeat left;
+	display:block;
+	width:46px;
+	height:46px;
+	float:left;
+	text-indent:-9999px;
+	margin: 0 0 0 96px;
+}
+#india-glance-slideshow .views_slideshow_singleframe_pause {
+	background:url(../images/slideshow_pause.png) no-repeat left;
+	display:block;
+	width:46px;
+	height:46px;
+	float:left;
+	text-indent:-9999px;
+	margin: 0 0 0 96px;
+}
+#india-glance-slideshow #views_slideshow_singleframe_next_view_slideshow-block_1 {
+	background:url(../images/slideshow_next.png) no-repeat left;
+	display:block;
+	width:23px;
+	height:46px;
+	float:left;
+	text-indent:-9999px;
+	margin: 0 0 0 96px;
+}
+#template_three_column .panels-flexible-region-25-india_glance_top .inside {
+	margin:-15px 0 0 0;
+}
+#views_slideshow_singleframe_teaser_section_view_slideshow-block_1
+{
+	margin-left:52px;
+}
+
+/* -------GOL  ------------- */
+
+/*.pane-views-exp-view-gol-page-1 {
+	border:6px solid #CCC;
+	width:700px;
+	padding-left:50px;
+	margin:10px 0 0 50px;
+	height:321px;
+	background:url(../images/gol-bg.jpg) no-repeat;
+}
+.gol-text p {
+	margin: 0 0 0 51px;
+	width: 758px;
+}
+#views-exposed-form-View-gol-page-1 .form-text {
+	background-color:#eeeeee;
+}
+.gmap-popup {
+	margin: -9px 0 0 0;
+}
+#office-details {
+	font-size:90%;
+}
+#office-details .views-field {
+	padding:10px 0;
+	border-bottom: 1px dotted #999999;
+}
+.gol-search {
+	font-size:90%;
+}
+.gol-search .views-row {
+	padding:10px 0;
+	border-bottom: 1px dotted #999999;
+}
+.gol-search a {
+	color: #39C;
+	font-weight:bold;
+}
+.views-field-title {
+	margin-bottom:5px;
+}
+.gol-search .contact-person {
+	font-weight:bold;
+	padding-left:10px;
+}
+.views-field-field-address-value {
+	padding:5px 0 0 10px;
+}
+#office-details label {
+	font-weight:bold;
+}
+#office-details .views-label {
+	float:left;
+	padding:0 10px 0 0;
+	font-weight:bold;
+}
+.panels-flexible-region-28-gol_left {
+	margin-top:25px;
+	border:4px solid #CCC;
+}
+.panels-flexible-region-28-gol_left h2 {
+	margin-left:10px;
+	padding-left:10px;
+	border-bottom:1px solid #d0d0d0;
+	background: url(../images/bg_site_links.gif) repeat-x;
+}
+.panels-flexible-region-28-gol_left span {
+	width:75px;
+}
+.view-id-View_gol {
+	padding-left:20px;
+}*/
+.special-search-forms, .pane-view-search-schemes, .pane-view-search-document, .pane-view-search-acts, .pane-view-search-forms {
+	margin: 0 0 0 13px;
+}
+.pane-view-search-schemes p, .pane-view-search-document p, .pane-view-search-acts p, .pane-view-search-forms p {
+	/*border-bottom:1px dotted;*/
+	margin-bottom:5px;
+}
+.pane-view-search-schemes a, .pane-view-search-document a, .pane-view-search-acts a, .pane-view-search-forms a {
+	/*padding-left:15px;*/
+	color:#006699;
+	font-size:80%;
+	font-weight:bold;
+	text-decoration:none;
+}
+#home_person .result-page li a {
+	/*padding-left:15px;*/
+	color:#006699;
+	font-size:90%;
+	font-weight:bold;
+	text-decoration:none;
+}
+#home_person .result-page li p {
+	font-size:70%;
+	margin:12px 0;
+}
+.pane-view-search-schemes a:hover, .pane-view-search-document a:hover, .pane-view-search-acts a:hover, .pane-view-search-forms a:hover{
+	text-decoration:underline;
+}
+.pane-view-search-document .fivestar-widget-static, .pane-view-search-acts .fivestar-widget-static, .pane-view-search-forms .fivestar-widget-static {
+	padding-left:15px;
+}
+.pane-view-search-document .views-field-body, .pane-view-search-schemes .views-field-body, .pane-view-search-acts .views-field-body, .pane-view-search-forms .views-field-body
+{
+	padding-left:0;
+	clear:both;
+} 
+.pane-view-search-document .tags, .pane-view-search-schemes .tags, .pane-view-search-acts .tags, .pane-view-search-forms .tags
+{
+	width:525px;
+} 
+/* --- rating ----*/
+.fivestar-widget-5 {
+	float:left;
+	margin-right:10px;
+}
+/* ------ how do i section meta results -----*/
+.howDoIDo .view-view-meta-leaf, .howDoIDo .pane-views-exp-view-meta-leaf-page-1, .howDoIDo .pane-views-exp-view-meta-leaf-page-2 {
+	padding-left:11px;
+}
+.howDoIDo .view-view-meta-leaf .views-field-body {
+	padding-left:0px;
+	clear:both;
+}
+/* ------  banner landig page -------*/
+#banner-landing {
+	margin: 20px 0 12px 0px;
+	/*overflow: auto;*/
+}
+#banner-landing .views-row-1 .views-field {
+	float:left;
+	margin: 0 20px 0 10px;
+}
+#banner-landing .views-row {
+	padding:0px;
+}
+/**** CSS for council of ministers *****/
+.views-table th {
+	padding:2px 0px 2px 5px;
+	background-color:#9ECA39;
+}
+.views-table td {
+	border-bottom:1px solid #CCCCCC;
+	padding:2px 0px 2px 5px;
+}
+.views-table {
+	margin:20px 10px 10px 5px;
+	font-size:80%;
+	width:95%;
+	border:1px solid #CCCCCC;
+}
+.views-table a {
+	text-decoration:none;
+}
+.views-table tr.even, tr.odd {
+	background-color:#FFFFFF;
+}
+/*** CSS for Kids corner ***/
+.image-content {
+	float: left;
+	width: 55px;
+}
+.text-content {
+	margin-left: 375px;
+}
+
+/*** CSS for India at a glance **/
+#quicktabs-quicktab_india_glance
+{
+	margin-left:-14px;
+	margin-right:13px;
+}
+.IAAG .views-exposed-widgets {
+    border: 1px solid#6DE7D8;
+    margin: 0 13px 10px -1px;
+    padding: 2px 0 15px 40px;
+	/*background:url(../images/search_india_bg.jpg) left top repeat-x;*/
+	border-top:0px;
+}
+.IAAG input[type="text"]
+{
+	background:#1AB7A2;
+	color:#FFFFFF;
+	height:17px;
+	width:180px;
+	padding-bottom:2px;
+	
+}
+#edit-submit-view-search-india-glance
+{
+	margin-top:-2px;
+
+}
+.IAAG .views-exposed-form label {
+    display: block;
+    font-size: 80%;
+    font-weight: bold;
+    padding-bottom: 11px;
+}
+/* - Theme Switcher -- */
+#block-switchtheme-0 {
+    float: left;
+    margin: 7px 0 0 0;
+    padding: 0;
+    width: 255px;
+}
+.region-themeswitcher #block-switchtheme-0 h2{
+	background: none;
+	border:none;
+    color: #000000;
+    font-size: 0.688em;
+    height: 24px;
+    padding: 5px 4px 0;
+    float:left;
+	}
+	
+/* -------GOL Unique ------------- */
+
+.pane-views-exp-view-gol-gol-unique-data {
+	border:6px solid #c7c0a1;
+	width:700px;
+	padding-left:50px;
+	margin:-245px 0 0 62px;
+	height:321px;
+	background:url(../images/gol-bg.png) no-repeat;
+}
+.gol-text p {
+	margin: 30px 0 0 62px;
+	width: 545px;
+	/*position:absolute;*/
+}
+#views-exposed-form-View-gol-gol-unique-data
+{
+	padding:245px 10px;
+	position:absolute;
+}
+#views-exposed-form-View-gol-gol-unique-data .form-text {
+	background-color:#F5F0DB;
+}
+.gmap-popup {
+	margin: -9px 0 0 0;
+}
+#office-details {
+	font-size:90%;
+}
+#office-details .views-field {
+	padding:10px 0;
+	border-bottom: 1px dotted #999999;
+}
+.gol-search {
+	font-size:90%;
+}
+.gol-search .views-row {
+	padding:10px 0;
+	border-bottom: 1px dotted #999999;
+}
+.gol-search a {
+	color: #39C;
+	font-weight:bold;
+}
+.views-field-title {
+	margin-bottom:5px;
+}
+.gol-search .contact-person {
+	font-weight:bold;
+	padding-left:10px;
+}
+.views-field-field-address-value {
+	padding:5px 0 0 10px;
+}
+#office-details label {
+	font-weight:bold;
+}
+#office-details .views-label {
+	float:left;
+	padding:0 10px 0 0;
+	font-weight:bold;
+}
+.panels-flexible-region-28-gol_left {
+	margin-top:25px;
+	border:4px solid #CCC;
+}
+.panels-flexible-region-28-gol_left h2 {
+	margin-left:10px;
+	padding-left:10px;
+	border-bottom:1px solid #d0d0d0;
+	background: url(../images/bg_site_links.gif) repeat-x;
+}
+.panels-flexible-region-28-gol_left span {
+	width:75px;
+}
+.view-id-View_gol {
+	padding-left:20px;
+}
+
+/* Forget Password*/
+.forget_password
+{
+	margin-left:784px;
+	font-size:75%;
+}
+/* Rate and feedback*/
+.rate_metatdata
+{
+	float:left;
+	width:190px;
+	margin-top:8px;
+	*margin-top:2px;
+	*width:190px!important;
+	margin-bottom:0px;
+}
+.hi-content .rate_metatdata{	margin-bottom:15px; margin-top:3px;}
+.share_metadata_box{
+	float:left;
+	width:100%;
+}
+#metadata_landing_page .share_metadata{ margin-top:0;}
+.share_metadata_box .tags{ width:97%; text-align:center;}
+.share_metadata_box .tags a{margin:0 10px;}
+form.fivestar-widget
+{
+	clear:none;
+}
+.rate
+{
+	float:left;
+	font-size:78%;
+	color:#6c6c6c;
+	font-weight:bold;
+	/*background-image:url(../images/icon_rateit.png) ;*/
+	background-repeat:no-repeat;
+	padding:2px 0 6px; /*2px 0 6px 25px*/
+	/*margin-top:-2px;*/
+}
+.metadata_feedback
+{
+	/*float:left;
+	font-size:80%;
+	width:88px;*/
+	margin-top:10px;
+	margin-bottom:0px;
+	clear:both;
+}
+.metadata_tags
+{
+	float:left;
+	/*font-size:80%;*/
+	margin-top:6px;
+	margin-bottom:0px;
+	/*width:100px;*/
+	clear:both;
+}
+#leaf-pages .views-field-body
+{
+	clear:both;
+}
+.tags
+{
+	border: 1px dotted #000000;
+    padding: 8px;
+	background-color:#F5F0DB;
+	margin-bottom:10px;
+	font-size:80%;
+	/*min-height:200px;*/
+	float:left;
+}
+.tags textarea
+{
+	width:500px;
+	font-size:80%;
+}
+.tags label
+{
+	font-weight:bold;
+}
+#content-inner .view-id-view_sponsor_metadata .tags a, #content-inner .view-view-meta-leaf .tags a
+{
+	font-weight:normal;
+}
+.tags_link
+{
+	cursor:pointer;
+	font-weight:bold;
+	font-size:85%;
+	display:block;
+	margin-top:0px;
+	color:#6c6c6c;
+	background-image:url(../images/icon_suggest.png) ;
+	background-repeat:no-repeat;
+	padding:4px 0 3px 24px;
+}
+.metadata_feedback_form
+{
+	border: 2px solid #C7C0A1;
+    display: block;
+    padding: 5px 2px 5px 10px;
+	margin-top:15px;
+	font-size:80%;
+	background-color:#F5F0DB;
+	width:98%;
+	float:left;
+	margin-bottom:15px;
+}
+.metadata_feedback_form .teaser-button, .metadata_feedback_form input[value="Preview"], .metadata_feedback_form fieldset
+{
+	display:none;
+} 
+.metadata_feedback_form textarea
+{
+	height:80px;
+}
+.form-radios>div
+{
+	display:inline;
+	padding-right:10px;
+}
+.metadata_feedback .captcha img {
+    border: 1px solid #999999;
+    margin-left: 0px;
+    padding: 5px;
+}
+.feedback_icon
+{
+	color:#6c6c6c;
+	font-weight:bold;
+	font-size:85%;
+	cursor:pointer;
+	background-image:url(../images/icon_feedback.png) ;
+	background-repeat:no-repeat;
+	padding:4px 16px 5px 25px;
+}
+.metadata_feedback_form input[type="text"]
+{
+	background: none repeat scroll 0 0 #fff;
+    color: #000;
+}
+/* user registration*/
+#user-register label{
+	float:left;
+	width:200px;
+	display:block;
+	text-align:right;
+	font-size:80%;
+}
+#user-register #edit-profile-subscribe-newsletter-wrapper  label {
+	width:400px!important;
+}
+
+#user-register fieldset legend{
+		font-size:85%;
+		font-weight:bold;
+}
+
+#user-register .description{
+	margin-left:200px;
+	font-size:75%;
+	padding-top:5px;
+	
+}
+#edit-profile-education-wrapper{clear:both;
+}
+/** India glance image **/
+.india_glance_profile
+{
+	padding-left:8px;
+}
+.india_glance_heading .pane-content{
+	display:none;
+}
+.IAAG .field-content p
+{
+	clear:both;
+	font-size:75%;
+	padding:12px 0;
+}
+.IAAG_home .field-content p	
+{
+	font-size:100%;
+}
+.IAAG p
+{
+	font-size:80%;
+}
+.IAAG .panels-flexible-region-48-center
+{
+	padding-left:15px;
+	width:70%;
+}
+
+#template_three_column #content-inner #iaag_internal_page
+{
+	width:960px;
+}
+#iaag_internal_page .panels-flexible-region-47-center	
+{
+	background:#FFFFFF;
+}
+#iaag_internal_page .more-link
+{
+	float:none;
+	margin-bottom:10px;
+}
+/** Page comment block**/
+.pane-formblock-page-feedback, #metadata_suggestion, #block-formblock-page_feedback
+{
+	
+	/*background-color:#EEEFE5;*/
+	padding:5px 10px 10px 20px;
+	font-size:80%;
+	border:1px dotted #6c6c6c;
+	min-height:32px;
+	margin-top:20px;
+}
+#internal-pages .pane-formblock-page-feedback h2, #level2-pages .pane-formblock-page-feedback h2, #leaf-pages .pane-formblock-page-feedback h2, .IAAG .pane-formblock-page-feedback h2, #metadata_suggestion h2, #block-formblock-page_feedback h2, #publications .pane-formblock-page-feedback h2
+{
+	margin:0;
+	background-color:#e9e9e9;	
+	padding-left:55px;
+	border-bottom:1px solid #cbcbcb;
+	width:480px;
+	
+}
+#peoplegroup-leaf-pages .pane-formblock-page-feedback h2{
+	margin:0;
+	background-color:#e9e9e9;	
+	padding-left:55px;
+	border-bottom:1px solid #cbcbcb;
+	width:640px;
+}
+#peoplegroup-leaf-pages .pane-formblock-page-feedback h2, #metadata_suggestion h2, #block-formblock-page_feedback h2
+{
+	font-size:110%;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-weight:bold;
+	padding-bottom:0px;
+	
+}
+.people_groups_leaf #block-formblock-page_feedback h2{
+	width:640px;
+}
+.people_groups_leaf .pane-formblock-page-feedback, #block-formblock-page_feedback
+{
+	margin-left:21px;
+	margin-right:28px;
+}
+.pane-formblock-page-feedback textarea, #metadata_suggestion textarea, #block-formblock-page_feedback textarea
+{
+	height:50px;
+	font-size:100%;		
+}
+.pane-formblock-page-feedback fieldset, .pane-formblock-page-feedback input[value="Preview"], .pane-formblock-page-feedback .teaser-button, .pane-formblock-page-feedback label, .pane-formblock-page-feedback input[name="title"] , #metadata_suggestion input[value="Preview"], #metadata_suggestion fieldset, #metadata_suggestion .teaser-button, #block-formblock-page_feedback input[value="Preview"], #block-formblock-page_feedback fieldset, #block-formblock-page_feedback .teaser-button, #block-formblock-page_feedback .form-item label
+{
+	display:none;
+}
+#block-formblock-page_feedback .form-radios label
+{
+	display:inline;
+}
+.pane-formblock-page-feedback .form-radios label, #block-formblock-page_feedback .form-radios label
+{
+	font-weight:bold;
+	font-size:85%;
+}
+#internal-pages .pane-formblock-page-feedback h2, #level2-pages .pane-formblock-page-feedback h2, #leaf-pages .pane-formblock-page-feedback h2, #metadata_suggestion h2
+{
+	padding-bottom:0px;
+}
+.pane-formblock-page-feedback .form-item, #metadata_suggestion .form-item, #block-formblock-page_feedback .form-item{
+	margin:0px;
+}
+.form-item .description{
+	padding:5px;
+}
+
+/** GOL edit page **/
+.gol_edit_page #edit-title-wrapper, .gol_edit_page .body-field-wrapper, .gol_edit_page #edit-preview-changes, .content-add-more, .content-multiple-drag, .gol_edit_page fieldset, .gol_edit_page .link-field-url .description
+{
+	display:none;
+}
+.gol_edit_page .form-item, .gol_edit_page .form-checkboxes, .gol_edit_page .form-radios
+{
+	margin:4px;
+}
+.gol_edit_page .resizable-textarea
+{
+	width:400px;
+}
+.gol_edit_page input[type="text"]
+{
+	width:250px;
+}
+/*.gol_edit_page #field-phone-items, .gol_edit_page #field-tollfreenumber-items
+{
+	float:left;
+	width:350px;
+}*/
+.gol_edit_page
+{
+	border: 2px solid #C7C0A1;
+    /*display: block;*/
+    padding: 5px 2px 5px 10px;
+	margin-top:15px;
+	font-size:80%;
+}
+#recent_history
+{
+	border:1px solid #ccc;
+	padding:10px;
+}
+#state_links
+{
+	padding:6px;
+	border: 1px solid #a3c6d1;
+	background-color: #f0f8f9;
+	margin-top:9px;
+	min-height:290px;
+}
+.gol_edit_page table
+{
+	margin:7px;
+}
+.gol_edit_page textarea
+{
+	height:40px;
+	font-size:90%;
+}
+
+/** user bookmark **/
+
+#user_bookmark .views-table
+{
+	margin:1px 10px 0 0;
+	width:100%;
+	border:0px
+}
+
+#user_bookmark .views-table th,#user_bookmark  .views-table tr.even,#user_bookmark  .views-table tr.odd{
+	background:none;
+
+}
+
+#user_bookmark .views-table td
+{
+	border-bottom:none;
+
+}
+
+/** For personalized **/
+#template_three_column #content-inner #home_person
+{
+	width:960px;
+}
+#home_person .panels-flexible-region-36-center
+{
+	background:#fff;
+	min-height:267px;
+}
+.body-field-wrapper p, .tips
+{
+	display:none;
+}
+.result-page ol li
+{
+	list-style: none outside none;
+}
+.result-page ol
+{
+	padding:0px;
+}
+/** For News **/
+
+#news-list a{
+	color: #000000;
+    font-size: 100%;
+    font-weight: bold;
+    text-decoration: none;
+		
+}
+
+/*** Metadata landing page ***/
+
+#metadata_landing_page
+{
+	width:875px;
+	padding: 20px 0 15px 40px;
+}
+
+#metadata_landing_page h3
+{
+	border-bottom:2px solid #06C;
+	border-top:1px dotted #06C;
+	padding-top:5px;
+}
+#metadata_landing_page .rate_metatdata
+{
+	margin-top:0;
+}
+#metadata_landing_page .views-field-phpcode
+{
+	float:left;
+	width:100%;
+}
+#metadata_landing_page .pane-view-meta-leaf .field-content p
+{
+	padding-left:0px;
+	padding-top:6px;
+}
+
+/***  Search Page ****/
+.search-page .search-info
+{
+	display:none;
+}
+.search-results dt
+{
+	background:url("../images/bullet_whats_new.gif") no-repeat scroll left 16px transparent;
+	padding-left:12px;
+}
+.search-results dd
+{
+	margin:0px;
+	padding:5px 0 0 12px;
+	border-bottom:1px dotted;
+	height:auto;
+}
+.search-results dt a
+{
+	color: #006699;
+    font-size: 80%;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/** Metadata landing page **/
+#main_metadata
+{
+	border:1px dotted #999999;
+	background-color:#f2f2f2;
+	padding:0 11px 0 11px;
+	margin-bottom:30px;
+	float:left;
+	width:100%;
+}
+#metadata_landing_page .views-field-field-un-ministry-value ul.hierarchical-select-lineages li, #metadata_landing_page .views-field-field-st-dept-value ul.hierarchical-select-lineages li
+{
+	font-size:80%;
+	padding-bottom:5px;
+	color:#6c6c6c;
+}
+#metadata_landing_page .views-label-field-un-ministry-value, #metadata_landing_page .views-label-field-st-dept-value
+{
+	color:#6c6c6c;
+	font-weight:bold;
+	font-size:80%;
+}
+#metadata_landing_page span.views-label-field-st-dept-value, #metadata_landing_page span.views-label-field-un-ministry-value
+{
+	float:left;
+	padding-right:5px;
+}
+#metadata_landing_page .metadata_tags
+{
+	margin-top:-2px;
+	float:none;
+}
+#metadata_landing_page .metadata_feedback
+{
+	margin-top:2px;
+}
+/*** How do i section ***/
+#tabs-mini-panel-minipanel-how-do-i-center ul
+{
+	background:none;
+}
+#tabs-mini-panel-minipanel-how-do-i-center .panels-flexible-region-inside-last
+{
+	padding-top:0px;
+}
+#template_three_column #tabs-mini-panel-minipanel-how-do-i-center .inside
+{
+ margin:0;
+}
+#tabs-mini-panel-minipanel-how-do-i-center .view-display-id-page_recently_added .view-content, #tabs-mini-panel-minipanel-how-do-i-center .view-display-id-page_top_online_service .view-content
+{
+	border:11px solid #FDEAAF;
+	border-top-width:6px;
+}
+#tabs-mini-panel-minipanel-how-do-i-center .view-display-id-page_recently_added .view-content .item-lists ul, #tabs-mini-panel-minipanel-how-do-i-center .view-display-id-page_top_online_service .view-content .item-lists ul
+{
+	background: url("../images/search_howdoi_bg.jpg") repeat-x scroll 0 0 #FFFFFF;
+    border: 1px solid #FDC100;
+	padding:5px 10px 10px;
+}
+/** Scheme Feedback **/
+.static #block-formblock-page_feedback
+{
+	margin-top:6px;
+	margin-bottom:-10px;
+}
+#scheme-landing span.views-label
+{
+	float:left;
+	padding-right:10px;
+	font-weight:bold;
+	text-align:right;
+	width:160px;
+	display:block;
+	color:#99026F;
+}
+#scheme-landing .views-field
+{
+	padding:7px;
+}
+#scheme-landing .field-content
+{
+
+	padding-left:175px;
+}
+#scheme-landing
+{
+	border: 6px solid #CCCCCC;
+    margin-left: 18px;
+    margin-right: 4px;
+    padding: 15px;
+	background:url(../images/scheme_bg.jpg) repeat-y;
+}
+#scheme-landing .views-field-field-scheme-st-dept-value ul.hierarchical-select-lineages li, #scheme-landing .views-field-field-scheme-un-ministry-value ul.hierarchical-select-lineages li
+{
+	color:#6c6c6c;
+	font-size:85%;
+}
+#search-topics #edit-scheme-ministry-hierarchical-select-selects-2 , #search-topics #edit-scheme-ministry-hierarchical-select-selects-3, #search-topics #edit-acts-central-hierarchical-select-selects-2, #search-topics #edit-acts-central-hierarchical-select-selects-3, #search-topics  #edit-docs-ministry-hierarchical-select-selects-2, #search-topics  #edit-docs-ministry-hierarchical-select-selects-3, #search-topics #edit-forms-min-hierarchical-select-selects-2, #search-topics #edit-forms-min-hierarchical-select-selects-3, #search-topics #edit-forms-state-hierarchical-select-selects-1, #search-topics #edit-forms-state-hierarchical-select-selects-2, #search-topics #edit-scheme-stat-hierarchical-select-selects-1, #search-topics #edit-scheme-stat-hierarchical-select-selects-2, #search-topics #edit-acts-state-hierarchical-select-selects-1, #search-topics #edit-acts-state-hierarchical-select-selects-2, #search-topics #edit-docs-state-hierarchical-select-selects-1, #search-topics #edit-docs-state-hierarchical-select-selects-2 
+{
+	width:450px;
+}
+.block-apachesolr_search ul ul.expanded-facet ul.expanded-facet, #static-content ul.links li.node_translation_hi, #static-content ul.links li.node_translation_en
+{
+	display:none;
+}
+.e-gov #content-inner #level2-pages, .e-gov #content-inner #internal-pages, .e-gov #content-inner #leaf-pages, .publications #content-inner #level2-pages, #template_three_column #content-inner #publications
+{
+	width:960px;
+}
+.e-gov #content-inner #level2-pages .panels-flexible-region-4-center, .e-gov #content-inner #internal-pages .panels-flexible-region-2-panel_content, .e-gov #content-inner #leaf-pages .panels-flexible-region-5-center, #template_three_column #content-inner #publications .panels-flexible-region-11-center, .publications #content-inner #level2-pages .panels-flexible-region-4-center, #template_three_column #content-inner #publications .panels-flexible-region-10-center
+{
+	background:#fff;
+}
+.panels-flexible-region-11-publication_left, #publications .panels-flexible-region-4-level2_left, #publications .panels-flexible-region-10-publication_left, .e-gov .panels-flexible-region-2-panel_left, .e-gov .panels-flexible-region-5-leaf_left
+{
+	width:22%;
+}
+#publications .pane-formblock-page-feedback, .e-gov #leaf-pages .pane-formblock-page-feedback
+{
+	margin-top:15px;
+}
+
+/*** For Performance section ***/
+.block #mini-panel-right_sidebar_performance .pink h2.pane-title {
+	color: #000000;
+	font-weight: bold;
+	padding-bottom: 3px;
+	margin:10px 0 0 0px;
+	font-size:70%;
+	border:none;
+}
+
+/*** For comment and tags using ahah ***/
+.view-view-meta-leaf .form-submit, .view-view-sponsor-metadata .form-submit
+{
+	float:left;
+}
+input[value='Suggest Tags']
+{
+	background:url('../images/suggest_tag.png') no-repeat 0 0;
+	height:24px;
+	width:111px;
+	border:none;
+	cursor:pointer;
+	text-indent:-999px;
+	margin:5px 2px 0 0;
+	font-size:0;
+	line-height:0;
+}
+input[value='Suggest Tags']:hover
+{
+	background-position:0 -25px;
+}
+.hi-content input[value='Suggest Tags'],.hi-content input[value='टैग सुझाएँ']
+{
+	background:url('../images/suggest_tag_hn.png') no-repeat 0 0;
+	height:24px;
+	width:102px;
+	border:none;
+	cursor:pointer;
+	text-indent:-999px;
+	margin:5px 2px 0 0;
+	font-size:0;
+	line-height:0;
+}
+.hi-content input[value='Suggest Tags']:hover
+{
+	background-position:0 -25px;
+}
+input[value='Comment']
+{
+	background:url('../images/comments.png') no-repeat 0 0;
+	height:24px;
+	width:102px;
+	border:none;
+	cursor:pointer;
+	text-indent:-999px;
+	margin:5px 3px 0 0;
+	font-size:0;
+	line-height:0;
+}
+input[value='Comment']:hover
+{
+	background-position:0 -25px;
+}
+
+.share_metadata 
+{
+	background:url('../images/share.png') no-repeat 0 0;
+	height:24px;
+	width:106px;
+	float:left;
+	border:none;
+	cursor:pointer;
+	text-indent:-999px;
+	margin:5px 3px 0 0;
+	font-size:0;
+	line-height:0;
+}
+.hi-content .share_metadata{background:url('../images/share_hi.png') no-repeat 0 0;}
+.share_metadata:hover
+{
+	background-position:0 -25px;
+}
+input[value='टिप्पणी']
+{
+	background:url('../images/comments_hn.png') no-repeat 0 0;
+	height:24px;
+	width:102px;
+	border:none;
+	cursor:pointer;
+	text-indent:-999px;
+	margin:5px 3px 0 0;
+	font-size:0;
+	line-height:0;
+}
+input[value='टिप्पणी']:hover
+{
+	background-position:0 -25px;
+}
+
+/*** Accessibility option ***/
+a#text_resize_decrease
+{
+	margin:-2px 0 0;
+	background:url("../images/textsizeMinus.png") no-repeat scroll 0 0 transparent;
+	height:1px;
+	padding-top:20px;
+}
+a#text_resize_reset
+{
+	margin:-2px 2px 0 0;
+	background:url("../images/textsizeNormal.png") no-repeat scroll 0 0 transparent;
+	height:1px;
+	padding-top:23px;
+	width:24px;
+}
+a#text_resize_increase
+{
+	margin:-2px 0 0;
+	background:url("../images/textsizePlus.png") no-repeat scroll 0 0 transparent;
+	height:1px;
+	padding-top:26px;
+	width:26px;
+}
+.textContrast
+{
+	margin:	-15px 0 0 5px;
+}
+/*** New Metdata suggestion block ***/
+#edit-suggest-submit
+{
+	background: url("../images/suggest-us.png") no-repeat scroll 0 0 transparent;
+    border: medium none;
+    cursor: pointer;
+    height: 46px;
+    margin-top: 2px;
+    text-indent: -999px;
+    width: 137px;
+	font-size:0;
+}
+.hi-content #edit-suggest-submit
+{
+	background: url("../images/suggest-hindi-us.png") no-repeat scroll 0 0 transparent;
+}
+#suggest-wrapper #edit-title-wrapper, #suggest-wrapper #edit-teaser-include-wrapper
+{
+	display:none;
+}
+#metadata_landing_page input[value='Suggest Tags']
+{
+	margin-top:-2px;
+}
+#metadata_landing_page input[value='Comment']
+{
+	margin-top:-1px;
+}
+/*** For sitemap css ****/
+#npi_sitemap {font-size:170%; margin-top:-40px;overflow:hidden;}
+#npi_sitemap ul li{font-size:84%;}
+#npi_sitemap ul li.last{ background-image:none}
+.textSize{
+width:83px;
+}
+.e-gov .views_slideshow_singleframe_main
+{
+	width:535px;
+}
+.view-view-search-e-governance h3
+{
+	display:none;
+}
+.rate_metatdata .description
+{
+	padding:0px;
+}
+.e-gov #content-inner #leaf-pages .panels-flexible-region-5-center
+{
+	padding-left:33px;
+}
+.e-gov #leaf-pages .pane-formblock-page-feedback h2
+{
+	width:100%;
+	padding-left:3px;
+}
+#menu .block
+{
+	margin-bottom:0px;	
+}
+/*** Beta launch ***/
+.beta_border
+{
+	border:5px solid #488ac6; 
+	background-image:url("../images/beta_bg.png");
+	background-repeat:repeat-x;
+}
+
+.beta_border h1 {margin:0; padding:0; color:#ffffff; font-size:120%; text-align:center; background-color:#488AC6;padding-bottom:3px;}
+
+.beta_border p{ 
+font-size:85%;
+padding:3px 10px 10px 10px;
+}
+.beta_border ul{
+	margin-bottom:10px;
+	margin-left:32px;
+	list-style:square outside none;
+	font-size:80%;
+}
+ul.quicktabs_tabs.quicktabs-style-basic li{
+	padding-left:0px;
+	padding-right:0px; 
+}
+#mini-panel-minipanel_home_feed ul.quicktabs_tabs.quicktabs-style-basic li.last{ margin-right:0px; padding-right:7px; padding-right:0px\9;}
+#mini-panel-minipanel_home_feed ul.quicktabs_tabs.quicktabs-style-basic li a{ padding:0 5px; padding:0 3px\9;}
+#mini-panel-minipanel_home_feed #quicktabs-view_feeds_home ul.quicktabs_tabs.quicktabs-style-basic li.last, #mini-panel-minipanel_home_feed #quicktabs-news_feeds_hindi_home ul.quicktabs_tabs.quicktabs-style-basic li.last{ margin-right:0px; padding-left:4px; padding-right:4px; padding-right:0px\9; padding-left:0px\9;}
+#mini-panel-minipanel_home_feed #quicktabs-view_feeds_home ul.quicktabs_tabs.quicktabs-style-basic li a,#mini-panel-minipanel_home_feed #quicktabs-news_feeds_hindi_home ul.quicktabs_tabs.quicktabs-style-basic li a{padding:0 7px 0 8px; padding:0 3px 0 4px\9; }
+.hi-content #mini-panel-minipanel_home_feed ul.quicktabs_tabs.quicktabs-style-basic li.last{ margin-right:0px; padding-right:6px; padding-right:0px\9;}
+.hi-content #mini-panel-minipanel_home_feed ul.quicktabs_tabs.quicktabs-style-basic li a{ padding:0 22px 0 30px;}
+.hi-content #mini-panel-minipanel_home_feed #quicktabs-view_feeds_home ul.quicktabs_tabs.quicktabs-style-basic li.last,.hi-content #mini-panel-minipanel_home_feed #quicktabs-news_feeds_hindi_home ul.quicktabs_tabs.quicktabs-style-basic li.last{ margin-right:0px; padding-left:4px; padding-right:4px;padding-left:0px\9; padding-right:0px\9;}
+.hi-content #mini-panel-minipanel_home_feed #quicktabs-view_feeds_home ul.quicktabs_tabs.quicktabs-style-basic li a, .hi-content #mini-panel-minipanel_home_feed #quicktabs-news_feeds_hindi_home ul.quicktabs_tabs.quicktabs-style-basic li a{padding:0 7px;}
+.hi-content div.anythingSlider .thumbNav{
+	left:-54px;
+}
+.hi-content div.anythingSlider .start-stop{
+	left:428px;
+}
+.hi-content #mini-panel-minipanel_spotlight_home .more-link{
+	padding-top:5px;
+}
+.people_groups_leaf #edit-language-wrapper, #leaf-pages #edit-language-wrapper, #amendments #edit-language-wrapper
+{
+	display:none;
+}
+.views-slideshow-controls-bottom #views_slideshow_singleframe_image_count_view_topics_slideshow-block_1{
+	width:120px;
+}
+.showHideNav{
+	cursor:pointer;
+}
+.pane-view-mp-search-loksabha .view-header ,.view-view-mp-search-rajyasabha .view-header{ position:relative;}
+.pane-view-mp-search-loksabha .view-header span.count_total,.view-view-mp-search-rajyasabha .view-header span.count_total{ position:absolute; margin-top:115px; *margin-top:135px; font-size:80%; font-weight:bold; margin-left:20px;}
+#loksabha .view-content ul,#rajyasabha .view-content ul{padding-top:20px;}
+#loksabha .view-content ul li ,#rajyasabha .view-content ul li{font-size:80%;}
+#loksabha .view-content ul li a,#rajyasabha  .view-content ul li a{text-decoration:none;}
+#loksabha .view-content ul li a:hover,#rajyasabha  .view-content ul li a:hover{ text-decoration:underline;}
+.myGovtMore {text-align:right; font-size:90%;}
+.myGovtMore a{ color:#006600 !important;}
+#metadata_suggestion h2:pane-title{width:87%;}
+#static-content input[value="Comment"],.view-view-search-leaf input[value="Suggest Tags"]{
+	float:left;
+}
+
+a#text_resize_decrease, a#text_resize_reset,a#text_resize_increase{
+	display:block;
+	width:23px;
+	text-indent:-9999px;
+	float:left;
+	margin-left:4px;
+}
+#loksabha #edit-language-wrapper, #rajyasabha #edit-language-wrapper,#iaag_internal_page #edit-language-wrapper,#metadata_suggestion #edit-language-wrapper, #council_minister #edit-language-wrapper
+{
+	display:none;
+}
+.item-list .pager li
+{
+	padding:0.2em;
+}
+#leaf-pages #metadata_suggestion h2,#content-inner #metadata_suggestion h2, .myGovt #leaf-pages .pane-formblock-page-feedback h2
+{
+	width:87%;
+}
+.textContrast img
+{
+	border:0;
+}
+#metadata_landing_page input[value='टिप्पणी']
+{
+	margin:0 3px 0 0;
+}
+#outer #edit-preview
+{
+	display:none;
+}
+#mini-panel-minipanel_how_do_i .item-lists {
+	font-size:66%;
+	line-height:120%;
+}
+#mini-panel-minipanel_how_do_i .item-lists ul li,#quicktabs_container_relevant_links .item-lists ul li{
+	background:url("../images/bullet_whats_new.gif") no-repeat scroll left 40% transparent;
+}
+#tabs-mini-panel-minipanel-how-do-i-center .views-field-title a
+{
+	font-size:120%;
+	color:#006699;
+	font-weight:bold;
+}
+#tabs-mini-panel-minipanel-how-do-i-center .views-field-title
+{
+	padding-bottom:5px;	
+}
+.IAAG .views-exposed-form .views-exposed-widget .form-submit{
+	margin-top:-.1em;
+}
+.hi-content .IAAG .views-exposed-form .views-exposed-widget .form-submit{
+	margin-top:-.4em;
+}
+.spotlight_archive,.top-spotlights {
+	margin-left:80px;
+}
+.view-view-spotlight-archive .item-list {
+	float:left;
+	width:100%;
+}
+#rajyasabha .view-empty, #loksabha .view-empty
+{
+	margin: 60px 0 10px 20px;
+	margin-bottom: 10px;
+	font-size: 85%;
+	font-weight: bold;
+	color: #FF0000;
+}
+form.fivestar-widget div.description
+{
+	/*width:20px\9;*/
+	clear:both;
+}
+.views-table td.views-field-phpcode{
+	width:250px;
+}
+.views-table td.views-field-rownumber{
+	width:50px;
+}
+.middleColumn img.imagefield{
+	z-index:0;
+}
+#template_three_column.logout {
+	text-align:center;
+}
+#template_three_column.logout #content-inner{
+	padding:80px 50px;
+	font-size:130%;
+}
+#template_three_column.logout .logoutconfirm-form{
+	padding:10px 0;
+}
+#template_three_column.logout .form-submit{
+	padding:0px 20px;
+}
+#personalized-list .result-page ol li .views-field {
+	float:left;
+	width:100%;
+}
+#personalized-list .result-page ol li form{
+	float:left;
+}
+#personalized-list .result-page ol li .field-content p{
+	padding-left:0px;
+}
+.hi-content form.fivestar-widget .form-item  .description div.fivestar-summary{
+	height:20px;
+}
+.listoffset li {
+	padding-top:5px;
+	font-size:88%;
+}
+.listoffset li a{
+	color:#006699;
+	text-decoration:none;
+}
+#edit-language.form-select{
+	display:none;
+}
+.sitemap {
+	padding-top:30px;
+}
+.visitor_summary .listoffset .imageicon{
+	width:16px;
+}
+.npi_user_profile ul.primary li a .tab{
+	font-size:75%;
+}
+.npi_user_profile  #tabs-mini-panel-minipanel-how-do-i-center .views-field-title a{
+	font-size:95%;
+}
+#whats_new_right_sidebar {
+	border-bottom:1px solid #999;
+}
+.more-link-symbols
+{
+	margin:0;
+	background-color:#e9e9e9;	
+	padding-left:427px;
+	border-bottom:1px solid #cbcbcb;
+	font-size:90%;
+	font-weight:bold;		
+}
+.more-link-symbols a
+{
+	text-decoration:none;
+	color:#000;
+}
+.custom-error #header .topHeader
+{
+	height:0px;
+}
+.custom-error #outer
+{
+	border-bottom:1px solid #A3C6D1;
+}
+
+/**********Bookmark********************/
+.flag-wrapper {
+	float:left;
+}
+.flag-bookmarks {
+	position:relative;
+}
+.flag-bookmarks a.flag-action, .flag-bookmarksterms a.flag-action{
+	background: url("../images/bookmark.png")  no-repeat scroll left 105% transparent;
+	background-repeat:no-repeat;
+	width:22px;
+	height:22px;
+	text-indent:-2000px;
+	display:inline-block;
+	margin-top:1px;
+}
+.flag-bookmarks a.flag-action:hover, .flag-bookmarksterms a.flag-action:hover{
+	background: url("../images/bookmark.png")  no-repeat scroll left 0% transparent;
+}
+.fivestar-form-item  .fivestar-widget {
+	height:24px!important;
+	margin-top:2px;
+}
+.flag-bookmarks .flag-message {
+	position:absolute;
+	left:-145px;
+	top:28px;	
+	color:green;
+	font-size:70%;
+	font-style:italic;
+}
+#user_bookmark .flag-bookmarks .flag-message  {
+	left:-265px;
+}
+.static .flag-bookmarks .flag-message  {
+	left:-200px;
+}
+.schemes  .flag-bookmarks .flag-message {
+	left:-195px;
+}
+.flag-bookmarks a.unflag-action, .flag-bookmarksterms a.unflag-action{
+	background: url("../images/unbookmark.png")  no-repeat scroll left 105% transparent;
+	width:22px;
+	height:22px;
+	text-indent:-2000px;
+	display:inline-block;
+	margin-top:1px;
+}
+.flag-bookmarks a.unflag-action:hover, .flag-bookmarksterms a.unflag-action:hover{
+	background: url("../images/unbookmark.png")  no-repeat scroll left 0% transparent;
+}
+/*
+#home-personalized  .flag-bookmarks a.flag-action, .flag-bookmarksterms a.flag-action{
+	background: url("../images/bookmark.png")  no-repeat scroll left 105% transparent;
+}*/
+#home-personalized  .flag-bookmarks a.unflag-action, #home-personalized .flag-bookmarksterms a.unflag-action{
+	background: url("../images/bookmark_small.png")  no-repeat scroll left 100% transparent;
+}
+#home-personalized  .flag-bookmarks a.unflag-action:hover, #home-personalized .flag-bookmarksterms a.unflag-action:hover{
+	background: url("../images/bookmark_small.png")  no-repeat scroll left 131% transparent;
+}
+#home-personalized  .flag-bookmarks a.flag-action, #home-personalized .flag-bookmarksterms a.flag-action{
+	background: url("../images/bookmark_small.png")  no-repeat scroll left 22% transparent;
+}
+#home-personalized  .flag-bookmarks a.flag-action:hover,#home-personalized   .flag-bookmarksterms a.flag-action:hover{
+	background: url("../images/bookmark_small.png")  no-repeat scroll left 57% transparent;
+	background-repeat:no-repeat;	
+}
+#quicktabs-personalized .item-list li .views-field-title {
+	width:260px;
+	float:left;
+	/*height:22px;*/
+	overflow:hidden;
+	margin-left:10px;
+	padding:1px 0;
+}
+#user_bookmark  ul{
+	padding-left:0px;
+}
+
+#quicktabs-personalized .item-list li .views-field-ops{
+	width:20px;
+	float:right;
+	text-align:center;
+	height:7px;
+	overflow:hidden;
+}
+.flag-bookmarksterms {
+	position:absolute;
+	right:10px;
+	width:260px;
+}
+.flag-bookmarksterms a,.flag-bookmarksterms  a{
+	float:right;
+}
+.flag-bookmarksterms .flag-message{
+	float:right;
+	font-size:70%;
+	text-align:right;
+	margin-top:10px;
+	width:100%;
+	color:green;
+	font-style:italic;
+}
+.flag-bookmarksterms .flag-throbber{
+	float:right;
+	margin-top:5px;
+}
+#leaf-pages .result-page  .flag-bookmarks a.unflag-action,#leaf-pages  .result-page .flag-bookmarks a.flag-action,.myGovt    .flag-bookmarks a.unflag-action,.myGovt  .flag-bookmarks a.flag-action,.myGovt    .flag-bookmarks a.unflag-action,.myGovt  .flag-bookmarks a.flag-action, #content-inner .flag-bookmarksterms a.flag-action, #content-inner  .flag-bookmarksterms a.unflag-action{
+	margin-top:6px;
+}
+.schemes .result-page li  .views-field-title {
+	width:85%;
+	float:left;
+}
+.schemes .result-page li  .schemes-bookmark {
+	width:10%;
+	float:left;
+	text-align:center;
+	padding-left:10px;
+}
+#static-content  .flag-bookmarks{
+	position:absolute;
+	right:0;
+	top:0;
+}
+#home-personalized span.whoswho{
+	background: url("../images/login_icons.png")  no-repeat scroll left -1% transparent;
+}
+#home-personalized span.offwebsite{
+	background: url("../images/login_icons.png")  no-repeat scroll left 11% transparent;
+}
+#home-personalized span.govtcontact{
+	background: url("../images/login_icons.png")  no-repeat scroll left 22% transparent;
+}
+#home-personalized span.impwebsite{
+	background: url("../images/login_icons.png")  no-repeat scroll left 34% transparent;
+}
+#home-personalized span.teldirectory{
+	background: url("../images/login_icons.png")  no-repeat scroll left 45% transparent;
+}
+#home-personalized span.services{
+	background: url("../images/login_icons.png")  no-repeat scroll left 56% transparent;
+}
+#home-personalized span.schemes{
+	background: url("../images/login_icons.png")  no-repeat scroll left 67% transparent;
+}
+#home-personalized span.forms1{
+	background: url("../images/login_icons.png")  no-repeat scroll left 78% transparent;
+}
+#home-personalized span.acts{
+	background: url("../images/login_icons.png")  no-repeat scroll left 89% transparent;
+}
+#home-personalized span.documents{
+	background: url("../images/login_icons.png")  no-repeat scroll left 101% transparent;
+}
+#quicktabs-personalized ul.quicktabs_tabs li {
+	margin:0 2px;
+}
+#quicktabs-personalized ul.quicktabs_tabs li a{
+	padding:0 5px; padding:0 3px\9;
+	text-decoration:none;
+}
+#quicktabs-personalized ul.quicktabs_tabs li.active{
+	background: url(../images/home_tab_bg.jpg) repeat-x;
+	font-weight: bold;
+	/*margin: 0 0 0 5px;
+	padding: 2px 6px 4px;*/
+	width: 90px;
+	border:solid 1px #72a4ff;
+}
+#quicktabs-personalized ul.quicktabs_tabs li.active a{
+	color:#FFF;
+}
+#quicktabs-personalized ul.quicktabs_tabs li.active a:hover{
+	color:#CCC;
+}
+#quicktabs-personalized ul.quicktabs_tabs li {
+	/*border:none;*/
+	border:1px solid #CCC;
+	background:url(../images/search_tab_bg.jpg) repeat-x;
+	padding:0;
+}
+#quicktabs_container_personalized {
+	border-top: 2px solid #c1d6fc;
+	overflow:hidden;
+	border:1px solid #A3C6D1;
+	background:url("../images/search_peoplegroups_bg.jpg") repeat-x scroll 0 0 transparent;
+	min-height:283px;
+}
+
+ #home-personalized  ul.listoffset{
+	padding:0 0 0 2em;
+ }
+/* #home-personalized  .item-list ul  li{
+	padding:0 0 0 1em;
+	background: url("../images/bullet_whats_new.gif") no-repeat scroll left 5px transparent;
+
+ }*/
+  #home-personalized  .item-list ul a{
+	font-weight:normal;  
+  }
+#home-personalized  .item-list ul{
+	margin:0;
+	padding:0 0 0 1em;
+}
+
+#quicktabs_tabpage_personalized_1 .item-list ul li{
+	margin:0
+}
+#quicktabs_tabpage_personalized_1  .bookmarks-terms .item-list {
+	font-size:70%;
+}
+#quicktabs_tabpage_personalized_1  .bookmarks-terms .item-list li span {
+	margin-left:10px;
+	width:20px;
+}
+#quicktabs_tabpage_personalized_1  .bookmarks-terms .item-list li  .views-field-phpcode{
+	width:93%;
+	float:left;
+	overflow:hidden;
+}
+ #home-personalized   h2{
+	border-bottom:1px solid #A3C6D1;
+	margin-left:5px;
+}
+.pane-quicktabs-personalized h2{
+	display:none;
+}
+#mini-panel-home_bookmark h2{
+	display:block;
+	margin-left:5px;
+	padding-bottom:1px;
+	width:97%;
+}
+#home  .view-View-myprofile  .views-field-name{
+	width:35%;
+	float:left;
+}
+#home  .view-View-myprofile    .views-field-access{
+	width:34%;
+	float:left;
+	padding-top:4px;
+}
+#home .view-View-myprofile   .views-field-uid  {
+	width:30%;
+	float:left;	
+	padding-top:3px;
+}
+ #home .view-View-myprofile{
+	font-size:70%;
+	float:left;
+	padding-top:50px;
+	width:100%;
+}
+ #home .view-View-myprofile h2{
+	font-size:120%;
+	margin-top:0;
+	background: url("../images/welcome_bg.jpg")repeat-y scroll 0 0 transparent;
+	padding:3px 5px 5px;	
+ }
+#mini-panel-home_personalized .panels-flexible-region-first {
+	width:39%;
+}
+#mini-panel-home_personalized .panels-flexible-region-last{
+	width:60%;
+}
+#block-panels_mini-home_bookmark{
+		margin-bottom:5px;
+}
+#block-panels_mini-home_bookmark .panels-flexible-region-last, #mini-panel-recent_visited .panels-flexible-region-last{ 
+	width:100%;
+}
+#mini-panel-home_bookmark .pane-flag-bookmarks h2{
+	margin:0 0 0 5px;
+}
+#mini-panel-home_bookmark  .pane-flag-bookmarks{
+	margin-bottom:20px;
+}
+#mini-panel-home_bookmark .pane-flag-bookmarks .bookmarks-terms ul{
+	margin-top:7px;
+}
+#mini-panel-home_bookmark .pane-flag-bookmarks .bookmarks-terms li{
+	margin:3px 0;	
+}
+#mini-panel-home_bookmark .more-link{
+	margin-right:7px;
+}
+#mini-panel-home_bookmark .pane-flag-bookmarks ul li {
+	background:url("../images/bullet_whats_new.gif") no-repeat scroll left 6px transparent;
+}
+.view-flag-bookmarks td .flag-bookmarksterms{
+	position:relative;
+	right:auto;
+	width:auto;
+}
+	
+	/*************** ADD for hight of the News feeds tab problem in Chrome ***********/
+#quicktabs_container_view_feeds_home .quicktabs_tabpage {
+	height:100%;
+}
+#auto_suggesion ul {
+	width:100%;
+}
+.metadata_tags .captcha img
+{
+	margin-left:0px;
+}
+
+/************** Overlay design of auto logout *************/
+.ui-dialog-overlay{
+	background:url("../images/overlay.png") repeat;
+}
+.ui-dialog {
+	background-color:#FFF;
+	padding:10px;
+	height:150px!important;
+	font-size:90%;
+	border:4px solid #353535;
+}
+.ui-dialog .ui-dialog-titlebar-close span{
+	background:url("../images/close-button.png") no-repeat;
+	text-indent:-2000px;	
+	display:inline-block;
+	height:28px;
+	width:25px;
+	float:right;
+}
+.ui-dialog-content{
+	height:150px!important;
+}
+.ui-dialog-buttonpane{
+	bottom:15px!important;
+}
+.online-service-search
+{
+	padding-left:11px;
+}
+.service-banner
+{
+	padding-left:4px;
+}
+#mini-panel-minipanel-how-do-i-center-tab-3 .pane-content, #mini-panel-minipanel-how-do-i-center-tab-4 .pane-content
+{
+	border:11px solid #FDEAAF;
+	border-top-width:6px;
+}
+#mini-panel-minipanel-how-do-i-center-tab-3 .panel-pane, #mini-panel-minipanel-how-do-i-center-tab-4 .panel-pane
+{
+	padding-left:11px;
+}
+#mini-panel-minipanel-how-do-i-center-tab-3 table,#mini-panel-minipanel-how-do-i-center-tab-4 table
+{
+	background: url("../images/search_howdoi_bg.jpg") repeat-x scroll 0 0 #FFFFFF;
+    border: 1px solid #FDC100;
+    padding: 5px 10px 10px;	
+	margin:0;
+}
+#mini-panel-minipanel-how-do-i-center-tab-3 table td,#mini-panel-minipanel-how-do-i-center-tab-4 table td
+{
+	color: #006699;
+    font-size: 72%;
+    font-weight: bold;	
+}
+#mini-panel-minipanel-how-do-i-center-tab-3 table td a,#mini-panel-minipanel-how-do-i-center-tab-4 table td a
+{
+	color: #006699;
+    text-decoration:none;
+    font-weight: bold;	
+}
+#metadata_landing_page .ministry-name, #metadata_landing_page .state-name
+{
+	font-size:80%;
+	color:#6c6c6c;
+	padding-bottom:5px;
+}
+.howDoIDo .view-display-id-page_recently_added
+{
+	padding-left:0;
+}
+#tabs-mini-panel-minipanel-how-do-i-center .view-display-id-page_recently_added .view-content
+{
+	border:0;
+}
+.webinfo
+{
+	clear:both;
+	text-align:center;
+}
+#metadata_landing_page .metadata_feedback_form #edit-title-wrapper,#leaf-pages .metadata_feedback_form #edit-title-wrapper{
+	display:none;
+}
+.share_spotlight .tags a{ margin:0 10px;}
+.share_spotlight .tags {margin-top:10px;}
+.box_linktous {
+    border: 1px solid #cccccc;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f4f1f1;
+}
+#header .sharefacebook{ margin:9px 3px 0 5px; background:url("../images/skipLinkBorder.gif") no-repeat scroll right 3px rgba(0, 0, 0, 0)}
+
+#header .sharetwitter{ margin:9px 3px 0 5px}
+.stateDataDD .pane-content strong {
+    color: #006699;
+    float: left;
+    margin-right: 17px;
+    text-align: right;
+    width: 72%;
+}
+.share_metadata .share_icons ul{padding-left:2px;}
+.share_metadata .share_icons ul li {width:17px; float:left; padding:3px 8px;}
+.share_metadata .share_icons{display:none; float:left; width:100%; background:url("../images/icon_bg.png") no-repeat scroll right 0px rgba(0, 0, 0, 0)}
+.share_metadata .share_icons ul li a img{float:left; border:0;}
+.share_metadata:hover .share_icons, .share_metadata:focus .share_icons, .share_metadata.hover .share_icons,.share_metadata .share_icons a:focus{display:block;}
+
+
+#metadata_landing_page .result-page ol li {float:left}
+
+
+/*Added for New News list (single colomn news details)*/
+#news-list { margin-bottom:10px; margin-top:10px;}
+#news-list .panel-col img {margin-left:1px;}
+#news-list #new-news-details  .view-news-feeds-xml{ width:943px;}
+#news-list #new-news-details  .view-news-feeds-xml ul li{list-style:disc outside url("../images/bull_purpel.gif"); padding-bottom:12px; padding-right:15px; float:left; width:99%;}
+#news-list #new-news-details .view-content{
+	border-left:2px solid #D66BD6;
+	border-right:2px solid #D66BD6;
+	margin:0px 1px;
+	padding:10px 10px 10px 20px;
+	width:933px;
+	height:650px;
+	overflow:auto;
+}
+#news-list #new-news-details .view-footer{
+	 background: url("../images/footer.jpg") no-repeat scroll right 0 rgba(0, 0, 0, 0);
+    font-size: 90%;
+    height: 24px;
+    margin: 0 1px;
+    padding-right: 20px;
+    padding-top: 17px;
+    text-align: right;
+    width: 947px;
+	font-size:90%;
+}
+#news-list #new-news-details .view-footer strong{
+	text-align:right;
+}
+.howDoIDo #search-topics.special-search-forms .pane-content{
+	height:10px;
+}
+.howDoIDo #search-topics.special-search-forms .pane-content .more-link{padding-top:0}

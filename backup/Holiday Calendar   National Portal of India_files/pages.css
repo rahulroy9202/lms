@@ -1,0 +1,1118 @@
+/**
+ * @file
+ * Page Styling
+ *
+ * Style the markup found in page.tpl.php. Also includes some styling of
+ * miscellaneous Drupal elements that appear in the $content variable, such as
+ * ul.links, .pager, .more-link, etc.
+ */
+
+
+/*
+ * Body
+ */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#page-wrapper {
+}
+
+#page {
+}
+
+/*
+ * The skip navigation link will be completely hidden until a user tabs to the
+ * link. See http://www.webaim.org/techniques/skipnav/
+ */
+#skip-link a,
+#skip-link a:visited {
+  position: absolute;
+  display: block;
+  left: 0;
+  top: -500px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  text-align: center;
+  background-color: #666;
+  color: #fff;
+}
+
+#skip-link a:hover,
+#skip-link a:active,
+#skip-link a:focus {
+  position: static;
+  width: 100%;
+  height: auto;
+  padding: 2px 0 3px 0;
+}
+
+/*
+ * Header
+ */
+#header {
+}
+
+#header .section {
+}
+
+#logo {
+    float: left;
+    margin-left: 2px;
+    padding: 0;
+}
+
+#logo img {
+  vertical-align: bottom;
+  
+}
+
+#name-and-slogan /* Wrapper for website name and slogan */ {
+}
+
+h1#site-name,
+div#site-name /* The name of the website */ {
+  margin: 0;
+  font-size: 2em;
+  line-height: 1.3em;
+}
+
+#site-name a:link,
+#site-name a:visited {
+  color: #000;
+  text-decoration: none;
+}
+
+#site-name a:hover,
+#site-name a:focus {
+  text-decoration: underline;
+}
+
+#site-slogan /* The slogan (or tagline) of a website */ {
+}
+
+.region-header /* Wrapper for any blocks placed in the header region */ {
+}
+
+/*
+ * Main (container for everything else)
+ */
+#main-wrapper {
+}
+
+#main {
+}
+
+/*
+ * Content
+ */
+#content {
+}
+
+#content .section {
+}
+
+#mission /* The mission statement of the site (displayed on homepage) */ {
+}
+
+.region-content-top /* Wrapper for any blocks placed in the "content top" region */ {
+}
+
+.breadcrumb /* The path to the current page in the form of a list of links */ {
+  padding-bottom: 0; /* Undo system.css */
+}
+
+h1.title, /* The title of the page */
+h2.title, /* Block title or the title of a piece of content when it is given in a list of content */
+h3.title /* Comment title */ {
+  margin: 0;
+}
+
+tr.even /* Some tables have rows marked even or odd. */ {
+  /* background-color: #eee; */ /* Drupal core uses a #eee background */
+}
+
+tr.odd {
+  /* background-color: #eee; */ /* Drupal core uses a #eee background */
+}
+
+div.messages /* Important messages (status, warning, and error) for the user. See also the declarations in messages.css. */ {
+}
+
+div.status /* Normal priority messages */ {
+}
+
+div.warning,
+tr.warning /* Medium priority messages */ {
+  /* border: 1px solid #f0c020; */ /* Drupal core uses: 1px solid #f0c020 */
+}
+
+div.error,
+tr.error /* High priority messages. See also the .error declaration below. */ {
+}
+
+.error /* Errors that are separate from div.messages status messages. */ {
+  /* color: #e55; */ /* Drupal core uses a #e55 background */
+}
+
+.warning /* Warnings that are separate from div.messages status messages. */ {
+  /* color: #e09010; */ /* Drupal core uses a #e09010 background */
+}
+
+div.tabs /* See also the tabs.css file. */ {
+}
+
+.help /* Help text on a page */ {
+  margin: 1em 0;
+}
+
+.more-help-link /* Link to more help */ {
+  font-size: 0.85em;
+  text-align: right;
+}
+
+#content-area /* Wrapper for the actual page content */ {
+}
+
+ul.links /* List of links */ {
+  margin: 1em 0;
+  padding: 0;
+}
+
+ul.links.inline {
+  margin: 0;
+  display: inline;
+}
+
+ul.links li {
+  display: inline;
+  list-style-type: none;
+  padding: 0 0.5em;
+}
+
+.pager /* A list of page numbers when more than 1 page of content is available */ {
+  clear: both;
+  margin: 1em 0;
+  text-align: center;
+}
+
+.pager a,
+.pager strong.pager-current /* Each page number in the pager list */ {
+  padding: 0.5em;
+}
+
+.feed-icons /* The links to the RSS or Atom feeds for the current list of content */ {
+  margin: 1em 0;
+}
+
+.more-link /* Aggregator, blog, and forum more link */ {
+  text-align: right; /* LTR */
+  float:right;
+  clear:right;
+  padding-top:5px;
+}
+.more-link a
+{
+	text-decoration:none;
+	color:#000000;
+	font-size:70%;
+	font-weight:bold;
+}
+#content-inner .more-link a{
+	text-decoration:none;
+	color:#000000;
+	font-weight:bold;
+	font-size:70%;
+}
+
+.region-content-bottom /* Wrapper for any blocks placed in the "content bottom" region */ {
+}
+
+/*
+ * First sidebar (on left in LTR languages, on right in RTL)
+ *
+ * Remember to NOT add padding or margin to your .region-sidebar-first
+ * (see the layout.css file.)
+ */
+.region-sidebar-first {
+}
+
+.region-sidebar-first .section {
+}
+
+/*
+ * Second sidebar (on right in LTR languages, on left in RTL)
+ *
+ * Remember to NOT add padding or margin to your .region-sidebar-second
+ * (see the layout.css file.)
+ */
+.region-sidebar-second {
+}
+
+.region-sidebar-second .section {
+}
+
+/*
+ * Footer
+ */
+#footer {
+}
+
+#footer .section {
+}
+
+#footer-message /* Wrapper for the footer message from Drupal's "Site information"
+                   and for any blocks placed in the footer region */ {
+}
+
+.region-footer {
+}
+
+/*
+ * Closure
+ */
+.region-page-closure /* Wrapper for any blocks placed in the closure region */ {
+}
+
+/*
+ * Drupal boxes
+ *
+ * Wrapper for Comment form, Comment viewing options, Menu admin, and
+ * Search results.
+ */
+.box /* Wrapper for box */ {
+}
+
+.box h2 /* Box title */ {
+}
+
+.box .content /* Box's content wrapper */ {
+}
+
+/*
+ * Markup free clearing (See: http://www.positioniseverything.net/easyclearing.html )
+ */
+/*.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}*/
+
+/**
+ * Hide elements from all users.
+ *
+ * Used for elements which should not be immediately displayed to any user. An
+ * example would be a collapsible fieldset that will be expanded with a click
+ * from a user. The effect of this class can be toggled with the jQuery show()
+ * and hide() functions.
+ */
+.element-hidden {
+  display: none;
+}
+
+/**
+ * Hide elements visually, but keep them available for screen-readers.
+ *
+ * Used for information required for screen-reader users to understand and use
+ * the site where visual display is undesirable. Information provided in this
+ * manner should be kept concise, to avoid unnecessary burden on the user. Must
+ * not be used for focusable elements (such as links and form elements) as this
+ * causes issues for keyboard only or voice recognition users. "!important" is
+ * used to prevent unintentional overrides.
+ */
+.element-invisible {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+}
+/**
+ * Level1 page styles NPI
+ *
+ * 
+ */
+ul#topLinks{
+	list-style:none;
+}
+#internal-pages h2, #level2-pages h2, #leaf-pages h2, .india_glance_heading h2{
+	font-family: Georgia,"Times New Roman",Times,serif;
+    font-size: 110%;
+    font-weight: bold;
+    margin-bottom: 7px;
+    padding-bottom: 7px;
+	}
+	
+/*** h2 section css needs to be review later	**/
+.topics h2{
+    /*border-bottom: 1px solid #99026F;*/
+	color:#99026F;
+}
+.howDoIDo h2
+{
+	 /*border-bottom: 1px solid #FFC82E;*/
+	 color:#98580d;
+}
+.myGovt h2
+{
+	 /*border-bottom: 1px solid #77B800;*/
+	 color:#449418;
+	 font-size:110%;
+}
+.people_groups h2
+{
+	 /*border-bottom: 1px dotted #4891DC;*/
+	 color:#4891DC;
+}
+.e-gov h2
+{
+	 /*border-bottom: 1px solid #9F60B5;*/
+	 color:#9F60B5;
+}
+.IAAG h2
+{
+	color:#34d0bb;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 110%;
+	font-weight: bold;
+}
+#internal-pages p{
+    font-size:75%;
+    padding-bottom: 10px;
+}
+.topics p{
+    /*color: #99026F;*/
+	/*font-weight:bold;*/
+}
+.howDoIDo p
+{
+	 /*color: #834904;*/
+	/* font-weight:bold;*/
+}
+.myGovt p
+{
+	 /*color: #77B800;*/
+	 /*color:#009933;*/
+	 /*font-weight:bold;*/
+	 font-size:75%;
+}
+.people_groups p
+{
+	 /*color: #4891DC;*/
+	 /*font-weight:bold;*/
+}
+.e-gov p
+{
+	 /*color: #9F60B5;*/
+	 /*font-weight:bold;*/
+}
+#level2-pages p, #leaf-pages p{
+	color: #000000;
+	font-size:75%;
+    padding: 12px 0;
+}
+#content-inner{
+	float: left;
+    width: 785px;
+}
+#sidebar-right {
+    float: right;
+    width: 192px;
+}
+#sidebar-left {
+    float: left;
+    width: 192px;
+}
+#topics-slideshow, #level2-pages{
+	margin:0 auto;
+}
+#views_slideshow_singleframe_controls_view_topics_slideshow-block_1{
+	float: left;
+	width:auto;
+}
+#views_slideshow_singleframe_controls_view_topics_slideshow-block_1 a{
+	padding:0 2px 0 0;
+	float:left;
+}
+#views_slideshow_singleframe_image_count_view_topics_slideshow-block_1{
+	float: left;
+    padding:2px 0 0 4px;
+    width: 400px;
+    font-size:75%;
+}
+/*.views-slideshow-controls-bottom{
+	 margin-top:5px;
+	 border-top: 1px solid #6B7689;
+}*/
+a.views_slideshow_play{
+	background:url(../images/play.gif) center top no-repeat;
+	display:block;
+	width:13px;
+	height:14px;
+	text-indent:-999px;
+	outline:none;
+	margin:3px 1px 0 -1px;
+}
+a.views_slideshow_pause{
+	background:url(../images/img_pagination_pause.gif) center top no-repeat;
+	display:block;
+	width:13px;
+	height:14px;
+	text-indent:-999px;
+	outline:none;
+	margin:3px 1px 0 -1px;
+}
+.level2_child_list ul li a, .level2_child_list ul li a:hover{
+	background:none;
+}
+.level2_child_list ul li{
+	background: url("../images/bullet_topics.gif") no-repeat scroll left 5px transparent;
+    padding-bottom: 1px;
+    float: left;
+    overflow: hidden;
+    padding-bottom: 3px;
+    padding-left: 9px;
+    width: 48%;
+}
+.oneUlList ul li a:link, .oneUlList ul li a:active, .oneUlList ul li a:visited, .oneUlList ul li a:hover {
+    color: #006699;
+    float: left;
+    text-decoration: none;
+}
+/* -topics slideshow-----*/
+#topics-slideshow .topics-slider-title{
+	color: #FFFFFF;
+    font-size: 170%;
+    font-weight: bolder;
+    margin: -108px 0 0 25px;
+    position: absolute;
+    /*text-align: center;*/
+    width: 202px;
+}
+#topics-slideshow a.linkMore{
+	float:right;
+}
+.topics-slider-teaser{
+	background: none repeat scroll 0 0 #000000;
+    color: #FFFFFF;
+    font-size: 85%;
+    font-weight: normal;
+    margin: -45px 0;
+    opacity: 0.8;
+    padding: 0 10px;
+    position: absolute;
+    display:none;
+    width:513px;
+}
+#topics-slideshow .topics-slider-teaser p{
+	color: #FFFFFF;
+}
+#topics-slideshow:hover .topics-slider-teaser{
+	display:block;
+}
+.views_slideshow_singleframe_no_display, .views_slideshow_singleframe_hidden, .views_slideshow_singleframe_controls, .views_slideshow_singleframe_image_count {
+    display: block;
+}
+
+/***** Styles for paging *******/
+.pager
+{
+	background-color:#f2f2f2;
+	font-size:75%;
+	border:1px dotted #CCCCCC;
+}
+
+/*** Styles for Spotlight ***/
+.view-view-spotlight-archive div.views-row
+{
+	float:left;
+	width:350px;
+	font-size:90%;
+	border-bottom:1px dotted #999999;	
+	margin:5px;
+	height:70px;
+}
+.view-view-spotlight-archive div.views-row img
+{
+	float:left;
+	border:1px solid #999999;
+	padding:2px;
+	margin:4px 8px 4px 4px;
+}
+.view-view-spotlight-archive div.views-row a
+{
+	text-decoration:none;
+	font-weight:bold;
+}
+
+/**** CSS for newsletter ****/
+.view-view-newsletter
+{
+	padding:10px 0px 0px 40px;
+}
+/* ---- static content -*/
+#static-content img.imagefield-field_image{
+	float:left;
+	width:auto;
+	margin:0 20px 10px 0;
+}
+/*** CSS for tell a friend **/
+form#spread-form .form-item label {
+    display: block;
+    float: left;
+    width: 194px;
+	text-align:right;
+	padding-right:10px;
+}
+form#spread-form
+{
+	padding-left:130px;	
+	font-size:90%;
+}
+.captcha img
+{
+	border:1px solid #999999;
+	margin-left:200px;
+	padding:5px;
+}
+form#spread-form input[type="submit"]
+{
+	padding:0px 5px;
+	margin-left:200px;
+	background-color:#FED6F0;
+}
+/*** CSS for feedback **/
+form#user-feedback-block-form .form-item label {
+    display: block;
+    float: left;
+    width: 190px;
+	text-align:right;
+	padding-right:10px;
+}
+form#user-feedback-block-form
+{
+	padding-left:130px;	
+	font-size:90%;
+}
+form#user-feedback-block-form input[type="submit"]
+{
+	padding:0px 5px;
+	margin-left:200px;
+	background-color:#FED6F0;
+}
+
+/*** CSS for MP Detail Page ****/
+.pane-view-mp .view-content
+{
+	padding:0px 10px;
+}
+.pane-view-mp .views-field
+{
+	border-bottom:1px dotted #CCCCCC;	
+	padding:10px;
+}
+.pane-view-mp .view-content .views-label
+{
+	font-weight:bold;
+}
+.pane-view-mp .view-content .field-content
+{
+	padding-bottom: 5px;
+    text-align: justify;
+}
+.pane-view-mp .view-content .field-content img
+{
+	border: 1px solid #CCCCCC;
+    margin: 10px 0 0 730px;
+    padding: 2px;
+    position: absolute;
+}
+/*** CSS for USER login **/
+form#user-login .form-item label {
+    display: block;
+    float: left;
+    width: 190px;
+	text-align:right;
+	padding-right:10px;
+}
+form#user-login
+{
+	padding-left:130px;	
+	font-size:90%;
+	padding-top:1px;
+}
+form#user-login input[type="submit"]
+{
+	padding:0px 5px;
+	margin-left:200px;
+	background-color:#FED6F0;
+}
+form#user-login .form-item .description
+{
+	padding-left:200px;
+}
+
+form#user-pass .form-item label {
+    display: block;
+    float: left;
+    width: 194px;
+	text-align:right;
+	padding-right:10px;
+}
+form#user-pass
+{
+	padding-left:130px;	
+	font-size:90%;
+}
+form#user-pass input[type="submit"]
+{
+	padding:0px 5px;
+	margin-left:200px;
+	background-color:#FED6F0;
+}
+.pane-view-mp .views-field{
+	font-size:90%;
+	}
+	
+	#user-login-form .form-item label {
+    display: block;
+    float: left;
+    width: 190px;
+	text-align:right;
+	padding-right:10px;
+	font-size:75%;
+}
+
+#user-login-form {
+    padding-left:100px;
+	border:2px solid #ececec;
+	margin:20px 25px;
+	padding-bottom:10px;
+}
+
+#user-login-form input[type="submit"]
+{
+	padding:0px 5px;
+	margin-left:200px;
+	background-color:#FED6F0;
+}
+
+.pane-content>p{
+	font-size:85%;
+	padding:0 25px;
+	
+	
+	
+	}
+#user-login-form .item-list
+{
+	display:none;
+}	
+	
+	
+	
+	
+/* --------  Schemes ------------ */
+
+.node-type-schemes .field{
+	border-bottom: 1px dotted #CCCCCC;
+    padding: 10px;
+    font-size:90%;
+	}
+/***** Search CSS ******/
+#views-exposed-form-view-site-search-page-2 label
+{
+	font-size:100%;
+}
+#views-exposed-form-view-site-search-page-2 .views-exposed-form
+{
+	margin-bottom:25px;
+}
+#views-exposed-form-view-site-search-page-2 #edit-submit-view-site-search
+{
+	background: url("../images/btn_search.gif") no-repeat scroll 0 0 transparent;
+    border: medium none;
+    display: block;
+    float: left;
+    height: 23px;
+    overflow: hidden;
+    text-indent: -9999px;
+    width: 71px;
+	margin-top:26px;
+}
+.view-display-id-page_2 .view-content .item-list ul li, .view-display-id-page_1 .view-content .item-list ul li
+{
+	font-size:90%;
+	padding-bottom:5px;
+	margin-bottom:15px;
+	border-bottom:1px dotted;
+}
+.view-display-id-page_2 .view-content .item-list ul li a, .view-display-id-page_1 .view-content .item-list ul li a
+{
+	font-size:95%;
+	font-weight:bold;
+}
+.search-page .staticHeading {
+	/*border-bottom:1px dotted;
+	color:#99026F;*/
+	border-bottom:1px dotted;
+	color:#216FE2;
+}
+.search-page #static-content {
+	padding:25px 20px;
+	/*border-left:1px solid #fdcbef;
+	border-right:1px solid #fdcbef;*/
+	overflow:auto;
+	border-left:1px solid #63ADF0;
+	border-right:1px solid #63ADF0;
+}
+.search-page #search-static-content {
+	padding:25px 20px;
+	overflow:auto;
+	border-left:1px solid #63ADF0;
+	border-right:1px solid #63ADF0;
+	float:left;
+	width:740px;
+}
+.search-page #breadCrumbs {
+	/*background: #fff5fd;	
+	border-bottom:1px solid #FDCBEF;
+	border-left:4px solid #FDCBEF;*/
+	background:  #BDDBF9;	
+	border-bottom:1px solid #63ADF0;
+	border-left:4px solid #63ADF0;
+}
+.search-page #static-content .field-content h4 a {
+	color: #006699;
+	font-weight: bold;
+	text-decoration: none;
+	font-size:80%;
+}
+.search-page #static-content .field-content p {
+    color: #000000;
+    font-size: 80%;
+    padding: 12px 0;
+}
+.search-page #static-content div.field-content
+{
+	clear:both;
+}
+.search-page #static-content .metadata_feedback a, .search-page #static-content .metadata_tags a
+{
+	text-decoration:none;
+}
+/*** CSS for Calendar *******/
+#template_three_column .redCal
+{
+	background-color:#FFA0A0;
+	font-weight:bold;
+	/*padding:20px;*/
+	text-align:center;
+}
+#template_three_column .greenCal
+{
+	background-color:#A0D0A0;
+	font-weight:bold;
+	/*padding:20px;*/
+	text-align:center;
+}
+.calendar-calendar td .inner div.calendar div, .calendar-calendar td .inner div.calendar div a 
+{
+	background:none;
+	border:none;
+	padding:0px;
+}
+.event-holiday
+{
+	border: 1px solid;
+    margin: -50px 0 0 5px;
+    position: absolute;
+    z-index: 11;
+	background:#ededed;
+	padding:5px;
+	font-weight:bold;
+}
+td.G
+{
+	background-color:#FFA0A0;
+}
+td.R
+{
+	background-color:#A0D0A0;
+}
+.redSpan
+{
+	background-color:#FFA0A0;
+}
+.greenSpan
+{
+	background-color:#A0D0A0;
+}
+.calendar-calendar div.date-nav a, .calendar-calendar div.date-nav h3
+{
+	color:#000000;
+	text-decoration:none;
+}
+.calendar-calendar div.date-nav
+{
+	background-image:url("../images/calendar-bg.jpg");
+	border-bottom:0;
+	padding:0;
+	height:26px;
+}
+.date-nav div.date-prev
+{
+	padding-left:8px;
+}
+.date-nav div.date-next
+{
+	padding-right:8px;
+}
+.calendar-calendar th.days
+{
+	background-color:#52546B;
+	border:1px solid #FFFFFF;
+	color:#FFFFFF;
+	font-size:12px;
+	height:27px;
+}
+.calendar-calendar td.empty, .calendar-calendar table.mini td.empty
+{
+	background:none repeat scroll 0 0 #EDECEC;
+	/*border-color:#edecec;*/
+	border:0px;
+}
+.calendar-calendar tr
+{
+	background-color:#dcdadb;
+}
+.calendar-calendar .inner .calendar-empty
+{
+	background-color:#DCDADB;
+}
+.calendar-calendar td
+{
+	border:1px solid #FFFFFF;
+}
+.calendar-calendar td .inner div, .calendar-calendar td .inner div a
+{
+	background:none repeat scroll 0 0 #EECD59;
+	font-weight:bold;
+	color:#000000;
+}
+.calendar-calendar div.day
+{
+	border-color:#FFFFFF;
+	padding:4px;
+	font-size:14px;
+	height:21px;
+	width:36px;
+}
+.calendar-calendar td div.day
+{
+	border:1px solid #fff;
+	border-right:0px;
+	border-top:0px;
+}
+.calendar-calendar tr td.today, .calendar-calendar tr.odd td.today, .calendar-calendar tr.even td.today
+{
+	background:none;
+}
+.calendar-calendar tr td.today .day, .calendar-calendar tr.odd td.today .day, .calendar-calendar tr.even td.today .day
+{
+	background-color:#6066AA;
+	color:#FFFFFF;
+}
+.calendar-calendar ul li.calendar-year a
+{
+	background-image:url(../images/calendar_year.png);
+	display:block;
+	height:24px;
+	text-indent:-9999px;
+	font-size:0;
+}
+.calendar-calendar ul li.calendar-month a
+{
+	background-image:url(../images/caledar_month.png);
+	display:block;
+	height:24px;
+	text-indent:-9999px;
+	font-size:0;
+}
+.calendar-calendar ul.links li
+{
+	display:inline-block;
+	width:55px;
+	height:24px;
+}
+.calendar-calendar table.mini td
+{
+	border:1px solid #fff;
+}
+.calendar-calendar table.mini td
+{
+	font-size:15px;
+	color:#000000;
+}
+.calendar-calendar table.mini td.today
+{
+	color:#FFFFFF;
+	font-weight:bold;
+	background-color:#606699;
+}
+/* ---- Personalized View Of Home page ---------*/
+#home-personalized{
+	margin:-30px 0 0 5px;
+	/*border:solid 4px #DFE5E6;*/
+	}
+#home-personalized  .views-row{
+	padding:0;
+}
+#home-personalized  .panels-flexible-region{
+	padding-bottom:10px;
+}
+#home-personalized .views-field{
+	/*border-bottom: 1px solid #006699;*/
+    list-style: disc outside url("../images/grey-bullet.gif");
+    padding: 5px 0;
+}
+#home-personalized .views-field.views-field-phpcode{
+	padding:0;
+}
+#home-personalized .views-field.views-field-access  {
+	padding:0 0 10px;
+}
+#home-personalized .views-field-uid  {
+	padding-bottom:20px;
+}
+#home-personalized .views-field-uid a  {
+	color:#333!important;
+}
+#home-personalized .views-field-uid a:hover {
+	color:#999!important;
+}
+#home-personalized .views-field.views-field-name {
+	padding:0;
+}
+#home-personalized tr.even,#home-personalized  tr.odd{
+	border:none;
+}
+#home-personalized #user_bookmark{
+	border:1px solid #CCC;
+	padding:0 10px;
+}
+#home-personalized .views-field-phpcode,#home-personalized .views-field-field-state-image-fid{
+	border:none;
+}
+#home-personalized .view-content a{
+    color: #006699;
+    font-weight: bold;
+    text-decoration: none;
+    font-size:70%;
+}
+#personalized-links-internal{
+	/*padding:20px 10px;*/
+	width:192px;
+	}
+#personalized-list a{
+	color: #006699;
+    text-decoration: none;
+	}
+#personalized-links-internal .view-content a{
+	color: #000;
+	 font-weight: bold;
+    text-decoration: none;
+    font-size:70%;
+	}
+#personalized-links-internal .view-content div.views-field span{
+	margin-left:10px;
+}
+#personalized-links-internal .view-content div.views-field {
+	width:100%;
+}
+#personalized-links-internal .view-content div.views-field:hover{
+	background-color: #eb6ac7;
+}
+#personalized-links-internal .view-content div.views-field.views-field-phpcode:hover{
+	background-color: #FFF5FD;
+}
+span.profile{
+	background: url("../images/profile-images/whoswho.gif") no-repeat scroll 0 5px transparent;
+	padding: 0 0 0 20px;
+	}
+span.whoswho{
+	background: url("../images/profile-images/whoswho.gif") no-repeat scroll 0 3px transparent;
+	padding: 0 0 0 20px;
+	}
+span.offwebsite{
+	background: url("../images/profile-images/offwebsite.gif") no-repeat scroll 0 5px transparent;
+	padding: 0 0 0 20px;
+	}
+span.govtcontact{
+	background: url("../images/profile-images/govtcontact.gif") no-repeat scroll 0 5px transparent;
+	padding: 0 0 0 20px;
+	}
+span.impwebsite{
+	background: url("../images/profile-images/impwebsite.gif") no-repeat scroll 0 7px transparent;
+	padding: 0 0 0 20px;
+	}
+span.teldirectory{
+	background: url("../images/profile-images/teldirectory.gif") no-repeat scroll 0 5px transparent;
+	padding: 0 0 0 20px;
+	}
+span.services{
+	background: url("../images/profile-images/services.gif") no-repeat scroll 0 5px transparent;
+	padding: 0 0 0 20px;
+	}
+span.schemes{
+	background: url("../images/profile-images/schemes.gif") no-repeat scroll 0 3px transparent;
+	padding: 0 0 0 20px;
+	}
+span.districts{
+	background: url("../images/profile-images/districts.gif") no-repeat scroll 0 5px transparent;
+	padding: 0 0 0 20px;
+	}
+span.forms1{
+	background: url("../images/profile-images/forms.gif") no-repeat scroll 0 5px transparent;
+	padding: 0 0 0 20px;
+	}
+span.acts{
+	background: url("../images/profile-images/act.jpg") no-repeat scroll 0 3px transparent;
+	padding: 0 0 0 20px;
+	}
+span.announce{
+	background: url("../images/profile-images/announcement.jpg") no-repeat scroll 0 5px transparent;
+	padding: 0 0 0 20px;
+	}
+	
+span.documents{
+	background: url("../images/profile-images/documents.gif") no-repeat scroll 0 5px transparent;
+	padding: 0 0 0 20px;
+	}
+#internal-pages .views-row-last .field-content, #level2-pages .view-view-meta-leaf .views-field-body .field-content{
+    font-size:75%;
+    padding-bottom: 10px;
+}
+#level2-pages .view-view-meta-leaf .views-field-body .field-content p
+{
+	font-size:96%;
+}	
+#home-personalized h2{
+	font-size:80%;
+}
+#home-personalized .views-field-access  span.views-label,#home-personalized .views-field-access  span.field-content{
+	font-size:70%;
+}
+#home-personalized .view-content table.views-table a{
+	font-size:82%;
+}
+form#password-reset-form .captcha img
+{
+	margin:0px;
+}
+.people_groups #level2-pages #quicktabs-relevant_links li.last
+{
+	display:none;
+}

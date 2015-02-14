@@ -1,0 +1,193 @@
+/*
+    AnythingSlider v1.4
+
+    By Chris Coyier: http://css-tricks.com
+    with major improvements by Doug Neiner: http://pixelgraphics.us/
+    based on work by Remy Sharp: http://jqueryfordesigners.com/
+*/
+
+/******* SET DEFAULT DIMENSIONS HERE ********/
+div.anythingSlider {
+	width: 649px;
+	height: 290px;
+	margin: 0 auto;
+}
+/****** SET COLORS HERE *******/
+/* Default State */
+div.anythingSlider .thumbNav a.cur, div.anythingSlider .thumbNav a {
+	background: red;
+}
+div.anythingSlider .anythingWindow {
+/*border-top: 3px solid #777;
+	border-bottom: 3px solid #777;*/
+}
+/* Active State */
+div.anythingSlider.activeSlider .thumbNav a {
+	background:url(../images/bullet_white.gif) no-repeat left top;
+}
+div.anythingSlider.activeSlider .thumbNav a.cur, div.anythingSlider.activeSlider .thumbNav a:hover {
+	background:url(../images/bullet_blue.gif) no-repeat left top;
+}
+div.anythingSlider.activeSlider .anythingWindow {
+	border-color: #7C9127;
+}
+/**** DO NOT CHANGE BELOW THIS LINE ****/
+/* anythingSlider viewport window */
+div.anythingSlider .anythingWindow {
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+/* wrapper: 45px right & left padding for the arrows, 28px @ bottom for naviagation */
+div.anythingSlider {
+	position: relative;/*padding: 0 45px 28px 45px;*/
+}
+/* anythingSlider base UL */
+ul.anythingBase {
+	background: transparent;
+	list-style: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin: 0;
+	padding:0;
+}
+ul.anythingBase li {
+	min-height:204px
+}
+ul.anythingBase li.panel {
+	background: transparent;
+	display: block;
+	float: left;
+	padding: 0;
+	margin: 0;
+}
+/* Navigation Arrows */
+div.anythingSlider .arrow {
+	top: 50%;
+	position: absolute;
+	display: block;
+}
+div.anythingSlider .arrow a {
+	display: block;
+	height: 120px;
+	margin-top: -60px;
+	width: 45px;
+	text-align: center;
+	outline: 0;
+	/*background: url(../images/arrows.png) no-repeat;*/
+	text-indent: -9999px;
+}
+div.anythingSlider .forward {
+	right: 0;
+}
+div.anythingSlider .back {
+	left: 0;
+}
+div.anythingSlider .forward a {
+	background-position: 0 -40px;
+}
+div.anythingSlider .back a {
+	background-position: -88px -40px;
+}
+div.anythingSlider .forward a:hover, div.anythingSlider .forward a.hover {
+	background-position: 0 -240px;
+}
+div.anythingSlider .back a:hover, div.anythingSlider .back a.hover {
+	background-position: -88px -240px;
+}
+/* Navigation Links */
+div.anythingSlider .thumbNav {
+	margin: 0;
+	position:relative;
+	float:right;
+	margin:-7px 6px 0 0;
+	/*background:url(../images/bg_slideshow_ticker.gif) no-repeat right top;*/
+	width:142px;
+	top:2px;
+	left:-75px;
+}
+div.anythingSlider .thumbNav div {
+	width:19px;
+	float:left;
+	height:23px;
+	padding-top:6px
+}
+div.anythingSlider .thumbNav div a {
+	color: black;
+	font: 0px Georgia, Serif;
+	display:block;
+	text-decoration: none;
+	margin-left:5px;
+	width:17px;
+	height:19px;
+}
+div.anythingSlider .thumbNav a:hover {
+	background-image: none;
+}
+div.anythingSlider .thumbNav li {/* display: inline; */
+	float:left;
+	list-style-type:none;
+	height:29px;
+	padding-top:6px
+}
+div.anythingSlider .thumbNav a {
+	color: black;
+	font: 0px Georgia, Serif;
+	display:block;
+	text-decoration: none;
+	margin-left:5px;
+	width:17px;
+	height:19px;
+}
+div.anythingSlider .thumbNav a:hover {
+	background-image: none;
+}
+/* slider autoplay right-to-left, reverse order of nav links to look better */
+div.anythingSlider.rtl .thumbNav a {
+	float: right;
+} /* reverse order of nav links */
+div.anythingSlider.rtl .thumbNav {
+	float: left;
+}    /* move nav link group to left */
+/* div.anythingSlider.rtl .start-stop { float: right; } */ /* move start/stop button - in case you want to switch sides */
+
+/* Autoplay Start/Stop button */
+div.anythingSlider .start-stop {
+	z-index: 10;
+	background:url(../images/btn_play.gif) no-repeat center center;
+	color: #dfe4e7;
+	padding: 3px 0px 0px 0px;
+	/*font-size:13px;*/
+	width: 20px;
+	height:29px;
+	text-align: center;
+	text-decoration: none;
+	float: left;
+	position:relative;
+	margin-top:-2px;
+	top:-5px;
+	left:410px;
+}
+.panels-flexible-region-3-center-inside{ 
+border-bottom:17px solid #dfe5e6;
+background-color:#DFE5E6;
+border-radius:6px;
+}
+#mini-panel-minipanel_spotlight_home .more-link {
+    /*background-color: #DFE5E6;*/
+    height: 24px;
+    position: relative;
+    top: -24px;
+	*top: -5px;
+	margin-right:10px;
+	padding-top:2px;
+}
+div.anythingSlider .start-stop.playing {
+	position:relative;
+	margin-top:-2px;
+	background:url(../images/btn_stop.gif) no-repeat center center;
+	color:#dfe4e7
+}
+/*div.anythingSlider .start-stop:hover, div.anythingSlider .start-stop.hover { background-color: #dfe4e7; color: blue; position:relative; margin-top:-23px ;background:url(btn_play.gif) no-repeat left top #dfe4e7 }*/

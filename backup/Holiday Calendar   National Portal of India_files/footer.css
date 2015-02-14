@@ -1,0 +1,140 @@
+/*Footer classes starts here -------------------------------*/
+#footer {
+	width: 100%;
+	clear: both;
+	/*padding-top: 28px;*/
+	overflow: hidden;
+}
+#footer .siteLinks {
+	clear: both;
+	width: 978px;
+	text-align: center;
+	background: url(../images/bg_site_links.gif) repeat-x left bottom;
+	overflow: hidden;
+	padding-bottom: 8px;
+	padding-top: 5px;
+	border:1px solid #d4d4d4;
+}
+
+#footer .siteLinks ul {
+	list-style: none;;
+	margin: 0 auto;
+	padding: 0;
+	text-align: center;
+}
+
+#footer .siteLinks ul li {
+	padding: 0;
+	margin: 0;
+	padding: 0px 6px 0px 3px;
+	display: inline;;
+	text-align: left;
+	color: #3d3d3d;
+	font-size: 0.688em;
+	font-family: Arial, Helvetica, sans-serif;
+	border-right: 1px solid #3d3d3d;
+}
+
+#footer .siteLinks ul li.last {
+	border: none
+}
+
+#footer .siteLinks ul li a:link,#footer  .siteLinks ul li a:active,#footer  .siteLinks ul li a:visited,#footer  .siteLinks ul li a:hover
+	{
+	color: #3d3d3d;
+	text-decoration: none;
+	font-size:100%;
+}
+
+#footer .siteLinks ul li a:hover {
+	text-decoration: underline;
+	color: #000
+}
+
+#block-taxonomy_treemenu-menu-footer-sitemap h2{
+	display:none;
+}
+#footer .footerLinks {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:65%;
+	width:980px;
+	overflow:auto;
+	
+}
+#footer .footerLinks ul {
+	padding:10px 0 0 40px;
+	margin:0;
+}
+#footer .footerLinks ul li {
+	float:left;
+	width:185px;
+	font-weight:bold;
+}
+#footer .footerLinks ul li a{
+	color: #3d3d3d;
+	text-decoration:none;
+	font-size:105%;
+}
+#footer .footerLinks ul li.first {
+	width:380px;
+}
+#footer .footerLinks ul li ul .first {
+	width:170px;
+}
+#footer .footerLinks ul li ul {
+	padding:5px 0 5px 13px;
+	overflow:auto;
+}
+#footer .footerLinks ul li ul li {
+	width:170px;
+	float:left;
+	font-weight:normal;
+	margin-top:0px;
+}
+#footer .footerLinks ul li ul li a{
+	font-family: Arial, Helvetica, sans-serif;
+	color: #3d3d3d;
+	text-decoration: none;
+	
+	
+}
+/* --- cssends - */
+#footer .footerBottom {
+	width: 100%;
+	clear: both;
+	margin: 10px auto;
+	height: 114px;
+	background: url(../images/bg_footer_bottom.gif) no-repeat left top
+}
+
+#footer .footerBottom .nic {
+	width: 62px;
+	float: left;
+	padding-top: 29px;
+	text-align: right;
+	padding-right: 13px
+}
+
+#footer .footerBottom .footerText {
+	color: #7f7f7f;
+	font-size: .688em;
+	padding-top: 17px;
+	text-align: justify;
+	width: 812px;
+	float: left;
+	font-family: "Trebuchet MS", Verdana, Arial
+}
+
+#footer .footerBottom .stqc {
+	width: 60px;
+	float: left;
+	padding-top: 20px;
+	text-align: right
+}
+
+#footer .footerBottom .w3cCSSHTML {
+	width: 81px;
+	text-align: right;
+	float: left;
+	padding-top: 31px
+}
