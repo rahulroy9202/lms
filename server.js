@@ -26,5 +26,22 @@ app.use(function(req, res, next) {
 app.listen(port, ipaddress);
 
 app.get('/status/', function(req, res) {
-    res.send('everything ok');
+    res.send('ok');
 });
+
+
+var connection = mysql.createConnection({
+	 host     : process.env.OPENSHIFT_MYSQL_DB_HOST,
+	 user     : process.env.OPENSHIFT_MYSQL_DB_USERNAME,
+	 password : process.env.OPENSHIFT_MYSQL_DB_PASSWORD,
+	 port     : process.env.OPENSHIFT_MYSQL_DB_PORT,
+	 database : 'lms'
+});
+ 
+connection.connect();
+
+
+
+function authenticate(req, res, email, password, callback) {
+
+}
