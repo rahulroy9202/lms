@@ -44,20 +44,20 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand topnav" href="#">L.M.S</a>
+                <a class="navbar-brand topnav" href="#">Leave Management System</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="#about">About</a>
+                    
+					<li id="view_current_user">
+                        <a href="#user"></a>
                     </li>
-                    <li>
-                        <a href="#services">Services</a>
+                    
+					<li id="view_logout_user">
+                        <a href="#logout"></a>
                     </li>
-                    <li>
-                        <a href="#contact">Contact</a>
-                    </li>
+					
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -83,46 +83,106 @@
                                 <a href="#" class="btn btn-default btn-lg"><i class="fa fa-sign-in fa-fw"></i> <span class="network-name">login</span></a>
                             </li>
                             <li>
-                                <a href="#" class="btn btn-default btn-lg"><i class="fa fa-user fa-fw"></i> <span class="network-name">signup</span></a>
+                                <a href="#" class="btn btn-default btn-lg"><i class="fa fa-user-plus fa-fw"></i> <span class="network-name">signup</span></a>
                             </li>
 
                         </ul>
                     </div>
 					
-					<div id="login" class="intro-message">
-					  <h3>login</h3>
-
-						<p><input type="text" name="login" value="" placeholder="Username or Email"></p>
-						<p><input type="password" name="password" value="" placeholder="Password"></p>
-						<p class="remember_me">
-						  <label>
-							<input type="checkbox" name="remember_me" id="remember_me">
-							Remember me on this computer
-						  </label>
-						</p>
-						<a href="#" class="btn btn-default btn-md "> <span class="network-name">LogIn</span></a>
-
-					</div>
-					
-					<div id="signup" class="intro-message">
-					  <h3>signup</h3>
-
-						<p><input type="text" name="login" value="" placeholder="Username or Email"></p>
-						<p><input type="password" name="password" value="" placeholder="Password"></p>
-
-						<a href="#" class="btn btn-default btn-md"> <span class="network-name">SignUp</span></a>
-
-					</div>
-					
-					
-					
-					
                 </div>
-            </div>			
+            </div>		
 
+            <div id="login" class="row">
+                <div class="col-lg-4 col-centered">
+
+					<h3>login</h3>
+
+					<div class="input-group">
+					  <span class="input-group-addon" id="signup-username"><i class="fa fa-user fa-fw"></i></span>
+					  <input type="text" class="form-control" placeholder="username" aria-describedby="basic-addon1">
+					</div><br>
+					<div class="input-group">
+					  <span class="input-group-addon" id="signup-password"><i class="fa fa-key fa-fw"></i></span>
+					  <input type="text" class="form-control" placeholder="password" aria-describedby="basic-addon1">
+					</div><br>
+					<p class="remember_me">
+					  <label>
+						<input type="checkbox" name="remember_me" id="remember_me">
+						remember me on this computer
+					  </label>
+					</p>
+					<a href="#" class="btn btn-default btn-md"><i class="fa fa-sign-in fa-fw"></i> <span class="network-name">login</span></a>
+					
+				</div>
+            </div>		
+					
+			<div id="signup" class="row">
+                <div class="col-lg-4 col-centered">
+										
+					<h3>signup</h3>
+					
+					<div class="input-group">
+					  <span class="input-group-addon" id="signup-username"><i class="fa fa-user fa-fw"></i></span>
+					  <input type="text" class="form-control" placeholder="username" aria-describedby="basic-addon1">
+					</div><br>
+					<div class="input-group">
+					  <span class="input-group-addon" id="signup-password"><i class="fa fa-star fa-fw"></i></span>
+					  <input type="text" class="form-control" placeholder="password" aria-describedby="basic-addon1">
+					</div><br>
+					<div class="input-group">
+					  <span class="input-group-addon" id="signup-password-confirm"><i class="fa fa-star fa-fw"></i></span>
+					  <input type="text" class="form-control" placeholder="confirm password" aria-describedby="basic-addon1">
+					</div><br>
+					
+					<a href="#" class="btn btn-default btn-md"><i class="fa fa-user-plus fa-fw"></i> <span class="network-name">signup</span></a>
+
+				</div>
+            </div>
+
+			<div id="profile" class="row">
+                <div class="col-lg-12 col-centered">
+					
+					<h3>profile</h3>
+					<hr>
+					
+					<div class="row">
+						
+						
+						<div class="col-md-6 portfolio-item">
+							
+							<h3>
+								<a href="#">Past Applications</a>
+							</h3>
+							
+							<a href="#">
+								<img class="img-responsive" src="http://placehold.it/700x400" alt="">
+							</a>
+							
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+						</div>
+						
+						
+						
+						<div class="col-md-6 portfolio-item">
+							<h3>
+								<a href="#">Apply Now</a>
+							</h3>						
+							
+							<a href="#">
+								<img class="img-responsive" src="http://placehold.it/700x400" alt="">
+							</a>
+
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+						</div>
+					</div>
+					
+					
+				</div>
+            </div>
+								
+					
         </div>
         <!-- /.container -->
-
     </div>
     <!-- /.intro-header -->
 
@@ -275,9 +335,13 @@
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
+	<script src="js/jquery_cookie.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+	
+	<!-- Custom -->
+    <script src="js/app.js"></script>
 
 </body>
 
