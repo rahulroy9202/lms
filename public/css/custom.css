@@ -4,9 +4,20 @@
 }
 
 
+#signup,#login {
+	margin-top: 90px;
+}
+
+#profile {
+	margin-top: 35px;
+}
+
+
 .row-centered {
     text-align:center;
 }
+
+
 .col-centered {
     display:inline-block;
     float:none;
@@ -14,4 +25,26 @@
     text-align:left;
     /* inline-block space fix */
     margin-right:-4px;
+}
+
+
+.datepicker {
+	//width: inherit;
+	//margin: auto;
+	//margin-top: 50px;
+}
+
+.inline {
+	display: inline;
+	text-align:center;
+}
+
+.new_leave {
+	margin-top: 50px;
+	margin: auto;
+	width: 300px;
+}
+
+.user_applications_display {
+	display: inline-block;
 }
