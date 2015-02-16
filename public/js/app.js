@@ -131,10 +131,12 @@ function init_dp(start,end) {
 			console.log("DATE CLEARED",selected);
 			if(selected.target.classList[2]==='from_dp'){
 				$('.to_dp').data('datepicker').setEndDate('1/1/2016');
+				$('.to_dp').data('datepicker').setStartDate(new Date());
 				console.log(max_date);
 			}
 			else{
-				$('.to_dp').data('datepicker').setStartDate(new Date());
+				$('.from_dp').data('datepicker').setEndDate('1/1/2016');
+				$('.from_dp').data('datepicker').setStartDate(new Date());
 			}
 			
 	});
