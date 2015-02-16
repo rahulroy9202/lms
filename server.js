@@ -148,7 +148,7 @@ app.post('/setholidays/', function(req, res) {
 	
 	for(var i in h) {
 		
-		var x = { name: i };
+		var x = { name: new Date(h[i]) };
 		console.log(x);
 		/*
 		app.models.holiday.create(i, function(err, model) {
