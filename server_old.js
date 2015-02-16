@@ -37,9 +37,18 @@ var connection = mysql.createConnection({
 	 port     : process.env.OPENSHIFT_MYSQL_DB_PORT,
 	 database : 'lms'
 });
+ */
  
+var connection = mysql.createConnection({
+	 host     : 'localhost',
+	 user     : 'admin',
+	 password : 'admin',
+	 port     : 3306,
+	 database : 'lms'
+}); 
+
 connection.connect();
-*/
+
 
 
 function authenticate(req, res, email, password, callback) {

@@ -13,10 +13,10 @@ var views = {
 		
 	}
 }
-
+/* 
 views.intro.toggle();
 views.login.toggle();
-views.signup.toggle();
+views.signup.toggle(); */
 //views.profile.toggle();
 //views.management.toggle();
 
@@ -131,18 +131,18 @@ function init_dp(start,end) {
 			console.log("DATE CLEARED",selected);
 			if(selected.target.classList[2]==='from_dp'){
 				$('.to_dp').data('datepicker').setEndDate('1/1/2016');
-				$('.to_dp').data('datepicker').setStartDate(new Date());
+				$('.to_dp').data('datepicker').setStartDate('-4d');
 				console.log(max_date);
 			}
 			else{
 				$('.from_dp').data('datepicker').setEndDate('1/1/2016');
-				$('.from_dp').data('datepicker').setStartDate(new Date());
+				$('.from_dp').data('datepicker').setStartDate('-4d');
 			}
 			
 	});
 }
 
-init_dp(new Date(),'1/1/2016')
+init_dp('-4d','1/1/2016')
 
 function display_leave_info(leave) {
 	var html = 	'<ul><li> total length: '+ leave.length +'</li><li> week days: '+leave.actual_length+'</li></ul>'

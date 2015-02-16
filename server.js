@@ -1,4 +1,3 @@
-
 var express = require('express'),
     //_ = require('lodash'),
 	bodyParser = require('body-parser'),
@@ -33,15 +32,17 @@ var config = {
 	// Build Connections Config
 	// Setup connections using the named adapter configs
 	connections: {
+		
 		mysqlos: {
-			adapter: 'mysql',
+			adapter	  : 'mysql',
 			module    : 'sails-mysql',
 			host      : process.env.OPENSHIFT_MYSQL_DB_HOST || 'localhost',
 			port      : process.env.OPENSHIFT_MYSQL_DB_PORT || 3306,
-			user      : process.env.OPENSHIFT_MYSQL_DB_USERNAME || 'username',
-			password  : process.env.OPENSHIFT_MYSQL_DB_PASSWORD ||'password',
+			user      : process.env.OPENSHIFT_MYSQL_DB_USERNAME || 'admin',
+			password  : process.env.OPENSHIFT_MYSQL_DB_PASSWORD ||'admin',
 			database  : 'lms'
 		}
+		
 	},
 
 	defaults: {
@@ -61,8 +62,21 @@ var User = Waterline.Collection.extend({
   connection: 'mysqlos',
 
   attributes: {
-    first_name: 'string',
-    last_name: 'string'
+    name: 'string',
+    password: 'string',
+	role: 'integer',
+	manager_id: 'integer'
+  }
+});
+
+var Holidays = Waterline.Collection.extend({
+
+  identity: 'holiday',
+  connection: 'mysqlos',
+
+  attributes: {
+	date: 'date',
+	occasion: 'string'
   }
 });
 
@@ -81,7 +95,7 @@ var Pet = Waterline.Collection.extend({
 // Load the Models into the ORM
 orm.loadCollection(User);
 orm.loadCollection(Pet);
-
+orm.loadCollection(Holidays);
 
 
 //////////////////////////////////////////////////////////////////
@@ -125,13 +139,30 @@ app.post('/users', function(req, res) {
   });
 });
 
+
+
+app.post('/setholidays/', function(req, res) {
+  
+	var h = req.body;
+	
+	for(var i in h) {
+		i.name = i;
+		app.models.holiday.create(i, function(err, model) {
+			if(err) return res.json({ err: err }, 500);
+			res.json(model);
+		});
+	}
+});
+
+
+
+
 app.get('/users/:id', function(req, res) {
   app.models.user.findOne({ id: req.params.id }, function(err, model) {
     if(err) return res.json({ err: err }, 500);
     res.json(model);
   });
 });
-
 
 app.put('/users/:id', function(req, res) {
   // Don't pass ID to update
