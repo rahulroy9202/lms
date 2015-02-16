@@ -26,7 +26,9 @@
     "body-parser": "^1.9.2",
     "compression": "^1.1.2",
     "express": "~4",
-    "mysql": "^2.5.4"
+    "mysql": "^2.5.4",
+    "sails-mysql": "^0.10.11",
+    "waterline": "^0.10.18"
   },
   "devDependencies": {},
   "bundleDependencies": [],
