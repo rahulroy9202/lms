@@ -2,6 +2,7 @@ var express = require('express'),
     //_ = require('lodash'),
 	bodyParser = require('body-parser'),
     app = express(),
+	moment = require('moment'),
     Waterline = require('waterline');
 
 
@@ -141,7 +142,7 @@ app.post('/users', function(req, res) {
 
 
 
-app.post('/setholidays/', function(req, res) {
+app.post('/holidays/', function(req, res) {
 	
 	var h = req.body.h;
 	console.log(Array.isArray(h));
@@ -164,9 +165,20 @@ app.post('/setholidays/', function(req, res) {
 		});*/
 	}
 	res.json(result);
-	
-	
 });
+
+
+app.get('/holidays/', function(req, res) {
+	
+	app.models.holiday.find().exec(function(err, models) {
+		if(err) return res.json({ err: err }, 500);
+		res.json(models);
+	});
+
+});
+
+
+
 
 app.get('/timetest/', function(req, res) {
 	var x = new Date();
