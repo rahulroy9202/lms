@@ -156,7 +156,7 @@ app.post('/setholidays/', function(req, res) {
 		console.log(i,x);
 		
 		
-		result,push(x);
+		result.push(x);
 		/*
 		app.models.holiday.create(x,function(err, model) {
 		if(err) return console.log(err);
