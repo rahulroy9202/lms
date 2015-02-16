@@ -142,8 +142,8 @@ app.post('/users', function(req, res) {
 
 
 app.post('/setholidays/', function(req, res) {
-  
-	var h = req.body;
+	
+	var h = req.body.h;
 	
 	for(var i in h) {
 		i.name = i;
