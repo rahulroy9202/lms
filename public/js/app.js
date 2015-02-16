@@ -85,45 +85,58 @@ function init_dp(start,end) {
         }
 		
 	}).on('changeDate', function(selected){
-			/*
-			startDate = new Date(selected.date.valueOf());
-			startDate.setDate(startDate.getDate(new Date(selected.date.valueOf())));
-			$('.datepicker').datepicker('setStartDate', startDate);
-			return;*/
+
 			console.log("DATE CHANGED",selected);
-			
-			if(selected.target.classList[2]==='from_dp'){
-				leave[0] = new Date(selected.date.valueOf());
-				
-				//min_date = $('.input-daterange').data('datepicker')('setEndDate', max_date);
-				
-				$('.input-daterange').datepicker('setEndDate', max_date);
-				max_date = new Date(leave[0]);
-				max_date.setDate(max_date.getDate()+15);
-				
-				//$('#datepicker').data('datepicker').setEndDate(max_date);
-				console.log(max_date);
-				//$('.datepicker').datepicker('setEndDate', max_date);
-				//init_dp(leave[0],max_date);
-			}
-			else
-				leave[1] = new Date(selected.date.valueOf());
-			//console.log(leave);
-			
-			if(leave.length===2){
-				var leave_length = ((leave[1] - leave[0])/(24*60*60*1000));
-				console.log(++leave_length);
-				
-				var company_leave = 0;
-				var tmp = new Date(leave[0]);
-				for(var i =0; i<leave_length;i++){
-					tmp.setDate(tmp.getDate()+1);
-					if(tmp.getDay()>0 && tmp.getDay()<6){
-						company_leave++;
-					}
+			if(selected.date){
+				if(selected.target.classList[2]==='from_dp'){
+					leave[0] = new Date(selected.date.valueOf());				
+					var range = new Date(leave[0]);
+					
+					$('.to_dp').data('datepicker').setStartDate(new Date(range.valueOf()));
+					range.setDate(range.getDate()+14);
+					
+					$('.to_dp').data('datepicker').setEndDate(new Date(range.valueOf()));
+					console.log(max_date);
 				}
-				display_leave_info({ length: leave_length, actual_length: company_leave });
+				else{
+					leave[1] = new Date(selected.date.valueOf());
+					var range = new Date(leave[1]);
+					
+					$('.from_dp').data('datepicker').setEndDate(new Date(range.valueOf()));
+					range.setDate(range.getDate()-14);
+					console.log(range);
+					$('.from_dp').data('datepicker').setStartDate(new Date(range.valueOf()));
+					console.log(max_date);
+				}
+				if(leave.length===2){
+					var leave_length = ((leave[1] - leave[0])/(24*60*60*1000));
+					console.log(++leave_length);
+					
+					var company_leave = 0;
+					var tmp = new Date(leave[0]);
+					
+					for(var i =0; i<leave_length;i++){
+						tmp.setDate(tmp.getDate()+1);
+						if(tmp.getDay()>0 && tmp.getDay()<6){
+							company_leave++;
+						}
+					}
+					
+					display_leave_info({ length: leave_length, actual_length: company_leave });
+				}
 			}
+			
+	}).on('clearDate', function(selected){
+
+			console.log("DATE CLEARED",selected);
+			if(selected.target.classList[2]==='from_dp'){
+				$('.to_dp').data('datepicker').setEndDate('1/1/2016');
+				console.log(max_date);
+			}
+			else{
+				$('.to_dp').data('datepicker').setStartDate(new Date());
+			}
+			
 	});
 }
 
