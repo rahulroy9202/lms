@@ -147,11 +147,14 @@ app.post('/setholidays/', function(req, res) {
 	console.log(Array.isArray(h));
 	
 	for(var i in h) {
+		
 		var x = { name: i };
+		console.log(x);
+		/*
 		app.models.holiday.create(i, function(err, model) {
 			if(err) return res.json({ err: err }, 500);
 			res.json(model);
-		});
+		});*/
 	}
 });
 
