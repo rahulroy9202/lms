@@ -148,16 +148,27 @@ app.post('/setholidays/', function(req, res) {
 	
 	for(var i in h) {
 		
-		var x = { name: new Date(h[i]) };
-		console.log(x);
+		var x = { date: new Date(h[i]) };
+		console.log(i,x);
+		
+		var x = { date: new Date(h[i].toString()) };
+		console.log(i,x);
+		
 		/*
-		app.models.holiday.create(i, function(err, model) {
-			if(err) return res.json({ err: err }, 500);
-			res.json(model);
+		app.models.holiday.create(x,function(err, model) {
+		if(err) return console.log(err);
+			console.log(model);
 		});*/
 	}
+	
+	
+	
 });
 
+app.get('/timetest/', function(req, res) {
+	var x = new Date();
+
+});
 
 
 
