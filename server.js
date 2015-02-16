@@ -23,30 +23,30 @@ var mysqlAdapter = require('sails-mysql');
 // Build A Config Object
 var config = {
 
-  // Setup Adapters
-  // Creates named adapters that have have been required
-  adapters: {
-    'default': mysqlAdapter,
-    mysql: mysqlAdapter
-  },
+	// Setup Adapters
+	// Creates named adapters that have have been required
+	adapters: {
+		'default': mysqlAdapter,
+		mysql: mysqlAdapter
+	},
 
-  // Build Connections Config
-  // Setup connections using the named adapter configs
-  connections: {
-	mysqlos: {
-		adapter: 'mysql',
-		module    : 'sails-mysql',
-		host      : process.env.OPENSHIFT_MYSQL_DB_HOST || 'localhost',
-		port      : process.env.OPENSHIFT_MYSQL_DB_PORT || 3306,
-		user      : process.env.OPENSHIFT_MYSQL_DB_USERNAME || 'username',
-		password  : process.env.OPENSHIFT_MYSQL_DB_PASSWORD ||'password',
-		database  : 'lms'
+	// Build Connections Config
+	// Setup connections using the named adapter configs
+	connections: {
+		mysqlos: {
+			adapter: 'mysql',
+			module    : 'sails-mysql',
+			host      : process.env.OPENSHIFT_MYSQL_DB_HOST || 'localhost',
+			port      : process.env.OPENSHIFT_MYSQL_DB_PORT || 3306,
+			user      : process.env.OPENSHIFT_MYSQL_DB_USERNAME || 'username',
+			password  : process.env.OPENSHIFT_MYSQL_DB_PASSWORD ||'password',
+			database  : 'lms'
+		}
+	},
+
+	defaults: {
+		migrate: 'alter'
 	}
-  },
-
-  defaults: {
-    migrate: 'alter'
-  }
 
 };
 
@@ -68,13 +68,13 @@ var User = Waterline.Collection.extend({
 
 var Pet = Waterline.Collection.extend({
 
-  identity: 'pet',
-  connection: 'mysqlos',
+	identity: 'pet',
+	connection: 'mysqlos',
 
-  attributes: {
-    name: 'string',
-    breed: 'string'
-  }
+	attributes: {
+		name: 'string',
+		breed: 'string'
+	}
 });
 
 
@@ -90,9 +90,24 @@ orm.loadCollection(Pet);
 
 
 // Setup Express Application
+app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.json());								// to support JSON-encoded bodies
 app.use(bodyParser.urlencoded({	extended: true }));		// to support URL-encoded bodies
+app.use(function(req, res, next) {
+    if (req.url.toString() !== "/status/") {
+        console.log(req.url);
+        console.log(req.body);
+    }
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+});
+
+
 //app.use(express.methodOverride());
+
+
+
 
 // Build Express Routes (CRUD routes for /users)
 
@@ -136,17 +151,17 @@ app.put('/users/:id', function(req, res) {
 
 // Start Waterline passing adapters in
 orm.initialize(config, function(err, models) {
-  if(err) throw err;
+	if(err) throw err;
 
-  app.models = models.collections;
-  app.connections = models.connections;
+	app.models = models.collections;
+	app.connections = models.connections;
 
-  // Start Server
-  
-  //set up application enviornment
+	// Start Server
+
+	//set up application enviornment
 	var port = process.env.OPENSHIFT_NODEJS_PORT || process.env.PORT || 8080;
 	var ipaddress = process.env.OPENSHIFT_NODEJS_IP || process.env.IP || '127.0.0.1';
 	app.listen(port, ipaddress);
   
-  //app.listen(3000);
+	//app.listen(3000);
 });
