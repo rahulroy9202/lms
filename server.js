@@ -146,6 +146,7 @@ app.post('/setholidays/', function(req, res) {
 	var h = req.body.h;
 	console.log(Array.isArray(h));
 	
+	var result = new Array();
 	for(var i in h) {
 		
 		var x = { date: new Date(h[i]) };
@@ -154,13 +155,15 @@ app.post('/setholidays/', function(req, res) {
 		var x = { date: new Date(h[i].toString()) };
 		console.log(i,x);
 		
+		
+		result,push(x);
 		/*
 		app.models.holiday.create(x,function(err, model) {
 		if(err) return console.log(err);
 			console.log(model);
 		});*/
 	}
-	
+	res.json(result);
 	
 	
 });

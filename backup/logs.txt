@@ -1,0 +1,58 @@
+true
+{ name: Tue Feb 03 2015 13:30:00 GMT-0500 (EST) }
+{ name: Wed Feb 25 2015 13:30:00 GMT-0500 (EST) }
+{ name: Sun Apr 05 2015 14:30:00 GMT-0400 (EDT) }
+{ name: Mon Apr 27 2015 14:30:00 GMT-0400 (EDT) }
+{ name: Fri May 01 2015 14:30:00 GMT-0400 (EDT) }
+{ name: Sat May 02 2015 14:30:00 GMT-0400 (EDT) }
+{ name: Wed Jun 03 2015 14:30:00 GMT-0400 (EDT) }
+{ name: Mon Aug 17 2015 14:30:00 GMT-0400 (EDT) }
+{ name: Mon Sep 14 2015 14:30:00 GMT-0400 (EDT) }
+{ name: Sun Oct 04 2015 14:30:00 GMT-0400 (EDT) }
+{ name: Sat Oct 24 2015 14:30:00 GMT-0400 (EDT) }
+{ name: Sun Nov 01 2015 13:30:00 GMT-0500 (EST) }
+{ name: Sat Nov 21 2015 13:30:00 GMT-0500 (EST) }
+{ name: Mon Nov 23 2015 13:30:00 GMT-0500 (EST) }
+{ name: Thu Dec 10 2015 13:30:00 GMT-0500 (EST) }
+{ name: Thu Dec 24 2015 13:30:00 GMT-0500 (EST) }
+{ name: Sat Jan 23 2016 13:30:00 GMT-0500 (EST) }
+{ name: Sun Jan 24 2016 13:30:00 GMT-0500 (EST) }
+/setholidays/
+{ h:
+   [ 'Wed Feb 04 2015 00:00:00 GMT+0530 (India Standard Time)',
+     'Thu Feb 26 2015 00:00:00 GMT+0530 (India Standard Time)',
+     'Mon Apr 06 2015 00:00:00 GMT+0530 (India Standard Time)',
+     'Tue Apr 28 2015 00:00:00 GMT+0530 (India Standard Time)',
+     'Sat May 02 2015 00:00:00 GMT+0530 (India Standard Time)',
+     'Sun May 03 2015 00:00:00 GMT+0530 (India Standard Time)',
+     'Thu Jun 04 2015 00:00:00 GMT+0530 (India Standard Time)',
+     'Tue Aug 18 2015 00:00:00 GMT+0530 (India Standard Time)',
+     'Tue Sep 15 2015 00:00:00 GMT+0530 (India Standard Time)',
+     'Mon Oct 05 2015 00:00:00 GMT+0530 (India Standard Time)',
+     'Sun Oct 25 2015 00:00:00 GMT+0530 (India Standard Time)',
+     'Mon Nov 02 2015 00:00:00 GMT+0530 (India Standard Time)',
+     'Sun Nov 22 2015 00:00:00 GMT+0530 (India Standard Time)',
+     'Tue Nov 24 2015 00:00:00 GMT+0530 (India Standard Time)',
+     'Fri Dec 11 2015 00:00:00 GMT+0530 (India Standard Time)',
+     'Fri Dec 25 2015 00:00:00 GMT+0530 (India Standard Time)',
+     'Sun Jan 24 2016 00:00:00 GMT+0530 (India Standard Time)',
+     'Mon Jan 25 2016 00:00:00 GMT+0530 (India Standard Time)' ] }
+true
+{ name: Tue Feb 03 2015 13:30:00 GMT-0500 (EST) }
+{ name: Wed Feb 25 2015 13:30:00 GMT-0500 (EST) }
+{ name: Sun Apr 05 2015 14:30:00 GMT-0400 (EDT) }
+{ name: Mon Apr 27 2015 14:30:00 GMT-0400 (EDT) }
+{ name: Fri May 01 2015 14:30:00 GMT-0400 (EDT) }
+{ name: Sat May 02 2015 14:30:00 GMT-0400 (EDT) }
+{ name: Wed Jun 03 2015 14:30:00 GMT-0400 (EDT) }
+{ name: Mon Aug 17 2015 14:30:00 GMT-0400 (EDT) }
+{ name: Mon Sep 14 2015 14:30:00 GMT-0400 (EDT) }
+{ name: Sun Oct 04 2015 14:30:00 GMT-0400 (EDT) }
+{ name: Sat Oct 24 2015 14:30:00 GMT-0400 (EDT) }
+{ name: Sun Nov 01 2015 13:30:00 GMT-0500 (EST) }
+{ name: Sat Nov 21 2015 13:30:00 GMT-0500 (EST) }
+{ name: Mon Nov 23 2015 13:30:00 GMT-0500 (EST) }
+{ name: Thu Dec 10 2015 13:30:00 GMT-0500 (EST) }
+{ name: Thu Dec 24 2015 13:30:00 GMT-0500 (EST) }
+{ name: Sat Jan 23 2016 13:30:00 GMT-0500 (EST) }
+{ name: Sun Jan 24 2016 13:30:00 GMT-0500 (EST) }

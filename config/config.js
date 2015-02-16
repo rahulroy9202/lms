@@ -17,7 +17,7 @@ var holidays = new Array();
 $('.has-events.G').each(function( index ) {
   var tmp = $( this ).attr('class').toString().split(' ').pop().split('-');
   tmp.shift();
-  holidays.push(new Date(tmp.shift(),tmp.shift(),tmp.shift()));
+  holidays.push(new Date(tmp.shift(),tmp.shift()-1,tmp.shift()));
 });
 console.log(holidays);
 
