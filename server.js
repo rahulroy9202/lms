@@ -142,6 +142,39 @@ app.use(function(req, res, next) {
 //app.use(express.methodOverride());
 
 
+app.post('/holidays/', function(req, res) {
+	var h = req.body.h;
+	console.log(Array.isArray(h));
+	
+	var result = new Array();
+	for(var i in h) {
+		/*
+		var x = { date: new Date(h[i]) };
+		console.log(i,x);
+		*/
+		//var tmp = new Date( Date.UTC(h[i].toString()) );
+		
+		h[i] = new Date(h[i]);
+		
+		var x = { date: new Date(h[i].toUTCString()) };
+		
+		console.log(i,x.date.toUTCString());
+		
+		
+		result.push(x);
+		//var tmp2 = Date.UTC(x.toUTCString());
+		//result.push(tmp2);
+		
+		
+		app.models.holiday.create({ date: h[i] },function(err, model) {
+		if(err) return console.log(err);
+			console.log(model);
+		});
+	}
+	res.json(result);
+});
+
+
 app.get('/api/holidays/', function(req, res) {
 	app.models.holiday.find().exec(function(err, models) {
 		if(err) return res.json({ err: err }, 500);
@@ -224,37 +257,6 @@ app.post('/api/admin/leave/set/', function(req, res) {
 
 
 
-app.post('/holidays/', function(req, res) {
-	var h = req.body.h;
-	console.log(Array.isArray(h));
-	
-	var result = new Array();
-	for(var i in h) {
-		/*
-		var x = { date: new Date(h[i]) };
-		console.log(i,x);
-		*/
-		//var tmp = new Date( Date.UTC(h[i].toString()) );
-		
-		h[i] = new Date(h[i]);
-		
-		//var x = { date: new Date(h[i].toUTCString()) };
-		
-		console.log(i,x.date.toUTCString());
-		
-		
-		result.push(x);
-		//var tmp2 = Date.UTC(x.toUTCString());
-		//result.push(tmp2);
-		
-		
-		app.models.holiday.create({ date: h[i] },function(err, model) {
-		if(err) return console.log(err);
-			console.log(model);
-		});
-	}
-	res.json(result);
-});
 
 
 
