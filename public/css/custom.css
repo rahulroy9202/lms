@@ -48,3 +48,8 @@
 .user_applications_display {
 	display: inline-block;
 }
+
+.hdays {
+	/*color: #800000 !important ;*/
+	color: #9acd32 !important ;
+}

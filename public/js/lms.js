@@ -5,7 +5,7 @@ function initLmsServer(_url){
 	lmsserver.login = function( _user, _cb ) {
 		
 		$.ajax({
-				url: _url + 'api/signin/',
+				url: _url + '/api/signin/',
 				data: {
 					user: _user
 				},
@@ -26,7 +26,7 @@ function initLmsServer(_url){
 	lmsserver.getLeaves = function( _user, _cb ) {
 		
 		$.ajax({
-				url: _url + 'api/leave/get/',
+				url: _url + '/api/leave/get/',
 				data: {
 					user: _user
 				},
@@ -44,10 +44,55 @@ function initLmsServer(_url){
 			});
 	}
 	
+	
+	lmsserver.getLeavesAdmin = function( _user, _cb ) {
+		
+		$.ajax({
+				url: _url + '/api/admin/leave/get/',
+				data: {
+					user: _user
+				},
+				type: "POST",
+				dataType: "json",
+				success: function(json) {
+					console.log("admin get leaves result- \n", json);
+					if(typeof(_cb)==='function'){
+						_cb(json);
+					}
+				},
+				error: function(xhr, status, errorThrown) {
+					console.log("Status: " + status);
+				},
+			});
+	}
+	
+	lmsserver.setLeavesAdmin = function( _user, _leave, _cb ) {
+		
+		$.ajax({
+				url: _url + '/api/admin/leave/get/',
+				data: {
+					user: _user,
+					leave: _leave
+				},
+				type: "POST",
+				dataType: "json",
+				success: function(json) {
+					console.log("admin set leaves result- \n", json);
+					if(typeof(_cb)==='function'){
+						_cb(json);
+					}
+				},
+				error: function(xhr, status, errorThrown) {
+					console.log("Status: " + status);
+				},
+			});
+	}
+	
+	
 	lmsserver.newLeave = function( _user, _leave, _cb ) {
 		
 		$.ajax({
-				url: _url + 'api/leave/new/',
+				url: _url + '/api/leave/new/',
 				data: {
 					user: _user,
 					leave: _leave
@@ -69,7 +114,7 @@ function initLmsServer(_url){
 	lmsserver.getHolidays = function( _cb ) {
 		
 		$.ajax({
-				url: _url + 'api/holidays/',
+				url: _url + '/api/holidays/',
 				type: "GET",
 				dataType: "json",
 				success: function(json) {

@@ -8,6 +8,7 @@ function User(name, pwd) {
 function Leave(start, end) {
 	this.start = start;
 	this.end = end;
+	this.status = 0;
 }
 
 Leave.prototype.getDetails = function(holidays_array) {
@@ -27,17 +28,19 @@ Leave.prototype.getDetails = function(holidays_array) {
 		}
 	}
 	
-	if(holidays_array){
+	var effective_days = _weekdays;
+	
+	if(holidays_array) {
 		//holiday array comes with no sat and sun holydays. i removed them when adding.
-		var effective_days = _weekdays;
-		
 		for(var i in holidays_array) {	
 			if( holidays_array[i] > this.start && holidays_array[i] < this.end ) {
 				effective_days--;
 			}
 		}
 	}
+	else
+		effective_days = -1;
 	
-	return {length: leave_length, weekdays: _weekdays, effective: effective_days || 'unknown' };
+	return {length: leave_length, weekdays: _weekdays, effective: effective_days };
 }
 

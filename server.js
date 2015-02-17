@@ -63,7 +63,10 @@ var User = Waterline.Collection.extend({
   connection: 'mysqlos',
 
   attributes: {
-    name: 'string',
+    name: {
+		type: 'string',
+		unique: true
+	},
     password: 'string',
 	role: 'integer',		// 1 for manager, 2 for user
 	manager_id: 'integer'	// manager responsible for user. model.id of manager user.
@@ -103,8 +106,32 @@ var Leave = Waterline.Collection.extend({
 		comment: 'string'
 	},
 	
-	getLength: function() {
-		// Do something here
+	getLength: function( _holidays_array ) {
+		
+		var _leave_length = ((this.end - this.start)/(24*60*60*1000)) + 1;
+		var _weekdays = 0;		
+		var _tmp = new Date(this.start);
+		
+		for(var i =0; i < _leave_length; i++) {
+			_tmp.setDate(tmp.getDate()+1);
+			if(_tmp.getDay()>0 && _tmp.getDay()<6) {
+				_weekdays++;
+			}
+		}
+		
+		var _effective_days = _weekdays;
+		if(holidays_array) {
+			//holiday array comes with no sat and sun holydays. i removed them when adding.
+			for(var i in _holidays_array) {
+				if( holidays_array[i] > this.start && _holidays_array[i] < this.end ) {
+					_effective_days--;
+				}
+			}
+		}
+		else
+			effective_days = -1;
+		
+		return {length: _leave_length, weekdays: _weekdays, effective: _effective_days };
 	},
 	
 	getActualLength: function() {
@@ -211,7 +238,7 @@ app.post('/api/leave/get/', function(req, res) {
 
 app.post('/api/admin/leave/get/', function(req, res) {
 	app.models.user.findOne({ name: req.body.user.name, password: req.body.user.password }).exec(function(err, model) {
-		if(err) return res.json({ err: err }, 500);
+		if(err || model.role > 1) return res.json({ err: err }, 500);
 		
 		app.models.leave.find({ manager_id: model.id },function(err, model) {
 			if(err) return res.json({ err: err }, 500);
@@ -223,7 +250,7 @@ app.post('/api/admin/leave/get/', function(req, res) {
 
 app.post('/api/admin/leave/set/', function(req, res) {
 	app.models.user.findOne({ name: req.body.user.name, password: req.body.user.password }).exec(function(err, model) {
-		if(err) return res.json({ err: err }, 500);
+		if(err || model.role > 1) return res.json({ err: err }, 500);
 		
 		app.models.leave.findOne({ id: req.body.leave.id, manager_id: model.id },function(err, model) {
 			if(err) return res.json({ err: err }, 500);

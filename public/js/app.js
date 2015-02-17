@@ -53,15 +53,23 @@ start_date.setDate(start_date.getDate()-5);
 var max_date,min_date;
 //var date_picker;
 
-var lmsServer = initLmsServer(document.URL);
+var url = window.location.origin; //location.protocol+'//'+location.hostname+(location.port ? ':'+location.port : '');
+
+var lmsServer = initLmsServer(url);
 
 
-lmsServer.login({name:'new',password:'pwd'}, cb_login);
+var user = new User('new','pwd');
+var user2 = new User('new2','pwd2');
+
+
+lmsServer.login(user, cb_login);
 
 var hdays;
+
 lmsServer.getHolidays(function(result){
 	hdays = result;
 	console.log(hdays);
+	init_dp('-4d','31/12/2015');
 });
 
 
@@ -87,13 +95,17 @@ function init_dp(start,end) {
 		autoclose: true,
 		daysOfWeekDisabled: "0,6",
 		beforeShowDay: function(date) {
-			/*
-			console.log(max_date);
-			console.log(date);
-			if(max_date && (date>max_date)){
-				return [false, "", "exceeds"];
+			
+			for(var i in hdays){
+				if (date.getMonth() == hdays[i].getMonth()  && date.getDate() == hdays[i].getDate()){
+					console.log(date,hdays[i]);
+					return {
+						enabled: false,
+						tooltip: 'hurray: holiday',
+						classes: 'hdays'
+					};
+				}
 			}
-			*/
         }
 		
 	}).on('changeDate', function(selected){
@@ -121,11 +133,11 @@ function init_dp(start,end) {
 					console.log(max_date);
 				}
 				if(leave.length===2){
-					var nleave = new Leave(leave[0],leave[1])
+					 nleave = new Leave(leave[0],leave[1])
 					
-					console.log(nleave.getDetails());
+					console.log(nleave.getDetails(hdays));
 
-					display_leave_info(nleave.getDetails());
+					display_leave_info(nleave.getDetails(hdays));
 				}
 			}
 			
@@ -133,22 +145,22 @@ function init_dp(start,end) {
 
 			console.log("DATE CLEARED",selected);
 			if(selected.target.classList[2]==='from_dp'){
-				$('.to_dp').data('datepicker').setEndDate('1/1/2016');
+				$('.to_dp').data('datepicker').setEndDate('31/12/2015');
 				$('.to_dp').data('datepicker').setStartDate('-4d');
 				console.log(max_date);
 			}
 			else{
-				$('.from_dp').data('datepicker').setEndDate('1/1/2016');
+				$('.from_dp').data('datepicker').setEndDate('31/12/2015');
 				$('.from_dp').data('datepicker').setStartDate('-4d');
 			}
 			
 	});
 }
 
-init_dp('-4d','1/1/2016')
+init_dp('-4d','31/12/2015');
 
 function display_leave_info(leave) {
-	var html = 	'<ul><li> total length: '+ leave.length +'</li><li> week days: '+ leave.weekdays +'</li></ul>'
+	var html = 	'<ul><li> total length: '+ leave.length +'</li><li> week days: '+ leave.weekdays +'</li><li> company days: '+ ( (leave.effective != -1)? leave.effective :'unknown') +'</li></ul>'
 	var div = $('#new_leave_info').html(html);
 }
 
