@@ -234,13 +234,13 @@ app.post('/holidays/', function(req, res) {
 		var x = { date: new Date(h[i]) };
 		console.log(i,x);
 		*/
-		var tmp = new Date( Date.UTC(h[i].toString()) );
-		//var x = { date:  };
-		console.log(i,tmp);
+		//var tmp = new Date( Date.UTC(h[i].toString()) );
+		var x = { date: new Date(h[i].toString()) };
+		console.log(i,x);
 		
 		
-		result.push(tmp);
-		var tmp2 = new Date( Date.UTC(tmp.toUTCString()) );
+		result.push(x);
+		var tmp2 = Date.UTC(x.toUTCString());
 		result.push(tmp2);
 		
 		/*
