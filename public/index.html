@@ -84,10 +84,10 @@
                         <h3>rahulroy9202@gmail.com</h3>
                         <hr class="intro-divider">
                         <ul class="list-inline intro-social-buttons">
-                            <li>
+                            <li onClick="app.view.show(app.view.pages[1]);">
                                 <a href="#" class="btn btn-default btn-lg"><i class="fa fa-sign-in fa-fw"></i> <span class="network-name">login</span></a>
                             </li>
-                            <li>
+                            <li onClick="app.view.show(app.view.pages[2]);">
                                 <a href="#" class="btn btn-default btn-lg"><i class="fa fa-user-plus fa-fw"></i> <span class="network-name">signup</span></a>
                             </li>
 
@@ -107,12 +107,12 @@
 					<h3>login</h3>
 
 					<div class="input-group">
-					  <span class="input-group-addon" id="signup-username"><i class="fa fa-user fa-fw"></i></span>
-					  <input type="text" class="form-control" placeholder="username" aria-describedby="basic-addon1">
+					  <span class="input-group-addon" ><i class="fa fa-user fa-fw"></i></span>
+					  <input type="text" id="login-username" class="form-control" placeholder="username" aria-describedby="basic-addon1">
 					</div><br>
 					<div class="input-group">
-					  <span class="input-group-addon" id="signup-password"><i class="fa fa-key fa-fw"></i></span>
-					  <input type="text" class="form-control" placeholder="password" aria-describedby="basic-addon1">
+					  <span class="input-group-addon" ><i class="fa fa-key fa-fw"></i></span>
+					  <input type="text" id="login-password" class="form-control" placeholder="password" aria-describedby="basic-addon1">
 					</div><br>
 					<p class="remember_me">
 					  <label>
@@ -120,7 +120,7 @@
 						remember me on this computer
 					  </label>
 					</p>
-					<a href="#" class="btn btn-default btn-md"><i class="fa fa-sign-in fa-fw"></i> <span class="network-name">login</span></a>
+					<a href="#" onClick="app.login();" class="btn btn-default btn-md"><i class="fa fa-sign-in fa-fw"></i> <span class="network-name">login</span></a>
 					
 				</div>
             </div>		

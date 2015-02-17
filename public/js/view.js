@@ -26,9 +26,10 @@ View.prototype = {
 		console.log("this shouldn't execute");
 	},
 	
-	initDatePicker: function( _start, _end, _cb){
+	initDatePicker: function( _start, _end, _holidays, _cb){
 		
-		var leave = new Array(2);
+		var leave = new Array();
+		var _view = this;
 		
 		$('#datepicker').datepicker({
 		format: "dd/mm/yyyy",
@@ -39,9 +40,9 @@ View.prototype = {
 		daysOfWeekDisabled: "0,6",
 		beforeShowDay: function(date) {
 			
-			for(var i in hdays){
-				if (date.getMonth() == hdays[i].getMonth()  && date.getDate() == hdays[i].getDate()){
-					console.log(date,hdays[i]);
+			for(var i in _holidays){
+				if (date.getMonth() == _holidays[i].getMonth()  && date.getDate() == _holidays[i].getDate()){
+					console.log( date, _holidays[i] );
 					return {
 						enabled: false,
 						tooltip: 'hurray: holiday',
@@ -56,32 +57,29 @@ View.prototype = {
 				console.log("DATE CHANGED",selected);
 				if(selected.date){
 					if(selected.target.classList[2]==='from_dp'){
+						
 						leave[0] = new Date(selected.date.valueOf());				
 						var range = new Date(leave[0]);
-						
 						$('.to_dp').data('datepicker').setStartDate(new Date(range.valueOf()));
 						range.setDate(range.getDate()+14);
-						
 						$('.to_dp').data('datepicker').setEndDate(new Date(range.valueOf()));
-						console.log(max_date);
 					}
 					else{
+						
 						leave[1] = new Date(selected.date.valueOf());
 						var range = new Date(leave[1]);
-						
 						$('.from_dp').data('datepicker').setEndDate(new Date(range.valueOf()));
 						range.setDate(range.getDate()-14);
-						console.log(range);
 						$('.from_dp').data('datepicker').setStartDate(new Date(range.valueOf()));
-						console.log(max_date);
 					}
 					if(leave.length===2){
 						if(_cb)
 							return _cb(leave.shift(),leave.shift());
 						
 						nleave = new Leave(leave[0],leave[1])
-						console.log(nleave.getDetails(hdays));
-						display_leave_info(nleave.getDetails(hdays));
+						console.log(nleave.getDetails(_holidays));
+						console.log(this);
+						_view.displayNewLeave(nleave.getDetails(_holidays));
 					}
 				}
 				
@@ -100,6 +98,16 @@ View.prototype = {
 				
 		});
 	
+	},
+	
+	displayNewLeave: function(leave) {
+		var html = 	'<ul><li> total length: '+ leave.length +'</li><li> week days: '+ leave.weekdays +'</li><li> company days: '+ ( (leave.effective != -1)? leave.effective :'unknown') +'</li></ul>'
+		var div = $('#new_leave_info').html(html);
+	},
+	
+	displayLoginError: function() {
+		/*var html = 	'<ul><li> total length: '+ leave.length +'</li><li> week days: '+ leave.weekdays +'</li><li> company days: '+ ( (leave.effective != -1)? leave.effective :'unknown') +'</li></ul>'
+		var div = $('#new_leave_info').html(html);*/
 	}
 
 }

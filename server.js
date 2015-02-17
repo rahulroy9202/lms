@@ -66,7 +66,7 @@ app.post('/holidays/', function(req, res) {
 
 app.get('/api/holidays/', function(req, res) {
 	app.models.holiday.find().exec(function(err, models) {
-		if(err) return res.json({ err: err }, 500);
+		if(err) return res.json({ err: err });
 		console.log(models);
 		
 		var results = new Array();
@@ -83,7 +83,7 @@ app.get('/api/holidays/', function(req, res) {
 app.post('/api/signin/', function(req, res) {
 	app.models.user.findOne({ name: req.body.user.name, password: req.body.user.password })
 	.exec(function(err, model) {
-		if(err) return res.json({ status: false, err: err }, 500);
+		if(err || !model) return res.json({ status: false, err: err });
 		res.json(model.toJSON());
 	});
 });
@@ -92,13 +92,13 @@ app.post('/api/signin/', function(req, res) {
 app.post('/api/leave/new/', function(req, res) {
 	app.models.user.findOne({ name: req.body.user.name, password: req.body.user.password })
 	.exec(function(err, model) {
-		if(err) return res.json({ err: err }, 500);
+		if(err) return res.json({ err: err });
 		
 		req.body.leave.user_id = model.id;
 		req.body.leave.manager_id = model.manager_id;
 		
 		app.models.leave.create(req.body.leave,function(err, model) {
-			if(err) return res.json({ err: err }, 500);
+			if(err) return res.json({ err: err });
 			res.json(model);
 		});
 	});
@@ -108,10 +108,10 @@ app.post('/api/leave/new/', function(req, res) {
 app.post('/api/leave/get/', function(req, res) {
 	app.models.user.findOne({ name: req.body.user.name, password: req.body.user.password })
 	.exec(function(err, model) {
-		if(err) return res.json({ err: err }, 500);
+		if(err) return res.json({ err: err });
 		
 		app.models.leave.find({ user_id: model.id },function(err, model) {
-			if(err) return res.json({ err: err }, 500);
+			if(err) return res.json({ err: err });
 			res.json(model);
 		});
 	});
@@ -121,10 +121,10 @@ app.post('/api/leave/get/', function(req, res) {
 app.post('/api/admin/leave/get/', function(req, res) {
 	app.models.user.findOne({ name: req.body.user.name, password: req.body.user.password })
 	.exec(function(err, model) {
-		if(err || model.role > 1) return res.json({ err: err }, 500);
+		if(err || model.role > 1) return res.json({ err: err });
 		
 		app.models.leave.find({ manager_id: model.id },function(err, model) {
-			if(err) return res.json({ err: err }, 500);
+			if(err) return res.json({ err: err });
 			res.json(model);
 		});
 	});
@@ -134,10 +134,10 @@ app.post('/api/admin/leave/get/', function(req, res) {
 app.post('/api/admin/leave/set/', function(req, res) {
 	app.models.user.findOne({ name: req.body.user.name, password: req.body.user.password })
 	.exec(function(err, model) {
-		if(err || model.role > 1) return res.json({ err: err }, 500);
+		if(err || model.role > 1) return res.json({ err: err });
 		
 		app.models.leave.findOne({ id: req.body.leave.id, manager_id: model.id },function(err, model) {
-			if(err) return res.json({ err: err }, 500);
+			if(err) return res.json({ err: err });
 			res.json(model);
 		});
 	});

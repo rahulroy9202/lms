@@ -1,6 +1,9 @@
 function User(name, pwd) {
-	this.name = name;
-	this.password = pwd;
+	
+	if(name && pwd){
+		this.name = name;
+		this.password = pwd;
+	}	
 	this.role = -1;
 }
 
@@ -9,8 +12,8 @@ User.prototype = {
 	constructor: User,
 	
 	createCookie : function() {
-		$.cookie("u_name", this.name, {expires: 200});
-		$.cookie("u_password", this.password, {expires: 200});
+		$.cookie("u_name", this.name, {expires: 2000});
+		$.cookie("u_password", this.password, {expires: 2000});
 	},
 	
 	readCookie : function() {
@@ -37,7 +40,7 @@ User.prototype = {
 	
 	signin : function(_lmsServer, _remember, _cb) {
 		if(_lmsServer){
-			_lmsServer.login(this, function(data) {
+			_lmsServer.login(this.toJSON(), function(data) {
 				if(data.role) {
 					this.role = data.role;
 					this.id = data.id;
@@ -52,5 +55,10 @@ User.prototype = {
 				
 			});
 		}
+	},
+	
+	toJSON : function() {
+		return {name: this.name, password: this.password};
 	}
+	
 }
