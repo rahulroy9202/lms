@@ -30,7 +30,6 @@ User.prototype = {
 	
 	logout : function(_forget) {
 		console.log('x');
-
 		if(_forget)
 			this.clearCookie();
 		this.name = this.password = null;
