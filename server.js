@@ -234,7 +234,7 @@ app.post('/holidays/', function(req, res) {
 		var x = { date: new Date(h[i]) };
 		console.log(i,x);
 		*/
-		var tmp = new Date( Date.UTC(h[i].toUTCString()) );
+		var tmp = new Date( Date.UTC(h[i].toString()) );
 		//var x = { date:  };
 		console.log(i,tmp);
 		
