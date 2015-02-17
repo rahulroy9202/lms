@@ -234,12 +234,15 @@ app.post('/holidays/', function(req, res) {
 		var x = { date: new Date(h[i]) };
 		console.log(i,x);
 		*/
-		var tmp = new Date( Date.UTC(h[i].toString()) );
+		var tmp = new Date( Date.UTC(h[i].toUTCString()) );
 		//var x = { date:  };
 		console.log(i,tmp);
 		
 		
-		result.push(x);
+		result.push(tmp);
+		var tmp2 = new Date( Date.UTC(tmp.toUTCString()) );
+		
+		
 		/*
 		app.models.holiday.create(x,function(err, model) {
 		if(err) return console.log(err);
