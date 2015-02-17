@@ -134,8 +134,6 @@ function initLmsServer(_url){
 				},
 			});
 	}
-	
-	
 
 	return lmsserver;
 }
