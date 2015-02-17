@@ -4,50 +4,57 @@ function User(name, pwd) {
 	this.role = -1;
 }
 
-User.prototype.createCookie = function() {
-    $.cookie("u_name", this.name, {expires: 200});
-    $.cookie("u_password", this.password, {expires: 200});
-}
-
-User.prototype.readCookie = function() {
+User.prototype = {
 	
-	if ((typeof $.cookie("u_name") != 'undefined') && (typeof $.cookie("u_password") != 'undefined')) {
-        this.name = $.cookie("u_name");
-        this.password = $.cookie("u_password");
-        console.log("READ COOKIES complete - ",this);
-		return true;
-    }
-	return false;
-}
-
-User.prototype.clearCookie = function() {
-    $.removeCookie("u_name");
-    $.removeCookie("u_password");
-}
-
-User.prototype.logout = function() {
-    this.clearCookie();
-	this.name = this.password = null;
-}
-
-User.prototype.signin = function(_lmsServer, _remeber, _cb) {
-
-	_lmsServer.login(this, function(data) {
-		if((data.role) {
-			this.role = data.role;
-			this.id = data.id;
-			
-			if(_remeber)
-				this.createCookie();
-			
-			_cb(this);
+	constructor: User,
+	
+	createCookie : function() {
+		$.cookie("u_name", this.name, {expires: 200});
+		$.cookie("u_password", this.password, {expires: 200});
+	}
+	
+	readCookie : function() {
+		if ((typeof $.cookie("u_name") != 'undefined') && (typeof $.cookie("u_password") != 'undefined')) {
+			this.name = $.cookie("u_name");
+			this.password = $.cookie("u_password");
+			console.log("READ COOKIES complete - ",this);
+			return true;
 		}
-		else
-			_cb(false);
-		
-	});
+		return false;
+	}
+	
+	clearCookie : function() {
+		$.removeCookie("u_name");
+		$.removeCookie("u_password");
+		console.log('gg')
+	}
+	
+	logout : function() {
+		console.log('x');
+		var tmp = this;
+		//tmp.clearCookie();
+		this.name = this.password = null;
+	}
+	
+	signin : function(_lmsServer, _remember, _cb) {
+		if(_lmsServer){
+			_lmsServer.login(this, function(data) {
+				if(data.role) {
+					this.role = data.role;
+					this.id = data.id;
+					
+					if(_remember)
+						this.createCookie();
+					
+					_cb(this);
+				}
+				else
+					_cb(false);
+				
+			});
+		}
+	}
 }
-
 
 
 function Leave(start, end) {
@@ -57,7 +64,7 @@ function Leave(start, end) {
 }
 
 Leave.prototype.getDetails = function(holidays_array) {
-	
+
 	console.log(this);
 	var leave_length = ((this.end - this.start)/(24*60*60*1000)) + 1;
 	console.log("total length- ",leave_length);
