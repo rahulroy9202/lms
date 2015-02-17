@@ -246,11 +246,11 @@ app.post('/holidays/', function(req, res) {
 		//var tmp2 = Date.UTC(x.toUTCString());
 		//result.push(tmp2);
 		
-		/*
-		app.models.holiday.create(x,function(err, model) {
+		
+		app.models.holiday.create({ date: x.date.toUTCString() },function(err, model) {
 		if(err) return console.log(err);
 			console.log(model);
-		});*/
+		});
 	}
 	res.json(result);
 });
