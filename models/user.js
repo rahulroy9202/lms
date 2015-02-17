@@ -1,53 +1,26 @@
 var Waterline = require('waterline');
 
-// Define your collection (aka model)
 var User = Waterline.Collection.extend({
 
-	// Define a custom table name
-	tableName: 'user',
+	identity: 'user',
+	connection: 'mysqlos',
 
-	// Set schema true/false for adapters that support schemaless
-	schema: true,
-
-	// Define an adapter to use
-	adapter: 'postgresql',
-
-	// Define attributes for this collection
 	attributes: {
-
-		firstName: {
-		  type: 'string',
-
-		  // also accepts any validations
-		  required: true
-		},
-
-		lastName: {
+		name: {
 			type: 'string',
-			required: true,
-			maxLength: 20
+			unique: true
 		},
-
-		email: {
-
-			// Special types are allowed, they are used in validations and
-			// set as a string when passed to an adapter
-			type: 'email',
-
-			required: true
-		},
-
-		age: {
-			type: 'integer',
-			min: 18
-		},
-
-		// You can also define instance methods here
-		fullName: function() {
-			return this.firstName + ' ' + this.lastName
-		}
+		password: 'string',
+		role: 'integer',		// 1 for manager, 2 for user
+		manager_id: 'integer'	// manager responsible for user. model.id of manager user.
+	},
+	
+	toJSON: function() {
+		var obj = this.toObject();
+		delete obj.password;
+		return obj;
 	}
-
+  
 });
 
-module.exports = Person;
+module.exports = User;

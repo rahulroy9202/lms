@@ -19,14 +19,6 @@ views.profile.toggle();
 views.management.toggle();
 
 
-function clear_user_cookie() {
-    console.log("COOKIE  --CLEAR ");
-    $.removeCookie("u_email");
-    $.removeCookie("u_password");
-    g_email = g_password = null;
-}
-
-
 var leave = new Array();
 
 var start_date = new Date();

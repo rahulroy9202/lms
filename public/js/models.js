@@ -11,7 +11,7 @@ User.prototype = {
 	createCookie : function() {
 		$.cookie("u_name", this.name, {expires: 200});
 		$.cookie("u_password", this.password, {expires: 200});
-	}
+	},
 	
 	readCookie : function() {
 		if ((typeof $.cookie("u_name") != 'undefined') && (typeof $.cookie("u_password") != 'undefined')) {
@@ -21,20 +21,20 @@ User.prototype = {
 			return true;
 		}
 		return false;
-	}
+	},
 	
 	clearCookie : function() {
 		$.removeCookie("u_name");
 		$.removeCookie("u_password");
-		console.log('gg')
-	}
+	},
 	
-	logout : function() {
+	logout : function(_forget) {
 		console.log('x');
-		var tmp = this;
-		//tmp.clearCookie();
+
+		if(_forget)
+			this.clearCookie();
 		this.name = this.password = null;
-	}
+	},
 	
 	signin : function(_lmsServer, _remember, _cb) {
 		if(_lmsServer){
