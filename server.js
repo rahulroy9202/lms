@@ -239,7 +239,7 @@ app.post('/holidays/', function(req, res) {
 		h[i] = new Date(h[i]);
 		
 		var x = { date: new Date(h[i].toUTCString()) };
-		console.log(i,x);
+		console.log(i,x.date.toUTCString());
 		
 		
 		result.push(x);
