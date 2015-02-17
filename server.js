@@ -59,18 +59,24 @@ var config = {
 
 var User = Waterline.Collection.extend({
 
-  identity: 'user',
-  connection: 'mysqlos',
+	identity: 'user',
+	connection: 'mysqlos',
 
-  attributes: {
-    name: {
-		type: 'string',
-		unique: true
+	attributes: {
+		name: {
+			type: 'string',
+			unique: true
+		},
+		password: 'string',
+		role: 'integer',		// 1 for manager, 2 for user
+		manager_id: 'integer'	// manager responsible for user. model.id of manager user.
 	},
-    password: 'string',
-	role: 'integer',		// 1 for manager, 2 for user
-	manager_id: 'integer'	// manager responsible for user. model.id of manager user.
-  }
+	
+	toJSON: function() {
+		var obj = this.toObject();
+		delete obj.password;
+		return obj;
+	}
   
 });
 
@@ -80,7 +86,7 @@ var Holidays = Waterline.Collection.extend({
   connection: 'mysqlos',
 
   attributes: {
-	date: 'date',
+	date: 'datetime',
 	occasion: 'string'
   }
   
@@ -170,16 +176,19 @@ app.use(function(req, res, next) {
 
 
 app.post('/holidays/', function(req, res) {
+	
 	var h = req.body.h;
 	console.log(Array.isArray(h));
 	
 	var result = new Array();
 	for(var i in h) {
+		
 		h[i] = new Date(h[i]);
 		app.models.holiday.create({ date: h[i] },function(err, model) {
 		if(err) return console.log(err);
 			console.log(model);
 		});
+		
 	}
 	res.json(result);
 });
@@ -204,7 +213,7 @@ app.get('/api/holidays/', function(req, res) {
 app.post('/api/signin/', function(req, res) {
 	app.models.user.findOne({ name: req.body.user.name, password: req.body.user.password }).exec(function(err, model) {
 		if(err) return res.json({ status: false, err: err }, 500);
-		res.json({ status: true, role: model.role });
+		res.json(model.toJSON());
 	});
 });
 

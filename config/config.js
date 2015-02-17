@@ -57,6 +57,25 @@ function test_api() {
     });
 }
 
+function test_api() {
+
+    $.ajax({
+        url: 'http://127.0.0.1:8080/holidays/',
+        data: {
+			h: res
+        },
+        type: "POST",
+        dataType: "json",
+        success: function(json) {
+            console.log("RESULTS- \n", json);
+			result = json;
+        },
+        error: function(xhr, status, errorThrown) {
+            console.log("Status: " + status);
+        },
+    });
+}
+
 
 function test_api() {
 
