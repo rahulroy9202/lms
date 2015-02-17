@@ -77,7 +77,7 @@ var Holidays = Waterline.Collection.extend({
   connection: 'mysqlos',
 
   attributes: {
-	date: 'timestamp',
+	date: 'date',
 	occasion: 'string'
   }
   
@@ -163,11 +163,13 @@ app.get('/api/holidays/', function(req, res) {
 		if(err) return res.json({ err: err }, 500);
 		console.log(models);
 		
+		var results = new Array();
 		for(var i in models ){
 			console.log(new Date(models[i].date).getDay());
+			results.push(new Date(models[i].date));
 		}
 		
-		res.json(models);
+		res.json(results);
 	});
 });
 

@@ -1,5 +1,3 @@
-api_server_url = document.domain;
-
 
 var views = {
 	
@@ -20,14 +18,6 @@ views.signup.toggle();
 views.profile.toggle();
 views.management.toggle();
 
-/*
-function View(){
-}
-Person.prototype.name = “Nicholas”;
-Person.prototype.sayName = function(){
-alert(this.name);
-};
-*/
 
 function create_user_cookie(_email, _password) {
     console.log("COOKIE  --CREATE ");
@@ -66,7 +56,14 @@ var max_date,min_date;
 var lmsServer = initLmsServer(document.URL);
 
 
-lmsServer.login({name:'new2',password:'pwd2'}, cb_login);
+lmsServer.login({name:'new',password:'pwd'}, cb_login);
+
+var hdays;
+lmsServer.getHolidays(function(result){
+	hdays = result;
+	console.log(hdays);
+});
+
 
 function cb_login(data) {
 	console.log(data);
@@ -124,20 +121,11 @@ function init_dp(start,end) {
 					console.log(max_date);
 				}
 				if(leave.length===2){
-					var leave_length = ((leave[1] - leave[0])/(24*60*60*1000));
-					console.log(++leave_length);
+					var nleave = new Leave(leave[0],leave[1])
 					
-					var company_leave = 0;
-					var tmp = new Date(leave[0]);
-					
-					for(var i =0; i<leave_length;i++){
-						tmp.setDate(tmp.getDate()+1);
-						if(tmp.getDay()>0 && tmp.getDay()<6){
-							company_leave++;
-						}
-					}
-					
-					display_leave_info({ length: leave_length, actual_length: company_leave });
+					console.log(nleave.getDetails());
+
+					display_leave_info(nleave.getDetails());
 				}
 			}
 			
@@ -160,7 +148,7 @@ function init_dp(start,end) {
 init_dp('-4d','1/1/2016')
 
 function display_leave_info(leave) {
-	var html = 	'<ul><li> total length: '+ leave.length +'</li><li> week days: '+leave.actual_length+'</li></ul>'
+	var html = 	'<ul><li> total length: '+ leave.length +'</li><li> week days: '+ leave.weekdays +'</li></ul>'
 	var div = $('#new_leave_info').html(html);
 }
 

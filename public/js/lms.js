@@ -44,7 +44,7 @@ function initLmsServer(_url){
 			});
 	}
 	
-	lmsserver.newLeaves = function( _user, _leave, _cb ) {
+	lmsserver.newLeave = function( _user, _leave, _cb ) {
 		
 		$.ajax({
 				url: _url + 'api/leave/new/',
@@ -58,6 +58,30 @@ function initLmsServer(_url){
 					console.log("new leave result- \n", json);
 					if(typeof(_cb)==='function'){
 						_cb(json);
+					}
+				},
+				error: function(xhr, status, errorThrown) {
+					console.log("Status: " + status);
+				},
+			});
+	}
+	
+	lmsserver.getHolidays = function( _cb ) {
+		
+		$.ajax({
+				url: _url + 'api/holidays/',
+				type: "GET",
+				dataType: "json",
+				success: function(json) {
+					console.log("getHolidaysInfo result- \n", json);
+					
+					var res = new Array();
+					for(var i in json){
+						res.push(new Date(json[i]));
+					}
+					
+					if(typeof(_cb)==='function'){
+						_cb(res);
 					}
 				},
 				error: function(xhr, status, errorThrown) {
