@@ -148,7 +148,7 @@ app.get('/api/holidays/', function(req, res) {
 		console.log(models);
 		
 		for(var i in models ){
-			console.log(new Date(models.date).getDay());
+			console.log(new Date(models[i].date).getDay());
 		}
 		
 		res.json(models);
