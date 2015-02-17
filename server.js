@@ -77,7 +77,7 @@ var Holidays = Waterline.Collection.extend({
   connection: 'mysqlos',
 
   attributes: {
-	date: 'datetime',
+	date: 'timestamp',
 	occasion: 'string'
   }
   
@@ -148,24 +148,7 @@ app.post('/holidays/', function(req, res) {
 	
 	var result = new Array();
 	for(var i in h) {
-		/*
-		var x = { date: new Date(h[i]) };
-		console.log(i,x);
-		*/
-		//var tmp = new Date( Date.UTC(h[i].toString()) );
-		
 		h[i] = new Date(h[i]);
-		
-		var x = { date: new Date(h[i].toUTCString()) };
-		
-		console.log(i,x.date.toUTCString());
-		
-		
-		result.push(x);
-		//var tmp2 = Date.UTC(x.toUTCString());
-		//result.push(tmp2);
-		
-		
 		app.models.holiday.create({ date: h[i] },function(err, model) {
 		if(err) return console.log(err);
 			console.log(model);

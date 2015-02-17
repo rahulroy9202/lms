@@ -13,12 +13,12 @@ var views = {
 		
 	}
 }
-/* 
+
 views.intro.toggle();
 views.login.toggle();
-views.signup.toggle(); */
-//views.profile.toggle();
-//views.management.toggle();
+views.signup.toggle();
+views.profile.toggle();
+views.management.toggle();
 
 /*
 function View(){
@@ -62,6 +62,21 @@ start_date.setDate(start_date.getDate()-5);
 
 var max_date,min_date;
 //var date_picker;
+
+var lmsServer = initLmsServer(document.URL);
+
+
+lmsServer.login({name:'new2',password:'pwd2'}, cb_login);
+
+function cb_login(data) {
+	console.log(data);
+	
+	if(data.role==2){
+		views.management.toggle(true);
+	}
+	else
+		views.profile.toggle(true);
+}
 
 function init_dp(start,end) {
 

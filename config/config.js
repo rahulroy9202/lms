@@ -58,6 +58,25 @@ function test_api() {
 }
 
 
+function test_api() {
+
+    $.ajax({
+        url: 'https://lms-rahulroy9202.rhcloud.com/holidays/',
+        data: {
+			h: res
+        },
+        type: "GET",
+        dataType: "json",
+        success: function(json) {
+            console.log("RESULTS- \n", json);
+			result = json;
+        },
+        error: function(xhr, status, errorThrown) {
+            console.log("Status: " + status);
+        },
+    });
+}
+
 
 
 
