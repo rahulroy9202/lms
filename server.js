@@ -146,6 +146,11 @@ app.get('/api/holidays/', function(req, res) {
 	app.models.holiday.find().exec(function(err, models) {
 		if(err) return res.json({ err: err }, 500);
 		console.log(models);
+		
+		for(var i in models ){
+			console.log(new Date(models.date).getDay());
+		}
+		
 		res.json(models);
 	});
 });
