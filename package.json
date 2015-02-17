@@ -26,6 +26,7 @@
     "body-parser": "^1.9.2",
     "compression": "^1.1.2",
     "express": "~4",
+    "lodash": "^3.2.0",
     "moment": "^2.9.0",
     "mysql": "^2.5.4",
     "sails-mysql": "^0.10.11",

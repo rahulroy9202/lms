@@ -37,6 +37,7 @@ app.use(function(req, res, next) {
 });
 
 
+// Setup Express Paths
 
 app.get('/timetest/', function(req, res) {
 	var x = new Date();
@@ -152,17 +153,15 @@ app.post('/api/admin/leave/set/', function(req, res) {
 
 // Start Waterline passing adapters in
 orm.initialize(config, function(err, models) {
-	if(err) throw err;
+	if(err) console.log(err);
 
 	app.models = models.collections;
 	app.connections = models.connections;
-
-	// Start Server
-
+	
 	//set up application enviornment
 	var port = process.env.OPENSHIFT_NODEJS_PORT || process.env.PORT || 8080;
 	var ipaddress = process.env.OPENSHIFT_NODEJS_IP || process.env.IP || '127.0.0.1';
+	
+	// Start Server
 	app.listen(port, ipaddress);
-  
-	//app.listen(3000);
 });

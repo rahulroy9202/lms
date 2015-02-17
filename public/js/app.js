@@ -1,23 +1,7 @@
+var lmsServer = initLmsServer(window.location.origin);
+var view = new View();
 
-var views = {
-	
-	intro: $("#intro"),
-	login: $("#login"),
-	signup: $("#signup"),
-	profile: $("#profile"),
-	management: $("#management"),
-	
-	show: function(view){
-		
-	}
-}
-
-views.intro.toggle();
-views.login.toggle();
-views.signup.toggle();
-views.profile.toggle();
-views.management.toggle();
-
+console.log(view);
 
 var leave = new Array();
 
@@ -28,8 +12,7 @@ start_date.setDate(start_date.getDate()-5);
 var max_date,min_date;
 //var date_picker;
 
-var url = window.location.origin; //location.protocol+'//'+location.hostname+(location.port ? ':'+location.port : '');
-var lmsServer = initLmsServer(url);
+
 
 
 var user = new User('new','pwd');
@@ -51,10 +34,10 @@ function cb_login(data) {
 	console.log(data);
 	
 	if(data.role==2){
-		views.management.toggle(true);
+		view.management.toggle(true);
 	}
-	else
-		views.profile.toggle(true);
+	//else
+		//view.profile.toggle(true);
 }
 
 function init_dp(start,end) {
