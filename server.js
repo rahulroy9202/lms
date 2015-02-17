@@ -89,13 +89,26 @@ var Leave = Waterline.Collection.extend({
 	connection: 'mysqlos',
 
 	attributes: {
-		start: 'date',
-		end: 'date',
-		length: 'integer',		//actual length - ie- after considering weekends and holidays 
+		start: {
+			type: 'date',
+			required: true,
+		},
+		end: {
+			type: 'date',
+			required: true,
+		},
 		user_id: 'integer',
 		manager_id: 'integer',
 		status: 'integer',
 		comment: 'string'
+	},
+	
+	getLength: function() {
+		// Do something here
+	},
+	
+	getActualLength: function() {
+		// Do something here
 	}
 });
 
@@ -129,23 +142,12 @@ app.use(function(req, res, next) {
 //app.use(express.methodOverride());
 
 
-
-
-// Build Express Routes (CRUD routes for /users)
-
-app.get('/users', function(req, res) {
-  app.models.user.find().exec(function(err, models) {
-    if(err) return res.json({ err: err }, 500);
-    res.json(models);
-  });
-});
-
-
-app.post('/users', function(req, res) {
-  app.models.user.create(req.body, function(err, model) {
-    if(err) return res.json({ err: err }, 500);
-    res.json(model);
-  });
+app.get('/api/holidays/', function(req, res) {
+	app.models.holiday.find().exec(function(err, models) {
+		if(err) return res.json({ err: err }, 500);
+		console.log(models);
+		res.json(models);
+	});
 });
 
 
@@ -168,8 +170,6 @@ app.post('/api/leave/new/', function(req, res) {
 			if(err) return res.json({ err: err }, 500);
 			res.json(model);
 		});
-		
-		res.json({ status: true, role: model.role });
 	});
 });
 
@@ -182,8 +182,6 @@ app.post('/api/leave/get/', function(req, res) {
 			if(err) return res.json({ err: err }, 500);
 			res.json(model);
 		});
-		
-		res.json({ status: true, role: model.role });
 	});
 });
 
@@ -195,8 +193,7 @@ app.post('/api/admin/leave/get/', function(req, res) {
 		app.models.leave.find({ manager_id: model.id },function(err, model) {
 			if(err) return res.json({ err: err }, 500);
 			res.json(model);
-		});	
-		res.json({ status: true, role: model.role });
+		});
 	});
 });
 
@@ -209,8 +206,6 @@ app.post('/api/admin/leave/set/', function(req, res) {
 			if(err) return res.json({ err: err }, 500);
 			res.json(model);
 		});
-		
-		res.json({ status: true, role: model.role });
 	});
 });
 
@@ -225,16 +220,15 @@ app.post('/api/admin/leave/set/', function(req, res) {
 
 
 app.post('/holidays/', function(req, res) {
-	
 	var h = req.body.h;
 	console.log(Array.isArray(h));
 	
 	var result = new Array();
 	for(var i in h) {
-		
+		/*
 		var x = { date: new Date(h[i]) };
 		console.log(i,x);
-		
+		*/
 		var x = { date: new Date(h[i].toString()) };
 		console.log(i,x);
 		
@@ -250,19 +244,11 @@ app.post('/holidays/', function(req, res) {
 });
 
 
-app.get('/holidays/', function(req, res) {
-	
-	app.models.holiday.find().exec(function(err, models) {
-		if(err) return res.json({ err: err }, 500);
-		res.json(models);
-	});
-
-});
 
 
 app.get('/timetest/', function(req, res) {
 	var x = new Date();
-
+	res.json(x);
 });
 
 
