@@ -65,9 +65,10 @@ var User = Waterline.Collection.extend({
   attributes: {
     name: 'string',
     password: 'string',
-	role: 'integer',
-	manager_id: 'integer'
+	role: 'integer',		// 1 for manager, 2 for user
+	manager_id: 'integer'	// manager responsible for user. model.id of manager user.
   }
+  
 });
 
 var Holidays = Waterline.Collection.extend({
@@ -79,23 +80,29 @@ var Holidays = Waterline.Collection.extend({
 	date: 'date',
 	occasion: 'string'
   }
+  
 });
 
-var Pet = Waterline.Collection.extend({
+var Leave = Waterline.Collection.extend({
 
-	identity: 'pet',
+	identity: 'leave',
 	connection: 'mysqlos',
 
 	attributes: {
-		name: 'string',
-		breed: 'string'
+		start: 'date',
+		end: 'date',
+		length: 'integer',		//actual length - ie- after considering weekends and holidays 
+		user_id: 'integer',
+		manager_id: 'integer',
+		status: 'integer',
+		comment: 'string'
 	}
 });
 
 
 // Load the Models into the ORM
 orm.loadCollection(User);
-orm.loadCollection(Pet);
+orm.loadCollection(Leave);
 orm.loadCollection(Holidays);
 
 
@@ -133,12 +140,87 @@ app.get('/users', function(req, res) {
   });
 });
 
+
 app.post('/users', function(req, res) {
   app.models.user.create(req.body, function(err, model) {
     if(err) return res.json({ err: err }, 500);
     res.json(model);
   });
 });
+
+
+app.post('/api/signin/', function(req, res) {
+	app.models.user.findOne({ name: req.body.user.name, password: req.body.user.password }).exec(function(err, model) {
+		if(err) return res.json({ status: false, err: err }, 500);
+		res.json({ status: true, role: model.role });
+	});
+});
+
+
+app.post('/api/leave/new/', function(req, res) {
+	app.models.user.findOne({ name: req.body.user.name, password: req.body.user.password }).exec(function(err, model) {
+		if(err) return res.json({ err: err }, 500);
+		
+		req.body.leave.user_id = model.id;
+		req.body.leave.manager_id = model.manager_id;
+		
+		app.models.leave.create(req.body.leave,function(err, model) {
+			if(err) return res.json({ err: err }, 500);
+			res.json(model);
+		});
+		
+		res.json({ status: true, role: model.role });
+	});
+});
+
+
+app.post('/api/leave/get/', function(req, res) {
+	app.models.user.findOne({ name: req.body.user.name, password: req.body.user.password }).exec(function(err, model) {
+		if(err) return res.json({ err: err }, 500);
+		
+		app.models.leave.find({ user_id: model.id },function(err, model) {
+			if(err) return res.json({ err: err }, 500);
+			res.json(model);
+		});
+		
+		res.json({ status: true, role: model.role });
+	});
+});
+
+
+app.post('/api/admin/leave/get/', function(req, res) {
+	app.models.user.findOne({ name: req.body.user.name, password: req.body.user.password }).exec(function(err, model) {
+		if(err) return res.json({ err: err }, 500);
+		
+		app.models.leave.find({ manager_id: model.id },function(err, model) {
+			if(err) return res.json({ err: err }, 500);
+			res.json(model);
+		});	
+		res.json({ status: true, role: model.role });
+	});
+});
+
+
+app.post('/api/admin/leave/set/', function(req, res) {
+	app.models.user.findOne({ name: req.body.user.name, password: req.body.user.password }).exec(function(err, model) {
+		if(err) return res.json({ err: err }, 500);
+		
+		app.models.leave.findOne({ id: req.body.leave.id, manager_id: model.id },function(err, model) {
+			if(err) return res.json({ err: err }, 500);
+			res.json(model);
+		});
+		
+		res.json({ status: true, role: model.role });
+	});
+});
+
+
+
+
+
+
+
+
 
 
 
@@ -176,8 +258,6 @@ app.get('/holidays/', function(req, res) {
 	});
 
 });
-
-
 
 
 app.get('/timetest/', function(req, res) {
