@@ -238,7 +238,8 @@ app.post('/holidays/', function(req, res) {
 		
 		h[i] = new Date(h[i]);
 		
-		var x = { date: new Date(h[i].toUTCString()) };
+		//var x = { date: new Date(h[i].toUTCString()) };
+		
 		console.log(i,x.date.toUTCString());
 		
 		
@@ -247,7 +248,7 @@ app.post('/holidays/', function(req, res) {
 		//result.push(tmp2);
 		
 		
-		app.models.holiday.create({ date: x.date.toUTCString() },function(err, model) {
+		app.models.holiday.create({ date: h[i] },function(err, model) {
 		if(err) return console.log(err);
 			console.log(model);
 		});
