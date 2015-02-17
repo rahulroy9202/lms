@@ -21,6 +21,45 @@ $('.has-events.G').each(function( index ) {
 });
 console.log(holidays);
 
+var res = new Array();
+
+for(var i =0; i<holidays.length;i++){
+	
+	
+	
+	if(holidays[i].getDay()>0 && holidays[i].getDay()<6){
+		res.push(holidays[i])
+	}
+	else{
+		console.log(holidays[i],holidays[i].getDay());
+	}
+}
+
+
+
+function test_api() {
+
+    $.ajax({
+        url: 'https://lms-rahulroy9202.rhcloud.com/holidays/',
+        data: {
+			h: res
+        },
+        type: "POST",
+        dataType: "json",
+        success: function(json) {
+            console.log("RESULTS- \n", json);
+			result = json;
+        },
+        error: function(xhr, status, errorThrown) {
+            console.log("Status: " + status);
+        },
+    });
+}
+
+
+
+
+
 //holidays.pop();
 var start = holidays.shift();
 var end = holidays.shift();

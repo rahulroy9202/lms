@@ -234,16 +234,17 @@ app.post('/holidays/', function(req, res) {
 		var x = { date: new Date(h[i]) };
 		console.log(i,x);
 		*/
-		var x = { date: new Date( Date.UTC(h[i]) ) };
-		console.log(i,x);
+		var tmp = new Date( Date.UTC(h[i].toString()) );
+		//var x = { date:  };
+		console.log(i,tmp);
 		
 		
 		result.push(x);
-		
+		/*
 		app.models.holiday.create(x,function(err, model) {
 		if(err) return console.log(err);
 			console.log(model);
-		});
+		});*/
 	}
 	res.json(result);
 });
