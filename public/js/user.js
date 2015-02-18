@@ -5,6 +5,7 @@ function User(name, pwd) {
 		this.password = pwd;
 	}	
 	this.role = -1;
+	this.id = -1;
 }
 
 User.prototype = {
