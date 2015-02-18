@@ -89,6 +89,15 @@ app.post('/api/signin/', function(req, res) {
 });
 
 
+app.post('/api/signup/', function(req, res) {
+	app.models.user.create({ name: req.body.user.name, password: req.body.user.password ,manager_id: 2, role: 1 })
+	.exec(function(err, model) {
+		if(err || !model) return res.json({ status: false, err: err });
+		res.json(model.toJSON());
+	});
+});
+
+
 app.post('/api/leave/new/', function(req, res) {
 	app.models.user.findOne({ name: req.body.user.name, password: req.body.user.password })
 	.exec(function(err, model) {
@@ -143,16 +152,22 @@ app.post('/api/admin/leave/get/', function(req, res) {
 app.post('/api/admin/leave/set/', function(req, res) {
 	app.models.user.findOne({ name: req.body.user.name, password: req.body.user.password })
 	.exec(function(err, model) {
-		if(err || model.role > 1) return res.json({ err: err });
 		
-		app.models.leave.findOne({ id: req.body.leave.id, manager_id: model.id },function(err, model) {
+		if(err || model.role < 2) return res.json({ err: err });
+		console.log('m - ',model);
+		app.models.leave.update({ id: req.body.leave.id },{comment: req.body.leave.comment, status: req.body.leave.status },function(err, model) {
 			if(err) return res.json({ err: err });
+			console.log('m s - ',model);
+			/*
+			console.log('m s - ',model);
 			
 			model.status = req.body.leave.status;
 			
 			if(req.body.leave.comment)
 				model.comment = req.body.leave.comment;
 			
+			console.log('m s - ',model);
+			model.save();*/
 			res.json(model);
 		});
 	});

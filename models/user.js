@@ -11,7 +11,7 @@ var User = Waterline.Collection.extend({
 			unique: true
 		},
 		password: 'string',
-		role: 'integer',		// 1 for manager, 2 for user
+		role: 'integer',		// 2 for manager, 1 for user
 		manager_id: 'integer'	// manager responsible for user. model.id of manager user.
 	},
 	

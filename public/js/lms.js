@@ -23,6 +23,27 @@ function initLmsServer(_url){
 			});
 	}
 	
+	lmsserver.signup = function( _user, _cb ) {
+		
+		$.ajax({
+				url: _url + '/api/signin/',
+				data: {
+					user: _user
+				},
+				type: "POST",
+				dataType: "json",
+				success: function(json) {
+					//console.log("signin result- \n", json);
+					if(typeof(_cb)==='function'){
+						_cb(json);
+					}
+				},
+				error: function(xhr, status, errorThrown) {
+					console.log("Status: " + status);
+				},
+			});
+	}
+	
 	lmsserver.getLeaves = function( _user, _cb ) {
 		
 		$.ajax({
@@ -81,7 +102,7 @@ function initLmsServer(_url){
 	lmsserver.setLeaveAdmin = function( _user, _leave, _cb ) {
 		
 		$.ajax({
-				url: _url + '/api/admin/leave/get/',
+				url: _url + '/api/admin/leave/set/',
 				data: {
 					user: _user,
 					leave: _leave

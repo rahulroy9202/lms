@@ -19,14 +19,6 @@ function App() {
 	this.lmsServer = new initLmsServer(window.location.origin);
 	this.view = new View();
 	this.view.show(this.view.pages[0]);
-	/*
-	this.lmsServer.getHolidays(function(result){
-		this.holidays = result;
-		console.log(holidays);
-		this.view.initDatePicker('-4d','31/12/2015', holidays, this.createLeave);
-	});
-	*/
-	
 	this.user = new User();
 	
 	if(this.user.readCookie()){
@@ -34,26 +26,6 @@ function App() {
 	}
 }
 
-
-
-/*
-var lmsServer = new initLmsServer(window.location.origin),
-	view = new View();
-
-view.show(view.pages[0]);
-*/
-
-//var user = 
-//
-//var user = new User('new','pwd');
-//var user2 = new User('new2','pwd2');
-
-
-//lmsServer.login(user, cb_login);
-/*
-var hdays;
-
-*/
 
 App.prototype = {
 	
@@ -125,6 +97,14 @@ App.prototype = {
 		if(app.nLeave.getDetails(app.hdays).length < 16){
 			app.lmsServer.newLeave(app.user.toJSON(), app.nLeave, app.cb_newLeave);
 		}		
+	},
+	
+	setLeaveAdmin: function(_id,_status){
+		var _comment = '';
+		if(_status === 2){
+			_comment = $('#rejection_box').val();
+		}
+		app.lmsServer.setLeaveAdmin(app.user.toJSON(), { id : _id, status: _status, comment: _comment }, app.showAdminPage);
 	}
 
 

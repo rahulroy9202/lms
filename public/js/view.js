@@ -10,12 +10,7 @@ View.prototype = {
 		for(var i in this.pages){
 			if(_page == this.pages[i]){
 				this.pages[i].toggle(true);
-				
-				if(i===3){
-					
-				}
-				
-				
+				this.current = _page;
 				continue;
 			}
 			this.pages[i].toggle(false);	
@@ -113,7 +108,7 @@ View.prototype = {
 		if(leaves===null)
 			html = 'no leaves applied for.';
 		for(var i in leaves){
-			html += '<li class="'+status[leaves[i].status]+'" ><h4> from: '+ leaves[i].start.toDateString() + ' to: '+ leaves[i].end.toDateString() + ' status: ' + status[leaves[i].status] +
+			html += '<li class="'+status[leaves[i].status]+'" ><h4> from: '+ leaves[i].start.toDateString() + ' to: '+ leaves[i].end.toDateString() + ' status: ' + status[leaves[i].status] + ' ' +leaves[i].comment
 			/*'<a href="#" class="btn btn-warning btn-xs" ><i class="fa fa-trash fa-fw"></i><span class="">withdraw</span> */' </a></h4>  </li>'
 		}
 		var div = $('.user_applications_display').html(html);//'<ul>'+html+'</ul>');
@@ -129,7 +124,8 @@ View.prototype = {
 		for(var i in leaves){
 			if( leaves[i].status === 0 )
 				htmlP += '<li class="'+status[leaves[i].status]+'"><h4> from: '+ leaves[i].start.toDateString() + ' to: '+ leaves[i].end.toDateString() + ' status: ' + status[leaves[i].status] +
-			/*'<a href="#" class="btn btn-warning btn-xs" ><i class="fa fa-trash fa-fw"></i><span class="">withdraw</span> */' </a></h4>  </li>'
+				'<a href="#" onClick="app.setLeaveAdmin('+leaves[i].id+',2);" class="btn btn-warning btn-xs" ><i class="fa fa-thumbs-o-down fa-fw"></i><span class="">reject</span>' +
+				'<a href="#" onClick="app.setLeaveAdmin('+leaves[i].id+',1);" class="btn btn-success btn-xs" ><i class="fa fa-thumbs-o-up fa-fw"></i><span class="">approve</span>  </a></h4>  </li>';
 			else
 				html += '<li class="'+status[leaves[i].status]+'"><h4> from: '+ leaves[i].start.toDateString() + ' to: '+ leaves[i].end.toDateString() + ' status: ' + status[leaves[i].status] +
 			/*'<a href="#" class="btn btn-warning btn-xs" ><i class="fa fa-trash fa-fw"></i><span class="">withdraw</span> */' </a></h4>  </li>'
