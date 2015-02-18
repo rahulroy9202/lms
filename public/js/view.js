@@ -105,6 +105,11 @@ View.prototype = {
 		var div = $('#new_leave_info').html(html);
 	},
 	
+	displayLeaves: function(leave) {
+		var html = 	'<ul><li> total length: '+ leave.length +'</li><li> week days: '+ leave.weekdays +'</li><li> company days: '+ ( (leave.effective != -1)? leave.effective :'unknown') +'</li></ul>'
+		var div = $('#new_leave_info').html(html);
+	},
+	
 	displayLoginError: function() {
 		/*var html = 	'<ul><li> total length: '+ leave.length +'</li><li> week days: '+ leave.weekdays +'</li><li> company days: '+ ( (leave.effective != -1)? leave.effective :'unknown') +'</li></ul>'
 		var div = $('#new_leave_info').html(html);*/

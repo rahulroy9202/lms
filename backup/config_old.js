@@ -38,7 +38,7 @@ for(var i =0; i<holidays.length;i++){
 
 
 
-function test_api() {
+function test_api2() {
 
     $.ajax({
         url: 'https://lms-rahulroy9202.rhcloud.com/holidays/',

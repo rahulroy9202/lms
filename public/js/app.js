@@ -30,7 +30,7 @@ function App() {
 	this.user = new User();
 	
 	if(this.user.readCookie()){
-		this.lmsServer.login(this.user, this.cb_login);
+		this.lmsServer.login(this.user.toJSON(), this.cb_login);
 	}
 }
 
@@ -61,7 +61,17 @@ App.prototype = {
 
 	login: function() {
 		app.user = new User($('#login-username').val(),$('#login-password').val());
-		app.lmsServer.login(app.user, app.cb_login);
+		app.lmsServer.login(app.user.toJSON(), app.cb_login);
+	},
+	
+	showUserProfile: function() {
+		app.view.show(app.view.pages[3]);
+		app.lmsServer.getLeaves(app.user.toJSON(), app.cb_getLeaves);
+	},
+	
+	showAdminPage: function() {
+		app.view.show(app.view.pages[4]);
+		app.lmsServer.getLeavesAdmin(app.user.toJSON(), app.cb_getAdminLeaves);
 	},
 	
 	cb_login: function (data) {
@@ -71,9 +81,9 @@ App.prototype = {
 		app.user.id = data.id;
 		
 		switch(data.role){
-			case 1: app.view.show(app.view.pages[3]);
+			case 1: app.showUserProfile();
 				break;
-			case 2: app.view.show(app.view.pages[4]);
+			case 2: app.showAdminPage();
 				break;
 			default: app.view.displayLoginError();
 				break;
@@ -94,15 +104,25 @@ App.prototype = {
 	
 	cb_newLeave: function(data) {
 		console.log("NEW LEAVE- ",data);
-		if(data.status === 0 && data.user_id === app.user.id)
+		if(data.status === 0 && data.user_id === app.user.id){
 			app.nleave = null;
-		
+			app.view.initDatePicker('-4d','31/12/2015', app.hdays, app.createLeave);
+			app.showUserProfile();
+		}
+	},	
+	
+	cb_getLeaves: function(data) {
+		console.log("GOT LEAVES- ",data);	
 	},
 	
-	confirmLeave: function(){
+	cb_getAdminLeaves: function(data) {
+		console.log("GOT ADMIN LEAVES- ",data);
+	},
+	
+	confirmLeave: function(data){
 		if(app.nLeave.getDetails(app.hdays).length < 16){
 			app.lmsServer.newLeave(app.user, app.nLeave, app.cb_newLeave);
-		}
+		}		
 	}
 
 

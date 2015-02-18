@@ -67,11 +67,11 @@ app.post('/holidays/', function(req, res) {
 app.get('/api/holidays/', function(req, res) {
 	app.models.holiday.find().exec(function(err, models) {
 		if(err) return res.json({ err: err });
-		console.log(models);
-		
+		//console.log(models);
+		console.log('got holidays');
 		var results = new Array();
 		for(var i in models ){
-			console.log(new Date(models[i].date).getDay());
+			//console.log(new Date(models[i].date).getDay());
 			results.push(new Date(models[i].date));
 		}
 		
@@ -121,7 +121,7 @@ app.post('/api/leave/get/', function(req, res) {
 app.post('/api/admin/leave/get/', function(req, res) {
 	app.models.user.findOne({ name: req.body.user.name, password: req.body.user.password })
 	.exec(function(err, model) {
-		if(err || model.role > 1) return res.json({ err: err });
+		if(err || model.role != 2) return res.json({ err: err });
 		
 		app.models.leave.find({ manager_id: model.id },function(err, model) {
 			if(err) return res.json({ err: err });

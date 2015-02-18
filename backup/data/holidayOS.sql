@@ -1,0 +1,58 @@
+-- phpMyAdmin SQL Dump
+-- version 4.0.10.7
+-- http://www.phpmyadmin.net
+--
+-- Host: 127.9.110.2:3306
+-- Generation Time: Feb 18, 2015 at 12:31 AM
+-- Server version: 5.5.41
+-- PHP Version: 5.3.3
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+--
+-- Database: `lms`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `holiday`
+--
+
+CREATE TABLE IF NOT EXISTS `holiday` (
+  `date` datetime DEFAULT NULL,
+  `occasion` varchar(255) DEFAULT NULL,
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `createdAt` datetime DEFAULT NULL,
+  `updatedAt` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=37 ;
+
+--
+-- Dumping data for table `holiday`
+--
+
+INSERT INTO `holiday` (`date`, `occasion`, `id`, `createdAt`, `updatedAt`) VALUES
+('2015-01-25 13:30:00', NULL, 25, '2015-02-17 19:30:19', '2015-02-17 19:30:19'),
+('2015-03-05 13:30:00', NULL, 26, '2015-02-17 19:30:19', '2015-02-17 19:30:19'),
+('2015-04-02 14:30:00', NULL, 27, '2015-02-17 19:30:19', '2015-02-17 19:30:19'),
+('2015-05-03 14:30:00', NULL, 28, '2015-02-17 19:30:19', '2015-02-17 19:30:19'),
+('2015-04-01 14:30:00', NULL, 29, '2015-02-17 19:30:19', '2015-02-17 19:30:19'),
+('2015-09-24 14:30:00', NULL, 30, '2015-02-17 19:30:19', '2015-02-17 19:30:19'),
+('2015-10-01 14:30:00', NULL, 31, '2015-02-17 19:30:19', '2015-02-17 19:30:19'),
+('2015-10-21 14:30:00', NULL, 32, '2015-02-17 19:30:19', '2015-02-17 19:30:19'),
+('2015-11-10 13:30:00', NULL, 33, '2015-02-17 19:30:19', '2015-02-17 19:30:19'),
+('2015-11-24 13:30:00', NULL, 34, '2015-02-17 19:30:19', '2015-02-17 19:30:19'),
+('2015-12-24 13:30:00', NULL, 35, '2015-02-17 19:30:19', '2015-02-17 19:30:19'),
+('2015-12-23 13:30:00', NULL, 36, '2015-02-17 19:30:19', '2015-02-17 19:30:19');
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
