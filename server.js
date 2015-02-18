@@ -110,9 +110,16 @@ app.post('/api/leave/get/', function(req, res) {
 	.exec(function(err, model) {
 		if(err) return res.json({ err: err });
 		
-		app.models.leave.find({ user_id: model.id },function(err, model) {
+		app.models.leave.find({ user_id: model.id },function(err, models) {
 			if(err) return res.json({ err: err });
-			res.json(model);
+			
+			var results = new Array();
+			
+			for(var i in models ){
+				//console.log(new Date(models[i].date).getDay());
+				results.push(models[i].toJSON());
+			}
+			res.json(results);
 		});
 	});
 });

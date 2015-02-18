@@ -112,7 +112,8 @@ App.prototype = {
 	},	
 	
 	cb_getLeaves: function(data) {
-		console.log("GOT LEAVES- ",data);	
+		console.log("GOT LEAVES- ",data);
+		app.view.displayLeaves(data);
 	},
 	
 	cb_getAdminLeaves: function(data) {

@@ -44,12 +44,15 @@ var Leave = Waterline.Collection.extend({
 		}
 		else
 			effective_days = -1;
-		
+		console.log({ leave: this, length: _leave_length, weekdays: _weekdays, effective: _effective_days });
 		return {length: _leave_length, weekdays: _weekdays, effective: _effective_days };
 	},
 	
-	getActualLength: function() {
-		// Do something here
+	toJSON: function() {
+		var obj = this.toObject();
+		obj.start = new Date(this.start);
+		obj.end = new Date(this.end);
+		return obj;
 	}
 });
 
