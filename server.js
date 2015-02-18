@@ -44,7 +44,7 @@ app.get('/timetest/', function(req, res) {
 	res.json(x);
 });
 
-
+/*
 app.post('/holidays/', function(req, res) {
 	
 	var h = req.body.h;
@@ -62,16 +62,14 @@ app.post('/holidays/', function(req, res) {
 	}
 	res.json(result);
 });
-
+*/
 
 app.get('/api/holidays/', function(req, res) {
 	app.models.holiday.find().exec(function(err, models) {
 		if(err) return res.json({ err: err });
-		//console.log(models);
 		console.log('got holidays');
 		var results = new Array();
 		for(var i in models ){
-			//console.log(new Date(models[i].date).getDay());
 			results.push(new Date(models[i].date));
 		}
 		
@@ -158,16 +156,7 @@ app.post('/api/admin/leave/set/', function(req, res) {
 		app.models.leave.update({ id: req.body.leave.id },{comment: req.body.leave.comment, status: req.body.leave.status },function(err, model) {
 			if(err) return res.json({ err: err });
 			console.log('m s - ',model);
-			/*
-			console.log('m s - ',model);
-			
-			model.status = req.body.leave.status;
-			
-			if(req.body.leave.comment)
-				model.comment = req.body.leave.comment;
-			
-			console.log('m s - ',model);
-			model.save();*/
+
 			res.json(model);
 		});
 	});
