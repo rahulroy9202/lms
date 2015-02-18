@@ -62,6 +62,12 @@ function initLmsServer(_url){
 				dataType: "json",
 				success: function(json) {
 					console.log("admin get leaves result- \n", json);
+					
+					for(var i in json){
+						json[i].start = new Date(json[i].start);
+						json[i].end = new Date(json[i].end);
+					}
+					
 					if(typeof(_cb)==='function'){
 						_cb(json);
 					}

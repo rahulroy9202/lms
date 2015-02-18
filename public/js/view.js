@@ -119,6 +119,20 @@ View.prototype = {
 		var div = $('.user_applications_display').html(html);//'<ul>'+html+'</ul>');
 	},
 	
+	displayAdminLeaves: function(leaves) {
+		var html = '';
+		
+		var status = [ 'pending', 'approved', 'rejected' ];
+		
+		if(leaves===null)
+			html = 'no one applied.';
+		for(var i in leaves){
+			html += '<li><h4> from: '+ leaves[i].start.toDateString() + ' to: '+ leaves[i].end.toDateString() + ' status: ' + status[leaves[i].status] +
+			/*'<a href="#" class="btn btn-warning btn-xs" ><i class="fa fa-trash fa-fw"></i><span class="">withdraw</span> */' </a></h4>  </li>'
+		}
+		var div = $('.user_applications_display').html(html);//'<ul>'+html+'</ul>');
+	},
+	
 	displayLoginError: function() {
 		/*var html = 	'<ul><li> total length: '+ leave.length +'</li><li> week days: '+ leave.weekdays +'</li><li> company days: '+ ( (leave.effective != -1)? leave.effective :'unknown') +'</li></ul>'
 		var div = $('#new_leave_info').html(html);*/

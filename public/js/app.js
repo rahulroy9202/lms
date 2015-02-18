@@ -118,6 +118,7 @@ App.prototype = {
 	
 	cb_getAdminLeaves: function(data) {
 		console.log("GOT ADMIN LEAVES- ",data);
+		app.view.displayAdminLeaves(data);
 	},
 	
 	confirmLeave: function(data){
