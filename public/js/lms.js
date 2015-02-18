@@ -78,7 +78,7 @@ function initLmsServer(_url){
 			});
 	}
 	
-	lmsserver.setLeavesAdmin = function( _user, _leave, _cb ) {
+	lmsserver.setLeaveAdmin = function( _user, _leave, _cb ) {
 		
 		$.ajax({
 				url: _url + '/api/admin/leave/get/',

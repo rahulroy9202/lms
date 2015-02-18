@@ -123,7 +123,7 @@ App.prototype = {
 	
 	confirmLeave: function(data){
 		if(app.nLeave.getDetails(app.hdays).length < 16){
-			app.lmsServer.newLeave(app.user, app.nLeave, app.cb_newLeave);
+			app.lmsServer.newLeave(app.user.toJSON(), app.nLeave, app.cb_newLeave);
 		}		
 	}
 

@@ -96,6 +96,8 @@ app.post('/api/leave/new/', function(req, res) {
 		
 		req.body.leave.user_id = model.id;
 		req.body.leave.manager_id = model.manager_id;
+		req.body.leave.status = 0;
+		req.body.leave.comment = '';
 		
 		app.models.leave.create(req.body.leave,function(err, model) {
 			if(err) return res.json({ err: err });
@@ -145,6 +147,12 @@ app.post('/api/admin/leave/set/', function(req, res) {
 		
 		app.models.leave.findOne({ id: req.body.leave.id, manager_id: model.id },function(err, model) {
 			if(err) return res.json({ err: err });
+			
+			model.status = req.body.leave.status;
+			
+			if(req.body.leave.comment)
+				model.comment = req.body.leave.comment;
+			
 			res.json(model);
 		});
 	});

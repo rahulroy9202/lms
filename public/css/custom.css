@@ -49,7 +49,15 @@
 	display: inline-block;
 }
 
-.hdays {
+.hdays, .approved {
 	/*color: #800000 !important ;*/
 	color: #9acd32 !important ;
+}
+
+.pending {
+	color: #00bfff !important ;
+}
+
+.rejected {
+	color: #ff6347 !important ;
 }

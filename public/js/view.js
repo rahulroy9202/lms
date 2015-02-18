@@ -113,24 +113,29 @@ View.prototype = {
 		if(leaves===null)
 			html = 'no leaves applied for.';
 		for(var i in leaves){
-			html += '<li><h4> from: '+ leaves[i].start.toDateString() + ' to: '+ leaves[i].end.toDateString() + ' status: ' + status[leaves[i].status] +
+			html += '<li class="'+status[leaves[i].status]+'" ><h4> from: '+ leaves[i].start.toDateString() + ' to: '+ leaves[i].end.toDateString() + ' status: ' + status[leaves[i].status] +
 			/*'<a href="#" class="btn btn-warning btn-xs" ><i class="fa fa-trash fa-fw"></i><span class="">withdraw</span> */' </a></h4>  </li>'
 		}
 		var div = $('.user_applications_display').html(html);//'<ul>'+html+'</ul>');
 	},
 	
 	displayAdminLeaves: function(leaves) {
-		var html = '';
+		var html = '', htmlP = '';
 		
 		var status = [ 'pending', 'approved', 'rejected' ];
 		
 		if(leaves===null)
 			html = 'no one applied.';
 		for(var i in leaves){
-			html += '<li><h4> from: '+ leaves[i].start.toDateString() + ' to: '+ leaves[i].end.toDateString() + ' status: ' + status[leaves[i].status] +
+			if( leaves[i].status === 0 )
+				htmlP += '<li class="'+status[leaves[i].status]+'"><h4> from: '+ leaves[i].start.toDateString() + ' to: '+ leaves[i].end.toDateString() + ' status: ' + status[leaves[i].status] +
+			/*'<a href="#" class="btn btn-warning btn-xs" ><i class="fa fa-trash fa-fw"></i><span class="">withdraw</span> */' </a></h4>  </li>'
+			else
+				html += '<li class="'+status[leaves[i].status]+'"><h4> from: '+ leaves[i].start.toDateString() + ' to: '+ leaves[i].end.toDateString() + ' status: ' + status[leaves[i].status] +
 			/*'<a href="#" class="btn btn-warning btn-xs" ><i class="fa fa-trash fa-fw"></i><span class="">withdraw</span> */' </a></h4>  </li>'
 		}
-		var div = $('.user_applications_display').html(html);//'<ul>'+html+'</ul>');
+		$('.admin_applications_display').html(html);//'<ul>'+html+'</ul>');
+		$('.admin_pending_applications_display').html(htmlP);
 	},
 	
 	displayLoginError: function() {
